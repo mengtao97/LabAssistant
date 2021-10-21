@@ -1,0 +1,24 @@
+UseCaseModel GMS {
+
+	UC::reserveMeeting
+	UC::informStudents
+	UC::organizeSignIn
+	UC::makeConclusion
+	UC::receiveNotification
+	UC::checkIn
+
+	Actor Teacher {
+		reserveMeeting
+	informStudents
+		organizeSignIn
+	makeConclusion
+	}
+
+	Actor Student {
+		receiveNotification
+		checkIn
+	}
+
+	Service GMSSystem {} Service ThirdPartyServices {}}
+DomainModel GMS {}
+
