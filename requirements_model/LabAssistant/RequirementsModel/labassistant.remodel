@@ -1,0 +1,24 @@
+UseCaseModel LabAssistant {
+
+	UC::usecase1 "manage plans of the year"
+	UC::usecase2 "manage plans of the semester"
+	UC::usecase3 "manage plans of the week"
+	UC::usecase4 "supervise students' plans"
+
+	Actor Teacher {
+		usecase1
+		usecase2
+		usecase3
+		usecase4
+	}
+
+	Actor Student {
+		usecase1
+		usecase2
+		usecase3
+		usecase4
+	}
+
+	Service LabAssistantSystem {} Service ThirdPartyServices {}}
+DomainModel LabAssistant {}
+
