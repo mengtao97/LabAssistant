@@ -1,0 +1,104 @@
+UseCaseModel PlanManage {
+
+	UC::managePlans definedBySSD(ManagePlansSSD) relatedService(ManagePlansService)
+	UC::supervisePlans definedBySSD(SupervisePlansSSD) relatedService(SupervisePlansService)
+
+	Actor Student {
+		managePlans
+	}
+
+	Actor Teacher {
+		managePlans
+		supervisePlans
+	}
+
+	Interaction ManagePlansSSD {
+
+		[Participants: Teacher Student ManagePlansService]
+
+		CallMessage::ManagePlansSSDCallMessage1(inputPlanInformation ManagePlansSSDCallMessage1SendingEnd -> ManagePlansSSDExecution1StartEnd)
+		ReturnMessage::ManagePlansSSDCallMessage1Return(ManagePlansSSDExecution1FinishEnd -> ManagePlansSSDCallMessage1ReturnReceivingEnd ManagePlansSSDCallMessage1)
+		CallMessage::ManagePlansSSDCallMessage3(teacherInputPlanInformation ManagePlansSSDCallMessage3SendingEnd -> ManagePlansSSDExecution2StartEnd)
+		ReturnMessage::ManagePlansSSDCallMessage3Return(ManagePlansSSDExecution2FinishEnd -> ManagePlansSSDCallMessage3ReturnReceivingEnd ManagePlansSSDCallMessage3)
+
+		Execution::ManagePlansSSDExecution1(ManagePlansService ManagePlansSSDExecution1StartEnd ManagePlansSSDExecution1FinishEnd)
+		Execution::ManagePlansSSDExecution2(ManagePlansService ManagePlansSSDExecution2StartEnd ManagePlansSSDExecution2FinishEnd)
+
+		MessageEnd::ManagePlansSSDCallMessage1SendingEnd(Student ManagePlansSSDCallMessage1)
+		ExecutionEnd::ManagePlansSSDExecution1StartEnd(ManagePlansService ManagePlansSSDExecution1)
+		ExecutionEnd::ManagePlansSSDExecution1FinishEnd(ManagePlansService ManagePlansSSDExecution1)
+		MessageEnd::ManagePlansSSDCallMessage1ReturnReceivingEnd(Student ManagePlansSSDCallMessage1Return)
+		MessageEnd::ManagePlansSSDCallMessage3SendingEnd(Teacher ManagePlansSSDCallMessage3)
+		ExecutionEnd::ManagePlansSSDExecution2StartEnd(ManagePlansService ManagePlansSSDExecution2)
+		ExecutionEnd::ManagePlansSSDExecution2FinishEnd(ManagePlansService ManagePlansSSDExecution2)
+		MessageEnd::ManagePlansSSDCallMessage3ReturnReceivingEnd(Teacher ManagePlansSSDCallMessage3Return)
+
+	}
+
+	Interaction SupervisePlansSSD {
+
+		[Participants: Teacher SupervisePlansService]
+
+		CallMessage::SupervisePlansSSDCallMessage1(inputPlanInformationToSupervise SupervisePlansSSDCallMessage1SendingEnd -> SupervisePlansSSDExecution1StartEnd)
+		ReturnMessage::SupervisePlansSSDCallMessage1Return(SupervisePlansSSDExecution1FinishEnd -> SupervisePlansSSDCallMessage1ReturnReceivingEnd SupervisePlansSSDCallMessage1)
+
+		Execution::SupervisePlansSSDExecution1(SupervisePlansService SupervisePlansSSDExecution1StartEnd SupervisePlansSSDExecution1FinishEnd)
+
+		MessageEnd::SupervisePlansSSDCallMessage1SendingEnd(Teacher SupervisePlansSSDCallMessage1)
+		ExecutionEnd::SupervisePlansSSDExecution1StartEnd(SupervisePlansService SupervisePlansSSDExecution1)
+		ExecutionEnd::SupervisePlansSSDExecution1FinishEnd(SupervisePlansService SupervisePlansSSDExecution1)
+		MessageEnd::SupervisePlansSSDCallMessage1ReturnReceivingEnd(Teacher SupervisePlansSSDCallMessage1Return)
+
+	}
+
+	Service PlanManageSystem {
+
+	}
+
+	Service ThirdPartyServices {
+
+	}
+
+	Service ManagePlansService {
+
+		[Operation]
+		inputPlanInformation(plan)
+		teacherInputPlanInformation(plan)
+
+	}
+
+	Service SupervisePlansService {
+
+		[Operation]
+		inputPlanInformationToSupervise(plan)
+
+	}
+
+}
+
+DomainModel PlanManage {
+
+	@AutoCRUD Entity User {
+		Id : Integer
+		Name : String
+	Password : String
+		Email : String
+		Phone : String
+		Role : String
+
+		[Refer]
+		UsertoPlan : Plan* Association
+	}
+
+	@AutoCRUD Entity Plan {
+		Id : Integer
+		Title : String
+		Content : String
+		Type : String
+		CreatorId : Integer
+		BeginDate : Date
+		EndDate : Date
+	}
+
+}
+
