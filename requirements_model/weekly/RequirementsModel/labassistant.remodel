@@ -1,0 +1,182 @@
+UseCaseModel LabAssistant {
+
+	UC::assignTask definedBySSD(AssignTaskSSD) relatedService(AssignTaskService)
+	UC::launchTask definedBySSD(LaunchTaskSSD) relatedService(LaunchTaskService)
+	UC::viewWeekly definedBySSD(ViewWeeklySSD) relatedService(ViewWeeklyService)
+	UC::updateTaskProcession definedBySSD(UpdateTaskProcessionSSD) relatedService(UpdateTaskProcessionService)
+	UC::uploadProblem definedBySSD(UploadProblemSSD) relatedService(UploadProblemService)
+	UC::createWeekly definedBySSD(CreateWeeklySSD) relatedService(CreateWeeklyService)
+
+	Actor Teacher {
+		viewWeekly
+		assignTask
+		createWeekly
+		launchTask
+	}
+
+	Actor Student {
+		updateTaskProcession
+		viewWeekly
+		uploadProblem
+	}
+
+	Interaction CreateWeeklySSD {
+
+		[Participants: Teacher CreateWeeklyService]
+
+	CallMessage::CreateWeeklySSDCallMessage1(inputWeeklyInfo CreateWeeklySSDCallMessage1SendingEnd -> CreateWeeklySSDExecution1StartEnd)
+		ReturnMessage::CreateWeeklySSDCallMessage1ReturnWeeklyId(CreateWeeklySSDExecution1FinishEnd -> CreateWeeklySSDCallMessage1ReturnReceivingEnd CreateWeeklySSDCallMessage1)
+
+		Execution::CreateWeeklySSDExecution1(CreateWeeklyService CreateWeeklySSDExecution1StartEnd CreateWeeklySSDExecution1FinishEnd)
+
+		MessageEnd::CreateWeeklySSDCallMessage1SendingEnd(Teacher CreateWeeklySSDCallMessage1)
+		ExecutionEnd::CreateWeeklySSDExecution1StartEnd(CreateWeeklyService CreateWeeklySSDExecution1)
+		ExecutionEnd::CreateWeeklySSDExecution1FinishEnd(CreateWeeklyService CreateWeeklySSDExecution1)
+		MessageEnd::CreateWeeklySSDCallMessage1ReturnReceivingEnd(Teacher CreateWeeklySSDCallMessage1ReturnWeeklyId)
+
+	}
+
+	Interaction LaunchTaskSSD {
+
+		[Participants: Teacher LaunchTaskService]
+
+		CallMessage::LaunchTaskSSDCallMessage1(launchTask LaunchTaskSSDCallMessage1SendingEnd -> LaunchTaskSSDExecution1StartEnd)
+		ReturnMessage::LaunchTaskSSDCallMessage1ReturnTaskId(LaunchTaskSSDExecution1FinishEnd -> LaunchTaskSSDCallMessage1ReturnReceivingEnd LaunchTaskSSDCallMessage1)
+
+		Execution::LaunchTaskSSDExecution1(LaunchTaskService LaunchTaskSSDExecution1StartEnd LaunchTaskSSDExecution1FinishEnd)
+
+		MessageEnd::LaunchTaskSSDCallMessage1SendingEnd(Teacher LaunchTaskSSDCallMessage1)
+		ExecutionEnd::LaunchTaskSSDExecution1StartEnd(LaunchTaskService LaunchTaskSSDExecution1)
+		ExecutionEnd::LaunchTaskSSDExecution1FinishEnd(LaunchTaskService LaunchTaskSSDExecution1)
+		MessageEnd::LaunchTaskSSDCallMessage1ReturnReceivingEnd(Teacher LaunchTaskSSDCallMessage1ReturnTaskId)
+
+	}
+
+	Interaction ViewWeeklySSD {
+
+		[Participants: Student Teacher ViewWeeklyService]
+
+		CallMessage::ViewWeeklySSDCallMessage1(viewWeekly ViewWeeklySSDCallMessage1SendingEnd -> ViewWeeklySSDExecution1StartEnd)
+		ReturnMessage::ViewWeeklySSDCallMessage1ReturnWeeklyInfo(ViewWeeklySSDExecution1FinishEnd -> ViewWeeklySSDCallMessage1ReturnReceivingEnd ViewWeeklySSDCallMessage1)
+
+		Execution::ViewWeeklySSDExecution1(ViewWeeklyService ViewWeeklySSDExecution1StartEnd ViewWeeklySSDExecution1FinishEnd)
+
+		MessageEnd::ViewWeeklySSDCallMessage1SendingEnd(Student ViewWeeklySSDCallMessage1)
+		ExecutionEnd::ViewWeeklySSDExecution1StartEnd(ViewWeeklyService ViewWeeklySSDExecution1)
+		ExecutionEnd::ViewWeeklySSDExecution1FinishEnd(ViewWeeklyService ViewWeeklySSDExecution1)
+		MessageEnd::ViewWeeklySSDCallMessage1ReturnReceivingEnd(Student ViewWeeklySSDCallMessage1ReturnWeeklyInfo)
+
+	}
+
+	Interaction AssignTaskSSD {
+
+		[Participants: Teacher AssignTaskService]
+
+		CallMessage::AssignTaskSSDCallMessage1(assignTask AssignTaskSSDCallMessage1SendingEnd -> AssignTaskSSDExecution1StartEnd)
+		ReturnMessage::AssignTaskSSDCallMessage1Return(AssignTaskSSDExecution1FinishEnd -> AssignTaskSSDCallMessage1ReturnReceivingEnd AssignTaskSSDCallMessage1)
+
+		Execution::AssignTaskSSDExecution1(AssignTaskService AssignTaskSSDExecution1StartEnd AssignTaskSSDExecution1FinishEnd)
+
+		MessageEnd::AssignTaskSSDCallMessage1SendingEnd(Teacher AssignTaskSSDCallMessage1)
+		ExecutionEnd::AssignTaskSSDExecution1StartEnd(AssignTaskService AssignTaskSSDExecution1)
+		ExecutionEnd::AssignTaskSSDExecution1FinishEnd(AssignTaskService AssignTaskSSDExecution1)
+		MessageEnd::AssignTaskSSDCallMessage1ReturnReceivingEnd(Teacher AssignTaskSSDCallMessage1Return)
+
+	}
+
+	Interaction UpdateTaskProcessionSSD {
+
+		[Participants: Student UpdateTaskProcessionService]
+
+		CallMessage::UpdateTaskProcessionSSDCallMessage1(undateTaskProcession UpdateTaskProcessionSSDCallMessage1SendingEnd -> UpdateTaskProcessionSSDExecution1StartEnd)
+		ReturnMessage::UpdateTaskProcessionSSDCallMessage1Return(UpdateTaskProcessionSSDExecution1FinishEnd -> UpdateTaskProcessionSSDCallMessage1ReturnReceivingEnd UpdateTaskProcessionSSDCallMessage1)
+
+		Execution::UpdateTaskProcessionSSDExecution1(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1StartEnd UpdateTaskProcessionSSDExecution1FinishEnd)
+
+		MessageEnd::UpdateTaskProcessionSSDCallMessage1SendingEnd(Student UpdateTaskProcessionSSDCallMessage1)
+		ExecutionEnd::UpdateTaskProcessionSSDExecution1StartEnd(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1)
+		ExecutionEnd::UpdateTaskProcessionSSDExecution1FinishEnd(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1)
+		MessageEnd::UpdateTaskProcessionSSDCallMessage1ReturnReceivingEnd(Student UpdateTaskProcessionSSDCallMessage1Return)
+
+	}
+
+	Interaction UploadProblemSSD {
+
+		[Participants: Student UploadProblemService]
+
+		CallMessage::UploadProblemSSDCallMessage1(uploadProblem UploadProblemSSDCallMessage1SendingEnd -> UploadProblemSSDExecution1StartEnd)
+		ReturnMessage::UploadProblemSSDCallMessage1Return(UploadProblemSSDExecution1FinishEnd -> UploadProblemSSDCallMessage1ReturnReceivingEnd UploadProblemSSDCallMessage1)
+
+		Execution::UploadProblemSSDExecution1(UploadProblemService UploadProblemSSDExecution1StartEnd UploadProblemSSDExecution1FinishEnd)
+
+		MessageEnd::UploadProblemSSDCallMessage1SendingEnd(Student UploadProblemSSDCallMessage1)
+		ExecutionEnd::UploadProblemSSDExecution1StartEnd(UploadProblemService UploadProblemSSDExecution1)
+		ExecutionEnd::UploadProblemSSDExecution1FinishEnd(UploadProblemService UploadProblemSSDExecution1)
+		MessageEnd::UploadProblemSSDCallMessage1ReturnReceivingEnd(Student UploadProblemSSDCallMessage1Return)
+
+	}
+
+	Service LabAssistantSystem {
+
+	}
+
+	Service ThirdPartyServices {
+
+	}
+
+	Service WeeklyService {
+
+	}
+
+	Service Usecase6Service {
+
+	}
+
+	Service CreateWeeklyService {
+
+		[Operation]
+	inputWeeklyInfo(weeklyInfo)
+
+	}
+
+	Service LaunchTaskService {
+
+		[Operation]
+		launchTask(taskinfo)
+
+	}
+
+	Service ViewWeeklyService {
+
+		[Operation]
+		viewWeekly(weeklyId)
+
+	}
+
+	Service AssignTaskService {
+
+		[Operation]
+		assignTask(taskId, studentIds)
+
+	}
+
+	Service UpdateTaskProcessionService {
+
+		[Operation]
+		undateTaskProcession(taskId, procession)
+
+	}
+
+	Service UploadProblemService {
+
+		[Operation]
+		uploadProblem(taskId, problem)
+
+	}
+
+}
+
+DomainModel LabAssistant {
+
+}
+
