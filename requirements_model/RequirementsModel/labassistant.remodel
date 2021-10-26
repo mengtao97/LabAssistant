@@ -1,0 +1,529 @@
+UseCaseModel LabAssistant {
+
+	UC::assignTask definedBySSD(AssignTaskSSD) relatedService(AssignTaskService)
+	UC::launchTask definedBySSD(LaunchTaskSSD) relatedService(LaunchTaskService)
+	UC::viewWeekly definedBySSD(ViewWeeklySSD) relatedService(ViewWeeklyService)
+	UC::updateTaskProcession definedBySSD(UpdateTaskProcessionSSD) relatedService(UpdateTaskProcessionService)
+	UC::uploadProblem definedBySSD(UploadProblemSSD) relatedService(UploadProblemService)
+	UC::createWeekly definedBySSD(CreateWeeklySSD) relatedService(CreateWeeklyService)
+	UC::managePlans definedBySSD(ManagePlansSSD) relatedService(ManagePlansService)
+	UC::supervisePlans definedBySSD(SupervisePlansSSD) relatedService(SupervisePlansService)
+	UC::representInfo definedBySSD(RepresentInfoSSD) relatedService(RepresentInfoService)
+	UC::manageFile definedBySSD(ManageFileSSD) relatedService(ManageFileService)
+	UC::shareFile definedBySSD(ShareFileSSD) relatedService(ShareFileService)
+	UC::cancelShare definedBySSD(CancelShareSSD) relatedService(CancelShareService)
+	UC::reserveMeeting definedBySSD(ReserveMeetingSSD) relatedService(ReserveMeetingService)
+	UC::informStudents definedBySSD(InformStudentsSSD) relatedService(InformStudentsService)
+	UC::organizeSignIn
+	UC::makeConclusion
+	UC::receiveNotification
+	UC::checkIn
+
+	Actor Teacher {
+		viewWeekly
+		assignTask
+		createWeekly
+		launchTask
+		managePlans
+		supervisePlans
+		representInfo
+		manageFile
+		shareFile
+		cancelShare
+		reserveMeeting
+		informStudents
+		organizeSignIn
+		makeConclusion
+	}
+
+	Actor Student {
+		updateTaskProcession
+		viewWeekly
+		uploadProblem
+		managePlans
+		representInfo
+		manageFile
+		shareFile
+		cancelShare
+		receiveNotification
+		checkIn
+	}
+
+	Interaction CreateWeeklySSD {
+
+		[Participants: Teacher CreateWeeklyService]
+
+		CallMessage::CreateWeeklySSDCallMessage1(inputWeeklyInfo CreateWeeklySSDCallMessage1SendingEnd -> CreateWeeklySSDExecution1StartEnd)
+		ReturnMessage::CreateWeeklySSDCallMessage1ReturnWeeklyId(CreateWeeklySSDExecution1FinishEnd -> CreateWeeklySSDCallMessage1ReturnReceivingEnd CreateWeeklySSDCallMessage1)
+
+		Execution::CreateWeeklySSDExecution1(CreateWeeklyService CreateWeeklySSDExecution1StartEnd CreateWeeklySSDExecution1FinishEnd)
+
+		MessageEnd::CreateWeeklySSDCallMessage1SendingEnd(Teacher CreateWeeklySSDCallMessage1)
+		ExecutionEnd::CreateWeeklySSDExecution1StartEnd(CreateWeeklyService CreateWeeklySSDExecution1)
+		ExecutionEnd::CreateWeeklySSDExecution1FinishEnd(CreateWeeklyService CreateWeeklySSDExecution1)
+		MessageEnd::CreateWeeklySSDCallMessage1ReturnReceivingEnd(Teacher CreateWeeklySSDCallMessage1ReturnWeeklyId)
+
+	}
+
+	Interaction LaunchTaskSSD {
+
+		[Participants: Teacher LaunchTaskService]
+
+		CallMessage::LaunchTaskSSDCallMessage1(launchTask LaunchTaskSSDCallMessage1SendingEnd -> LaunchTaskSSDExecution1StartEnd)
+		ReturnMessage::LaunchTaskSSDCallMessage1ReturnTaskId(LaunchTaskSSDExecution1FinishEnd -> LaunchTaskSSDCallMessage1ReturnReceivingEnd LaunchTaskSSDCallMessage1)
+
+		Execution::LaunchTaskSSDExecution1(LaunchTaskService LaunchTaskSSDExecution1StartEnd LaunchTaskSSDExecution1FinishEnd)
+
+		MessageEnd::LaunchTaskSSDCallMessage1SendingEnd(Teacher LaunchTaskSSDCallMessage1)
+		ExecutionEnd::LaunchTaskSSDExecution1StartEnd(LaunchTaskService LaunchTaskSSDExecution1)
+		ExecutionEnd::LaunchTaskSSDExecution1FinishEnd(LaunchTaskService LaunchTaskSSDExecution1)
+		MessageEnd::LaunchTaskSSDCallMessage1ReturnReceivingEnd(Teacher LaunchTaskSSDCallMessage1ReturnTaskId)
+
+	}
+
+	Interaction ViewWeeklySSD {
+
+		[Participants: Student Teacher ViewWeeklyService]
+
+		CallMessage::ViewWeeklySSDCallMessage1(viewWeekly ViewWeeklySSDCallMessage1SendingEnd -> ViewWeeklySSDExecution1StartEnd)
+		ReturnMessage::ViewWeeklySSDCallMessage1ReturnWeeklyInfo(ViewWeeklySSDExecution1FinishEnd -> ViewWeeklySSDCallMessage1ReturnReceivingEnd ViewWeeklySSDCallMessage1)
+
+		Execution::ViewWeeklySSDExecution1(ViewWeeklyService ViewWeeklySSDExecution1StartEnd ViewWeeklySSDExecution1FinishEnd)
+
+		MessageEnd::ViewWeeklySSDCallMessage1SendingEnd(Student ViewWeeklySSDCallMessage1)
+		ExecutionEnd::ViewWeeklySSDExecution1StartEnd(ViewWeeklyService ViewWeeklySSDExecution1)
+		ExecutionEnd::ViewWeeklySSDExecution1FinishEnd(ViewWeeklyService ViewWeeklySSDExecution1)
+		MessageEnd::ViewWeeklySSDCallMessage1ReturnReceivingEnd(Student ViewWeeklySSDCallMessage1ReturnWeeklyInfo)
+
+	}
+
+	Interaction AssignTaskSSD {
+
+		[Participants: Teacher AssignTaskService]
+
+		CallMessage::AssignTaskSSDCallMessage1(assignTask AssignTaskSSDCallMessage1SendingEnd -> AssignTaskSSDExecution1StartEnd)
+		ReturnMessage::AssignTaskSSDCallMessage1Return(AssignTaskSSDExecution1FinishEnd -> AssignTaskSSDCallMessage1ReturnReceivingEnd AssignTaskSSDCallMessage1)
+
+		Execution::AssignTaskSSDExecution1(AssignTaskService AssignTaskSSDExecution1StartEnd AssignTaskSSDExecution1FinishEnd)
+
+		MessageEnd::AssignTaskSSDCallMessage1SendingEnd(Teacher AssignTaskSSDCallMessage1)
+		ExecutionEnd::AssignTaskSSDExecution1StartEnd(AssignTaskService AssignTaskSSDExecution1)
+		ExecutionEnd::AssignTaskSSDExecution1FinishEnd(AssignTaskService AssignTaskSSDExecution1)
+		MessageEnd::AssignTaskSSDCallMessage1ReturnReceivingEnd(Teacher AssignTaskSSDCallMessage1Return)
+
+	}
+
+	Interaction UpdateTaskProcessionSSD {
+
+		[Participants: Student UpdateTaskProcessionService]
+
+		CallMessage::UpdateTaskProcessionSSDCallMessage1(undateTaskProcession UpdateTaskProcessionSSDCallMessage1SendingEnd -> UpdateTaskProcessionSSDExecution1StartEnd)
+		ReturnMessage::UpdateTaskProcessionSSDCallMessage1Return(UpdateTaskProcessionSSDExecution1FinishEnd -> UpdateTaskProcessionSSDCallMessage1ReturnReceivingEnd UpdateTaskProcessionSSDCallMessage1)
+
+		Execution::UpdateTaskProcessionSSDExecution1(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1StartEnd UpdateTaskProcessionSSDExecution1FinishEnd)
+
+		MessageEnd::UpdateTaskProcessionSSDCallMessage1SendingEnd(Student UpdateTaskProcessionSSDCallMessage1)
+		ExecutionEnd::UpdateTaskProcessionSSDExecution1StartEnd(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1)
+		ExecutionEnd::UpdateTaskProcessionSSDExecution1FinishEnd(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1)
+		MessageEnd::UpdateTaskProcessionSSDCallMessage1ReturnReceivingEnd(Student UpdateTaskProcessionSSDCallMessage1Return)
+
+	}
+
+	Interaction UploadProblemSSD {
+
+		[Participants: Student UploadProblemService]
+
+		CallMessage::UploadProblemSSDCallMessage1(uploadProblem UploadProblemSSDCallMessage1SendingEnd -> UploadProblemSSDExecution1StartEnd)
+		ReturnMessage::UploadProblemSSDCallMessage1Return(UploadProblemSSDExecution1FinishEnd -> UploadProblemSSDCallMessage1ReturnReceivingEnd UploadProblemSSDCallMessage1)
+
+		Execution::UploadProblemSSDExecution1(UploadProblemService UploadProblemSSDExecution1StartEnd UploadProblemSSDExecution1FinishEnd)
+
+		MessageEnd::UploadProblemSSDCallMessage1SendingEnd(Student UploadProblemSSDCallMessage1)
+		ExecutionEnd::UploadProblemSSDExecution1StartEnd(UploadProblemService UploadProblemSSDExecution1)
+		ExecutionEnd::UploadProblemSSDExecution1FinishEnd(UploadProblemService UploadProblemSSDExecution1)
+		MessageEnd::UploadProblemSSDCallMessage1ReturnReceivingEnd(Student UploadProblemSSDCallMessage1Return)
+
+	}
+
+	Interaction ManagePlansSSD {
+
+		[Participants: Teacher Student ManagePlansService]
+
+		CallMessage::ManagePlansSSDCallMessage1(inputPlanInformation ManagePlansSSDCallMessage1SendingEnd -> ManagePlansSSDExecution1StartEnd)
+		ReturnMessage::ManagePlansSSDCallMessage1Return(ManagePlansSSDExecution1FinishEnd -> ManagePlansSSDCallMessage1ReturnReceivingEnd ManagePlansSSDCallMessage1)
+		CallMessage::ManagePlansSSDCallMessage3(teacherInputPlanInformation ManagePlansSSDCallMessage3SendingEnd -> ManagePlansSSDExecution2StartEnd)
+		ReturnMessage::ManagePlansSSDCallMessage3Return(ManagePlansSSDExecution2FinishEnd -> ManagePlansSSDCallMessage3ReturnReceivingEnd ManagePlansSSDCallMessage3)
+
+		Execution::ManagePlansSSDExecution1(ManagePlansService ManagePlansSSDExecution1StartEnd ManagePlansSSDExecution1FinishEnd)
+		Execution::ManagePlansSSDExecution2(ManagePlansService ManagePlansSSDExecution2StartEnd ManagePlansSSDExecution2FinishEnd)
+
+		MessageEnd::ManagePlansSSDCallMessage1SendingEnd(Student ManagePlansSSDCallMessage1)
+		ExecutionEnd::ManagePlansSSDExecution1StartEnd(ManagePlansService ManagePlansSSDExecution1)
+		ExecutionEnd::ManagePlansSSDExecution1FinishEnd(ManagePlansService ManagePlansSSDExecution1)
+		MessageEnd::ManagePlansSSDCallMessage1ReturnReceivingEnd(Student ManagePlansSSDCallMessage1Return)
+		MessageEnd::ManagePlansSSDCallMessage3SendingEnd(Teacher ManagePlansSSDCallMessage3)
+		ExecutionEnd::ManagePlansSSDExecution2StartEnd(ManagePlansService ManagePlansSSDExecution2)
+		ExecutionEnd::ManagePlansSSDExecution2FinishEnd(ManagePlansService ManagePlansSSDExecution2)
+		MessageEnd::ManagePlansSSDCallMessage3ReturnReceivingEnd(Teacher ManagePlansSSDCallMessage3Return)
+
+	}
+
+	Interaction SupervisePlansSSD {
+
+		[Participants: Teacher SupervisePlansService]
+
+		CallMessage::SupervisePlansSSDCallMessage1(inputPlanInformationToSupervise SupervisePlansSSDCallMessage1SendingEnd -> SupervisePlansSSDExecution1StartEnd)
+		ReturnMessage::SupervisePlansSSDCallMessage1Return(SupervisePlansSSDExecution1FinishEnd -> SupervisePlansSSDCallMessage1ReturnReceivingEnd SupervisePlansSSDCallMessage1)
+
+		Execution::SupervisePlansSSDExecution1(SupervisePlansService SupervisePlansSSDExecution1StartEnd SupervisePlansSSDExecution1FinishEnd)
+
+		MessageEnd::SupervisePlansSSDCallMessage1SendingEnd(Teacher SupervisePlansSSDCallMessage1)
+		ExecutionEnd::SupervisePlansSSDExecution1StartEnd(SupervisePlansService SupervisePlansSSDExecution1)
+		ExecutionEnd::SupervisePlansSSDExecution1FinishEnd(SupervisePlansService SupervisePlansSSDExecution1)
+		MessageEnd::SupervisePlansSSDCallMessage1ReturnReceivingEnd(Teacher SupervisePlansSSDCallMessage1Return)
+
+	}
+
+	Interaction CancelShareSSD {
+
+		[Participants: Student Teacher CancelShareService]
+
+		CallMessage::CancelShareSSDCallMessage1(StudentCancelSharing CancelShareSSDCallMessage1SendingEnd -> CancelShareSSDExecution1StartEnd)
+		ReturnMessage::CancelShareSSDCallMessage1Return(CancelShareSSDExecution1FinishEnd -> CancelShareSSDCallMessage1ReturnReceivingEnd CancelShareSSDCallMessage1)
+		CallMessage::CancelShareSSDCallMessage3(TeacherCancelSharing CancelShareSSDCallMessage3SendingEnd -> CancelShareSSDExecution2StartEnd)
+		ReturnMessage::CancelShareSSDCallMessage3Return(CancelShareSSDExecution2FinishEnd -> CancelShareSSDCallMessage3ReturnReceivingEnd CancelShareSSDCallMessage3)
+
+		Execution::CancelShareSSDExecution1(CancelShareService CancelShareSSDExecution1StartEnd CancelShareSSDExecution1FinishEnd)
+		Execution::CancelShareSSDExecution2(CancelShareService CancelShareSSDExecution2StartEnd CancelShareSSDExecution2FinishEnd)
+
+		MessageEnd::CancelShareSSDCallMessage1SendingEnd(Student CancelShareSSDCallMessage1)
+		ExecutionEnd::CancelShareSSDExecution1StartEnd(CancelShareService CancelShareSSDExecution1)
+		ExecutionEnd::CancelShareSSDExecution1FinishEnd(CancelShareService CancelShareSSDExecution1)
+		MessageEnd::CancelShareSSDCallMessage1ReturnReceivingEnd(Student CancelShareSSDCallMessage1Return)
+		MessageEnd::CancelShareSSDCallMessage3SendingEnd(Teacher CancelShareSSDCallMessage3)
+		ExecutionEnd::CancelShareSSDExecution2StartEnd(CancelShareService CancelShareSSDExecution2)
+		ExecutionEnd::CancelShareSSDExecution2FinishEnd(CancelShareService CancelShareSSDExecution2)
+		MessageEnd::CancelShareSSDCallMessage3ReturnReceivingEnd(Teacher CancelShareSSDCallMessage3Return)
+
+	}
+
+	Interaction RepresentInfoSSD {
+
+		[Participants: Student Teacher RepresentInfoService]
+
+		CallMessage::RepresentInfoSSDCallMessage1(SubmitStudentName RepresentInfoSSDCallMessage1SendingEnd -> RepresentInfoSSDExecution1StartEnd)
+		ReturnMessage::RepresentInfoSSDCallMessage1Return(RepresentInfoSSDExecution1FinishEnd -> RepresentInfoSSDCallMessage1ReturnReceivingEnd RepresentInfoSSDCallMessage1)
+		CallMessage::RepresentInfoSSDCallMessage3(SubmitTeacherName RepresentInfoSSDCallMessage3SendingEnd -> RepresentInfoSSDExecution2StartEnd)
+		ReturnMessage::RepresentInfoSSDCallMessage3Return(RepresentInfoSSDExecution2FinishEnd -> RepresentInfoSSDCallMessage3ReturnReceivingEnd RepresentInfoSSDCallMessage3)
+		CallMessage::RepresentInfoSSDCallMessage5(SubmitStudentInfo RepresentInfoSSDCallMessage5SendingEnd -> RepresentInfoSSDExecution3StartEnd)
+		ReturnMessage::RepresentInfoSSDCallMessage5Return(RepresentInfoSSDExecution3FinishEnd -> RepresentInfoSSDCallMessage5ReturnReceivingEnd RepresentInfoSSDCallMessage5)
+		CallMessage::RepresentInfoSSDCallMessage7(SubmitTeacherInfo RepresentInfoSSDCallMessage7SendingEnd -> RepresentInfoSSDExecution4StartEnd)
+		ReturnMessage::RepresentInfoSSDCallMessage7Return(RepresentInfoSSDExecution4FinishEnd -> RepresentInfoSSDCallMessage7ReturnReceivingEnd RepresentInfoSSDCallMessage7)
+		CallMessage::RepresentInfoSSDCallMessage9(SubmitTeacher RepresentInfoSSDCallMessage9SendingEnd -> RepresentInfoSSDExecution5StartEnd)
+		ReturnMessage::RepresentInfoSSDCallMessage9Return(RepresentInfoSSDExecution5FinishEnd -> RepresentInfoSSDCallMessage9ReturnReceivingEnd RepresentInfoSSDCallMessage9)
+		CallMessage::RepresentInfoSSDCallMessage11(AddStudent RepresentInfoSSDCallMessage11SendingEnd -> RepresentInfoSSDExecution6StartEnd)
+		ReturnMessage::RepresentInfoSSDCallMessage11Return(RepresentInfoSSDExecution6FinishEnd -> RepresentInfoSSDCallMessage11ReturnReceivingEnd RepresentInfoSSDCallMessage11)
+		CallMessage::RepresentInfoSSDCallMessage13(DelStudent RepresentInfoSSDCallMessage13SendingEnd -> RepresentInfoSSDExecution7StartEnd)
+		ReturnMessage::RepresentInfoSSDCallMessage13Return(RepresentInfoSSDExecution7FinishEnd -> RepresentInfoSSDCallMessage13ReturnReceivingEnd RepresentInfoSSDCallMessage13)
+
+		Execution::RepresentInfoSSDExecution1(RepresentInfoService RepresentInfoSSDExecution1StartEnd RepresentInfoSSDExecution1FinishEnd)
+		Execution::RepresentInfoSSDExecution2(RepresentInfoService RepresentInfoSSDExecution2StartEnd RepresentInfoSSDExecution2FinishEnd)
+		Execution::RepresentInfoSSDExecution3(RepresentInfoService RepresentInfoSSDExecution3StartEnd RepresentInfoSSDExecution3FinishEnd)
+		Execution::RepresentInfoSSDExecution4(RepresentInfoService RepresentInfoSSDExecution4StartEnd RepresentInfoSSDExecution4FinishEnd)
+		Execution::RepresentInfoSSDExecution5(RepresentInfoService RepresentInfoSSDExecution5StartEnd RepresentInfoSSDExecution5FinishEnd)
+		Execution::RepresentInfoSSDExecution6(RepresentInfoService RepresentInfoSSDExecution6StartEnd RepresentInfoSSDExecution6FinishEnd)
+		Execution::RepresentInfoSSDExecution7(RepresentInfoService RepresentInfoSSDExecution7StartEnd RepresentInfoSSDExecution7FinishEnd)
+
+		MessageEnd::RepresentInfoSSDCallMessage1SendingEnd(Student RepresentInfoSSDCallMessage1)
+		ExecutionEnd::RepresentInfoSSDExecution1StartEnd(RepresentInfoService RepresentInfoSSDExecution1)
+		ExecutionEnd::RepresentInfoSSDExecution1FinishEnd(RepresentInfoService RepresentInfoSSDExecution1)
+		MessageEnd::RepresentInfoSSDCallMessage1ReturnReceivingEnd(Student RepresentInfoSSDCallMessage1Return)
+		MessageEnd::RepresentInfoSSDCallMessage3SendingEnd(Teacher RepresentInfoSSDCallMessage3)
+		ExecutionEnd::RepresentInfoSSDExecution2StartEnd(RepresentInfoService RepresentInfoSSDExecution2)
+		ExecutionEnd::RepresentInfoSSDExecution2FinishEnd(RepresentInfoService RepresentInfoSSDExecution2)
+		MessageEnd::RepresentInfoSSDCallMessage3ReturnReceivingEnd(Teacher RepresentInfoSSDCallMessage3Return)
+		MessageEnd::RepresentInfoSSDCallMessage5SendingEnd(Student RepresentInfoSSDCallMessage5)
+		ExecutionEnd::RepresentInfoSSDExecution3StartEnd(RepresentInfoService RepresentInfoSSDExecution3)
+		ExecutionEnd::RepresentInfoSSDExecution3FinishEnd(RepresentInfoService RepresentInfoSSDExecution3)
+		MessageEnd::RepresentInfoSSDCallMessage5ReturnReceivingEnd(Student RepresentInfoSSDCallMessage5Return)
+		MessageEnd::RepresentInfoSSDCallMessage7SendingEnd(Teacher RepresentInfoSSDCallMessage7)
+		ExecutionEnd::RepresentInfoSSDExecution4StartEnd(RepresentInfoService RepresentInfoSSDExecution4)
+		ExecutionEnd::RepresentInfoSSDExecution4FinishEnd(RepresentInfoService RepresentInfoSSDExecution4)
+		MessageEnd::RepresentInfoSSDCallMessage7ReturnReceivingEnd(Teacher RepresentInfoSSDCallMessage7Return)
+		MessageEnd::RepresentInfoSSDCallMessage9SendingEnd(Student RepresentInfoSSDCallMessage9)
+		ExecutionEnd::RepresentInfoSSDExecution5StartEnd(RepresentInfoService RepresentInfoSSDExecution5)
+		ExecutionEnd::RepresentInfoSSDExecution5FinishEnd(RepresentInfoService RepresentInfoSSDExecution5)
+		MessageEnd::RepresentInfoSSDCallMessage9ReturnReceivingEnd(Student RepresentInfoSSDCallMessage9Return)
+		MessageEnd::RepresentInfoSSDCallMessage11SendingEnd(Teacher RepresentInfoSSDCallMessage11)
+		ExecutionEnd::RepresentInfoSSDExecution6StartEnd(RepresentInfoService RepresentInfoSSDExecution6)
+		ExecutionEnd::RepresentInfoSSDExecution6FinishEnd(RepresentInfoService RepresentInfoSSDExecution6)
+		MessageEnd::RepresentInfoSSDCallMessage11ReturnReceivingEnd(Teacher RepresentInfoSSDCallMessage11Return)
+		MessageEnd::RepresentInfoSSDCallMessage13SendingEnd(Teacher RepresentInfoSSDCallMessage13)
+		ExecutionEnd::RepresentInfoSSDExecution7StartEnd(RepresentInfoService RepresentInfoSSDExecution7)
+		ExecutionEnd::RepresentInfoSSDExecution7FinishEnd(RepresentInfoService RepresentInfoSSDExecution7)
+		MessageEnd::RepresentInfoSSDCallMessage13ReturnReceivingEnd(Teacher RepresentInfoSSDCallMessage13Return)
+
+	}
+
+	Interaction ShareFileSSD {
+
+		[Participants: Student Teacher ShareFileService]
+
+		CallMessage::ShareFileSSDCallMessage1(StudentShareFile ShareFileSSDCallMessage1SendingEnd -> ShareFileSSDExecution1StartEnd)
+		ReturnMessage::ShareFileSSDCallMessage1Return(ShareFileSSDExecution1FinishEnd -> ShareFileSSDCallMessage1ReturnReceivingEnd ShareFileSSDCallMessage1)
+		CallMessage::ShareFileSSDCallMessage3(TeacherShareFile ShareFileSSDCallMessage3SendingEnd -> ShareFileSSDExecution2StartEnd)
+		ReturnMessage::ShareFileSSDCallMessage3Return(ShareFileSSDExecution2FinishEnd -> ShareFileSSDCallMessage3ReturnReceivingEnd ShareFileSSDCallMessage3)
+
+		Execution::ShareFileSSDExecution1(ShareFileService ShareFileSSDExecution1StartEnd ShareFileSSDExecution1FinishEnd)
+		Execution::ShareFileSSDExecution2(ShareFileService ShareFileSSDExecution2StartEnd ShareFileSSDExecution2FinishEnd)
+
+		MessageEnd::ShareFileSSDCallMessage1SendingEnd(Student ShareFileSSDCallMessage1)
+		ExecutionEnd::ShareFileSSDExecution1StartEnd(ShareFileService ShareFileSSDExecution1)
+		ExecutionEnd::ShareFileSSDExecution1FinishEnd(ShareFileService ShareFileSSDExecution1)
+		MessageEnd::ShareFileSSDCallMessage1ReturnReceivingEnd(Student ShareFileSSDCallMessage1Return)
+		MessageEnd::ShareFileSSDCallMessage3SendingEnd(Teacher ShareFileSSDCallMessage3)
+		ExecutionEnd::ShareFileSSDExecution2StartEnd(ShareFileService ShareFileSSDExecution2)
+		ExecutionEnd::ShareFileSSDExecution2FinishEnd(ShareFileService ShareFileSSDExecution2)
+		MessageEnd::ShareFileSSDCallMessage3ReturnReceivingEnd(Teacher ShareFileSSDCallMessage3Return)
+
+	}
+
+	Interaction ManageFileSSD {
+
+		[Participants: Student Teacher ManageFileService]
+
+		CallMessage::ManageFileSSDCallMessage1(StudentAddFile ManageFileSSDCallMessage1SendingEnd -> ManageFileSSDExecution1StartEnd)
+		ReturnMessage::ManageFileSSDCallMessage1Return(ManageFileSSDExecution1FinishEnd -> ManageFileSSDCallMessage1ReturnReceivingEnd ManageFileSSDCallMessage1)
+		CallMessage::ManageFileSSDCallMessage3(StudentDelFile ManageFileSSDCallMessage3SendingEnd -> ManageFileSSDExecution2StartEnd)
+		ReturnMessage::ManageFileSSDCallMessage3Return(ManageFileSSDExecution2FinishEnd -> ManageFileSSDCallMessage3ReturnReceivingEnd ManageFileSSDCallMessage3)
+		CallMessage::ManageFileSSDCallMessage5(TeacherAddFile ManageFileSSDCallMessage5SendingEnd -> ManageFileSSDExecution3StartEnd)
+		ReturnMessage::ManageFileSSDCallMessage5Return(ManageFileSSDExecution3FinishEnd -> ManageFileSSDCallMessage5ReturnReceivingEnd ManageFileSSDCallMessage5)
+		CallMessage::ManageFileSSDCallMessage7(TeacherDelFile ManageFileSSDCallMessage7SendingEnd -> ManageFileSSDExecution4StartEnd)
+		ReturnMessage::ManageFileSSDCallMessage7Return(ManageFileSSDExecution4FinishEnd -> ManageFileSSDCallMessage7ReturnReceivingEnd ManageFileSSDCallMessage7)
+
+		Execution::ManageFileSSDExecution1(ManageFileService ManageFileSSDExecution1StartEnd ManageFileSSDExecution1FinishEnd)
+		Execution::ManageFileSSDExecution2(ManageFileService ManageFileSSDExecution2StartEnd ManageFileSSDExecution2FinishEnd)
+		Execution::ManageFileSSDExecution3(ManageFileService ManageFileSSDExecution3StartEnd ManageFileSSDExecution3FinishEnd)
+		Execution::ManageFileSSDExecution4(ManageFileService ManageFileSSDExecution4StartEnd ManageFileSSDExecution4FinishEnd)
+
+		MessageEnd::ManageFileSSDCallMessage1SendingEnd(Student ManageFileSSDCallMessage1)
+		ExecutionEnd::ManageFileSSDExecution1StartEnd(ManageFileService ManageFileSSDExecution1)
+		ExecutionEnd::ManageFileSSDExecution1FinishEnd(ManageFileService ManageFileSSDExecution1)
+		MessageEnd::ManageFileSSDCallMessage1ReturnReceivingEnd(Student ManageFileSSDCallMessage1Return)
+		MessageEnd::ManageFileSSDCallMessage3SendingEnd(Student ManageFileSSDCallMessage3)
+		ExecutionEnd::ManageFileSSDExecution2StartEnd(ManageFileService ManageFileSSDExecution2)
+		ExecutionEnd::ManageFileSSDExecution2FinishEnd(ManageFileService ManageFileSSDExecution2)
+		MessageEnd::ManageFileSSDCallMessage3ReturnReceivingEnd(Student ManageFileSSDCallMessage3Return)
+		MessageEnd::ManageFileSSDCallMessage5SendingEnd(Teacher ManageFileSSDCallMessage5)
+		ExecutionEnd::ManageFileSSDExecution3StartEnd(ManageFileService ManageFileSSDExecution3)
+		ExecutionEnd::ManageFileSSDExecution3FinishEnd(ManageFileService ManageFileSSDExecution3)
+		MessageEnd::ManageFileSSDCallMessage5ReturnReceivingEnd(Teacher ManageFileSSDCallMessage5Return)
+		MessageEnd::ManageFileSSDCallMessage7SendingEnd(Teacher ManageFileSSDCallMessage7)
+		ExecutionEnd::ManageFileSSDExecution4StartEnd(ManageFileService ManageFileSSDExecution4)
+		ExecutionEnd::ManageFileSSDExecution4FinishEnd(ManageFileService ManageFileSSDExecution4)
+		MessageEnd::ManageFileSSDCallMessage7ReturnReceivingEnd(Teacher ManageFileSSDCallMessage7Return)
+
+	}
+
+	Interaction ReserveMeetingSSD {
+
+		[Participants: Teacher ReserveMeetingService]
+
+		CallMessage::ReserveMeetingSSDCallMessage1(inputId ReserveMeetingSSDCallMessage1SendingEnd -> ReserveMeetingSSDExecution1StartEnd)
+		ReturnMessage::ReserveMeetingSSDCallMessage1Return(ReserveMeetingSSDExecution1FinishEnd -> ReserveMeetingSSDCallMessage1ReturnReceivingEnd ReserveMeetingSSDCallMessage1)
+		CallMessage::ReserveMeetingSSDCallMessage3(inputPassword ReserveMeetingSSDCallMessage3SendingEnd -> ReserveMeetingSSDExecution2StartEnd)
+		ReturnMessage::ReserveMeetingSSDCallMessage3Return(ReserveMeetingSSDExecution2FinishEnd -> ReserveMeetingSSDCallMessage3ReturnReceivingEnd ReserveMeetingSSDCallMessage3)
+		CallMessage::ReserveMeetingSSDCallMessage5(inputMeetingTime ReserveMeetingSSDCallMessage5SendingEnd -> ReserveMeetingSSDExecution3StartEnd)
+		ReturnMessage::ReserveMeetingSSDCallMessage5Return(ReserveMeetingSSDExecution3FinishEnd -> ReserveMeetingSSDCallMessage5ReturnReceivingEnd ReserveMeetingSSDCallMessage5)
+		CallMessage::ReserveMeetingSSDCallMessage7(inputMeetingPlace ReserveMeetingSSDCallMessage7SendingEnd -> ReserveMeetingSSDExecution4StartEnd)
+		ReturnMessage::ReserveMeetingSSDCallMessage7Return(ReserveMeetingSSDExecution4FinishEnd -> ReserveMeetingSSDCallMessage7ReturnReceivingEnd ReserveMeetingSSDCallMessage7)
+
+		Execution::ReserveMeetingSSDExecution1(ReserveMeetingService ReserveMeetingSSDExecution1StartEnd ReserveMeetingSSDExecution1FinishEnd)
+		Execution::ReserveMeetingSSDExecution2(ReserveMeetingService ReserveMeetingSSDExecution2StartEnd ReserveMeetingSSDExecution2FinishEnd)
+		Execution::ReserveMeetingSSDExecution3(ReserveMeetingService ReserveMeetingSSDExecution3StartEnd ReserveMeetingSSDExecution3FinishEnd)
+		Execution::ReserveMeetingSSDExecution4(ReserveMeetingService ReserveMeetingSSDExecution4StartEnd ReserveMeetingSSDExecution4FinishEnd)
+
+		MessageEnd::ReserveMeetingSSDCallMessage1SendingEnd(Teacher ReserveMeetingSSDCallMessage1)
+		ExecutionEnd::ReserveMeetingSSDExecution1StartEnd(ReserveMeetingService ReserveMeetingSSDExecution1)
+		ExecutionEnd::ReserveMeetingSSDExecution1FinishEnd(ReserveMeetingService ReserveMeetingSSDExecution1)
+		MessageEnd::ReserveMeetingSSDCallMessage1ReturnReceivingEnd(Teacher ReserveMeetingSSDCallMessage1Return)
+		MessageEnd::ReserveMeetingSSDCallMessage3SendingEnd(Teacher ReserveMeetingSSDCallMessage3)
+		ExecutionEnd::ReserveMeetingSSDExecution2StartEnd(ReserveMeetingService ReserveMeetingSSDExecution2)
+		ExecutionEnd::ReserveMeetingSSDExecution2FinishEnd(ReserveMeetingService ReserveMeetingSSDExecution2)
+		MessageEnd::ReserveMeetingSSDCallMessage3ReturnReceivingEnd(Teacher ReserveMeetingSSDCallMessage3Return)
+		MessageEnd::ReserveMeetingSSDCallMessage5SendingEnd(Teacher ReserveMeetingSSDCallMessage5)
+		ExecutionEnd::ReserveMeetingSSDExecution3StartEnd(ReserveMeetingService ReserveMeetingSSDExecution3)
+		ExecutionEnd::ReserveMeetingSSDExecution3FinishEnd(ReserveMeetingService ReserveMeetingSSDExecution3)
+		MessageEnd::ReserveMeetingSSDCallMessage5ReturnReceivingEnd(Teacher ReserveMeetingSSDCallMessage5Return)
+		MessageEnd::ReserveMeetingSSDCallMessage7SendingEnd(Teacher ReserveMeetingSSDCallMessage7)
+		ExecutionEnd::ReserveMeetingSSDExecution4StartEnd(ReserveMeetingService ReserveMeetingSSDExecution4)
+		ExecutionEnd::ReserveMeetingSSDExecution4FinishEnd(ReserveMeetingService ReserveMeetingSSDExecution4)
+		MessageEnd::ReserveMeetingSSDCallMessage7ReturnReceivingEnd(Teacher ReserveMeetingSSDCallMessage7Return)
+
+	}
+
+	Interaction InformStudentsSSD {
+
+		[Participants: Teacher InformStudentsService]
+
+	}
+
+	Service LabAssistantSystem {
+
+	}
+
+	Service ThirdPartyServices {
+
+	}
+
+	Service WeeklyService {
+
+	}
+
+	Service CreateWeeklyService {
+
+		[Operation]
+		inputWeeklyInfo(weeklyInfo)
+
+	}
+
+	Service LaunchTaskService {
+
+		[Operation]
+		launchTask(taskinfo)
+
+	}
+
+	Service ViewWeeklyService {
+
+		[Operation]
+		viewWeekly(weeklyId)
+
+	}
+
+	Service AssignTaskService {
+
+		[Operation]
+		assignTask(taskId, studentIds)
+
+	}
+
+	Service UpdateTaskProcessionService {
+
+		[Operation]
+		undateTaskProcession(taskId, procession)
+
+	}
+
+	Service UploadProblemService {
+
+		[Operation]
+		uploadProblem(taskId, problem)
+
+	}
+
+	Service PlanManageSystem {
+
+	}
+
+	Service ManagePlansService {
+
+		[Operation]
+		inputPlanInformation(plan)
+		teacherInputPlanInformation(plan)
+
+	}
+
+	Service SupervisePlansService {
+
+		[Operation]
+		inputPlanInformationToSupervise(plan)
+
+	}
+
+	Service CancelShareService {
+
+		[Operation]
+		studentCancelSharing(file)
+		submitInfo(info)
+		teacherCancelSharing(file)
+
+	}
+
+	Service RepresentInfoService {
+
+		[Operation]
+		submitStudentName(name)
+		submitTeacherName(name)
+		submitStudentInfo(info)
+		submitTeacherInfo(info)
+		submitTeacher(teacher)
+		addStudent(student)
+		delStudent(student)
+
+	}
+
+	Service ShareFileService {
+
+		[Operation]
+		studentShareFile(person)
+		teacherShareFile(person)
+
+	}
+
+	Service ManageFileService {
+
+		[Operation]
+		studentAddFile(file)
+		studentDelFile(file)
+		teacherAddFile(file)
+		teacherDelFile(file)
+
+	}
+
+	Service ReserveMeetingService {
+
+		[Operation]
+		inputId(id)
+		inputPassword(password)
+		inputMeetingTime(time)
+		inputMeetingPlace(place)
+
+	}
+
+	Service InformStudentsService {
+
+		[Operation]
+		inputId(id)
+		inputId2(id)
+
+	}
+
+}
+
+DomainModel LabAssistant {
+
+	@AutoCRUD Entity User {
+		Id : Integer
+		Name : String
+		Password : String
+		Email : String
+		Phone : String
+		Role : String
+
+		[Refer]
+		UsertoPlan : Plan* Association
+	}
+
+	@AutoCRUD Entity Plan {
+		Id : Integer
+		Title : String
+		Content : String
+		Type : String
+		CreatorId : Integer
+		BeginDate : Date
+		EndDate : Date
+	}
+
+}
+
