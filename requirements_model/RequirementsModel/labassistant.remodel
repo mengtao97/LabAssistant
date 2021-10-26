@@ -19,34 +19,33 @@ UseCaseModel LabAssistant {
 	UC::receiveNotification
 	UC::checkIn
 
-	Actor Teacher {
+	Actor Teacher extends User {
 		viewWeekly
 		assignTask
 		createWeekly
 		launchTask
 		managePlans
 		supervisePlans
-		representInfo
-		manageFile
-		shareFile
-		cancelShare
 		reserveMeeting
 		informStudents
 		organizeSignIn
 		makeConclusion
-	}
+		}
 
-	Actor Student {
+	Actor Student extends User {
 		updateTaskProcession
 		viewWeekly
 		uploadProblem
 		managePlans
-		representInfo
-		manageFile
-		shareFile
-		cancelShare
 		receiveNotification
 		checkIn
+		}
+
+	Actor User {
+		cancelShare
+		shareFile
+		manageFile
+		representInfo
 	}
 
 	Interaction ManagePlansSSD {
@@ -101,6 +100,8 @@ DomainModel LabAssistant {
 
 		[Refer]
 		UsertoPlan : Plan* Association
+	Browses : MyFile* Association
+		Teacher : User Association
 	}
 
 	@AutoCRUD Entity Plan {
@@ -111,6 +112,11 @@ DomainModel LabAssistant {
 		CreatorId : Integer
 		BeginDate : Date
 		EndDate : Date
+	}
+
+Entity MyFile {
+		FileName : String
+		OwnerID : Integer
 	}
 
 }
