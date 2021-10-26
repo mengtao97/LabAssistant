@@ -2,34 +2,36 @@ UseCaseModel GMS {
 
 	UC::reserveMeeting definedBySSD(ReserveMeetingSSD) relatedService(ReserveMeetingService)
 	UC::informStudents definedBySSD(InformStudentsSSD) relatedService(InformStudentsService)
-	UC::organizeSignIn
-	UC::makeConclusion
-	UC::receiveNotification
-	UC::checkIn
+	UC::holdSignIn definedBySSD(HoldSignInSSD) relatedService(HoldSignInService)
+	UC::makeConclusion definedBySSD(MakeConclusionSSD) relatedService(MakeConclusionService)
+	UC::checkInvitation definedBySSD(CheckInvitationSSD) relatedService(CheckInvitationService)
+	UC::signIn definedBySSD(SignInSSD) relatedService(SignInService)
+	UC::checkConclusion definedBySSD(CheckConclusionSSD) relatedService(CheckConclusionService)
 
 	Actor Teacher {
 		reserveMeeting
-	informStudents
-		organizeSignIn
-	makeConclusion
+		informStudents
+	holdSignIn
+		makeConclusion
 	}
 
 	Actor Student {
-		receiveNotification
-		checkIn
+		checkInvitation
+		signIn
+		checkConclusion
 	}
 
 	Interaction ReserveMeetingSSD {
 
 		[Participants: Teacher ReserveMeetingService]
 
-		CallMessage::ReserveMeetingSSDCallMessage1(inputId ReserveMeetingSSDCallMessage1SendingEnd -> ReserveMeetingSSDExecution1StartEnd)
+		CallMessage::ReserveMeetingSSDCallMessage1(inputID ReserveMeetingSSDCallMessage1SendingEnd -> ReserveMeetingSSDExecution1StartEnd)
 		ReturnMessage::ReserveMeetingSSDCallMessage1Return(ReserveMeetingSSDExecution1FinishEnd -> ReserveMeetingSSDCallMessage1ReturnReceivingEnd ReserveMeetingSSDCallMessage1)
 		CallMessage::ReserveMeetingSSDCallMessage3(inputPassword ReserveMeetingSSDCallMessage3SendingEnd -> ReserveMeetingSSDExecution2StartEnd)
 		ReturnMessage::ReserveMeetingSSDCallMessage3Return(ReserveMeetingSSDExecution2FinishEnd -> ReserveMeetingSSDCallMessage3ReturnReceivingEnd ReserveMeetingSSDCallMessage3)
-		CallMessage::ReserveMeetingSSDCallMessage5(inputMeetingTime ReserveMeetingSSDCallMessage5SendingEnd -> ReserveMeetingSSDExecution3StartEnd)
+		CallMessage::ReserveMeetingSSDCallMessage5(inputTime ReserveMeetingSSDCallMessage5SendingEnd -> ReserveMeetingSSDExecution3StartEnd)
 		ReturnMessage::ReserveMeetingSSDCallMessage5Return(ReserveMeetingSSDExecution3FinishEnd -> ReserveMeetingSSDCallMessage5ReturnReceivingEnd ReserveMeetingSSDCallMessage5)
-		CallMessage::ReserveMeetingSSDCallMessage7(inputMeetingPlace ReserveMeetingSSDCallMessage7SendingEnd -> ReserveMeetingSSDExecution4StartEnd)
+		CallMessage::ReserveMeetingSSDCallMessage7(inputPlace ReserveMeetingSSDCallMessage7SendingEnd -> ReserveMeetingSSDExecution4StartEnd)
 		ReturnMessage::ReserveMeetingSSDCallMessage7Return(ReserveMeetingSSDExecution4FinishEnd -> ReserveMeetingSSDCallMessage7ReturnReceivingEnd ReserveMeetingSSDCallMessage7)
 
 		Execution::ReserveMeetingSSDExecution1(ReserveMeetingService ReserveMeetingSSDExecution1StartEnd ReserveMeetingSSDExecution1FinishEnd)
@@ -60,6 +62,110 @@ UseCaseModel GMS {
 
 		[Participants: Teacher InformStudentsService]
 
+		CallMessage::InformStudentsSSDCallMessage1(inputStudents InformStudentsSSDCallMessage1SendingEnd -> InformStudentsSSDExecution1StartEnd)
+		ReturnMessage::InformStudentsSSDCallMessage1Return(InformStudentsSSDExecution1FinishEnd -> InformStudentsSSDCallMessage1ReturnReceivingEnd InformStudentsSSDCallMessage1)
+
+		Execution::InformStudentsSSDExecution1(InformStudentsService InformStudentsSSDExecution1StartEnd InformStudentsSSDExecution1FinishEnd)
+
+		MessageEnd::InformStudentsSSDCallMessage1SendingEnd(Teacher InformStudentsSSDCallMessage1)
+		ExecutionEnd::InformStudentsSSDExecution1StartEnd(InformStudentsService InformStudentsSSDExecution1)
+		ExecutionEnd::InformStudentsSSDExecution1FinishEnd(InformStudentsService InformStudentsSSDExecution1)
+		MessageEnd::InformStudentsSSDCallMessage1ReturnReceivingEnd(Teacher InformStudentsSSDCallMessage1Return)
+
+	}
+
+	Interaction HoldSignInSSD {
+
+		[Participants: Teacher HoldSignInService]
+
+		CallMessage::HoldSignInSSDCallMessage1(holdASignIn HoldSignInSSDCallMessage1SendingEnd -> HoldSignInSSDExecution1StartEnd)
+		ReturnMessage::HoldSignInSSDCallMessage1Return(HoldSignInSSDExecution1FinishEnd -> HoldSignInSSDCallMessage1ReturnReceivingEnd HoldSignInSSDCallMessage1)
+
+		Execution::HoldSignInSSDExecution1(HoldSignInService HoldSignInSSDExecution1StartEnd HoldSignInSSDExecution1FinishEnd)
+
+		MessageEnd::HoldSignInSSDCallMessage1SendingEnd(Teacher HoldSignInSSDCallMessage1)
+		ExecutionEnd::HoldSignInSSDExecution1StartEnd(HoldSignInService HoldSignInSSDExecution1)
+		ExecutionEnd::HoldSignInSSDExecution1FinishEnd(HoldSignInService HoldSignInSSDExecution1)
+		MessageEnd::HoldSignInSSDCallMessage1ReturnReceivingEnd(Teacher HoldSignInSSDCallMessage1Return)
+
+	}
+
+	Interaction MakeConclusionSSD {
+
+		[Participants: Teacher MakeConclusionService]
+
+		CallMessage::MakeConclusionSSDCallMessage1(makeAConclusion MakeConclusionSSDCallMessage1SendingEnd -> MakeConclusionSSDExecution1StartEnd)
+		ReturnMessage::MakeConclusionSSDCallMessage1Return(MakeConclusionSSDExecution1FinishEnd -> MakeConclusionSSDCallMessage1ReturnReceivingEnd MakeConclusionSSDCallMessage1)
+
+		Execution::MakeConclusionSSDExecution1(MakeConclusionService MakeConclusionSSDExecution1StartEnd MakeConclusionSSDExecution1FinishEnd)
+
+		MessageEnd::MakeConclusionSSDCallMessage1SendingEnd(Teacher MakeConclusionSSDCallMessage1)
+		ExecutionEnd::MakeConclusionSSDExecution1StartEnd(MakeConclusionService MakeConclusionSSDExecution1)
+		ExecutionEnd::MakeConclusionSSDExecution1FinishEnd(MakeConclusionService MakeConclusionSSDExecution1)
+		MessageEnd::MakeConclusionSSDCallMessage1ReturnReceivingEnd(Teacher MakeConclusionSSDCallMessage1Return)
+
+	}
+
+	Interaction CheckInvitationSSD {
+
+		[Participants: Student CheckInvitationService]
+
+		CallMessage::CheckInvitationSSDCallMessage1(inputId CheckInvitationSSDCallMessage1SendingEnd -> CheckInvitationSSDExecution1StartEnd)
+		ReturnMessage::CheckInvitationSSDCallMessage1Return(CheckInvitationSSDExecution1FinishEnd -> CheckInvitationSSDCallMessage1ReturnReceivingEnd CheckInvitationSSDCallMessage1)
+		CallMessage::CheckInvitationSSDCallMessage3(inputPassWord CheckInvitationSSDCallMessage3SendingEnd -> CheckInvitationSSDExecution2StartEnd)
+		ReturnMessage::CheckInvitationSSDCallMessage3Return(CheckInvitationSSDExecution2FinishEnd -> CheckInvitationSSDCallMessage3ReturnReceivingEnd CheckInvitationSSDCallMessage3)
+		CallMessage::CheckInvitationSSDCallMessage5(checkInvitation CheckInvitationSSDCallMessage5SendingEnd -> CheckInvitationSSDExecution3StartEnd)
+		ReturnMessage::CheckInvitationSSDCallMessage5Return(CheckInvitationSSDExecution3FinishEnd -> CheckInvitationSSDCallMessage5ReturnReceivingEnd CheckInvitationSSDCallMessage5)
+
+		Execution::CheckInvitationSSDExecution1(CheckInvitationService CheckInvitationSSDExecution1StartEnd CheckInvitationSSDExecution1FinishEnd)
+		Execution::CheckInvitationSSDExecution2(CheckInvitationService CheckInvitationSSDExecution2StartEnd CheckInvitationSSDExecution2FinishEnd)
+		Execution::CheckInvitationSSDExecution3(CheckInvitationService CheckInvitationSSDExecution3StartEnd CheckInvitationSSDExecution3FinishEnd)
+
+		MessageEnd::CheckInvitationSSDCallMessage1SendingEnd(Student CheckInvitationSSDCallMessage1)
+		ExecutionEnd::CheckInvitationSSDExecution1StartEnd(CheckInvitationService CheckInvitationSSDExecution1)
+		ExecutionEnd::CheckInvitationSSDExecution1FinishEnd(CheckInvitationService CheckInvitationSSDExecution1)
+		MessageEnd::CheckInvitationSSDCallMessage1ReturnReceivingEnd(Student CheckInvitationSSDCallMessage1Return)
+		MessageEnd::CheckInvitationSSDCallMessage3SendingEnd(Student CheckInvitationSSDCallMessage3)
+		ExecutionEnd::CheckInvitationSSDExecution2StartEnd(CheckInvitationService CheckInvitationSSDExecution2)
+		ExecutionEnd::CheckInvitationSSDExecution2FinishEnd(CheckInvitationService CheckInvitationSSDExecution2)
+		MessageEnd::CheckInvitationSSDCallMessage3ReturnReceivingEnd(Student CheckInvitationSSDCallMessage3Return)
+		MessageEnd::CheckInvitationSSDCallMessage5SendingEnd(Student CheckInvitationSSDCallMessage5)
+		ExecutionEnd::CheckInvitationSSDExecution3StartEnd(CheckInvitationService CheckInvitationSSDExecution3)
+		ExecutionEnd::CheckInvitationSSDExecution3FinishEnd(CheckInvitationService CheckInvitationSSDExecution3)
+		MessageEnd::CheckInvitationSSDCallMessage5ReturnReceivingEnd(Student CheckInvitationSSDCallMessage5Return)
+
+	}
+
+	Interaction SignInSSD {
+
+		[Participants: Student SignInService]
+
+		CallMessage::SignInSSDCallMessage1(signIn SignInSSDCallMessage1SendingEnd -> SignInSSDExecution1StartEnd)
+		ReturnMessage::SignInSSDCallMessage1Return(SignInSSDExecution1FinishEnd -> SignInSSDCallMessage1ReturnReceivingEnd SignInSSDCallMessage1)
+
+		Execution::SignInSSDExecution1(SignInService SignInSSDExecution1StartEnd SignInSSDExecution1FinishEnd)
+
+		MessageEnd::SignInSSDCallMessage1SendingEnd(Student SignInSSDCallMessage1)
+		ExecutionEnd::SignInSSDExecution1StartEnd(SignInService SignInSSDExecution1)
+		ExecutionEnd::SignInSSDExecution1FinishEnd(SignInService SignInSSDExecution1)
+		MessageEnd::SignInSSDCallMessage1ReturnReceivingEnd(Student SignInSSDCallMessage1Return)
+
+	}
+
+	Interaction CheckConclusionSSD {
+
+		[Participants: Student CheckConclusionService]
+
+		CallMessage::CheckConclusionSSDCallMessage1(checkConclusion CheckConclusionSSDCallMessage1SendingEnd -> CheckConclusionSSDExecution1StartEnd)
+		ReturnMessage::CheckConclusionSSDCallMessage1Return(CheckConclusionSSDExecution1FinishEnd -> CheckConclusionSSDCallMessage1ReturnReceivingEnd CheckConclusionSSDCallMessage1)
+
+		Execution::CheckConclusionSSDExecution1(CheckConclusionService CheckConclusionSSDExecution1StartEnd CheckConclusionSSDExecution1FinishEnd)
+
+		MessageEnd::CheckConclusionSSDCallMessage1SendingEnd(Student CheckConclusionSSDCallMessage1)
+		ExecutionEnd::CheckConclusionSSDExecution1StartEnd(CheckConclusionService CheckConclusionSSDExecution1)
+		ExecutionEnd::CheckConclusionSSDExecution1FinishEnd(CheckConclusionService CheckConclusionSSDExecution1)
+		MessageEnd::CheckConclusionSSDCallMessage1ReturnReceivingEnd(Student CheckConclusionSSDCallMessage1Return)
+
 	}
 
 	Service GMSSystem {} Service ThirdPartyServices {}
@@ -67,55 +173,57 @@ UseCaseModel GMS {
 	Service ReserveMeetingService {
 
 		[Operation]
-		inputId(id)
+		inputID(id)
 		inputPassword(password)
-		inputMeetingTime(time)
-		inputMeetingPlace(place)
+		inputTime(time)
+		inputPlace(place)
 
 	}
 
 	Service InformStudentsService {
 
 		[Operation]
+		inputStudents(students)
+
+	}
+
+Service HoldSignInService {
+
+		[Operation]
+		holdASignIn()
+
+	}
+
+	Service MakeConclusionService {
+
+		[Operation]
+		makeAConclusion()
+
+	}
+
+Service CheckInvitationService {
+
+		[Operation]
 		inputId(id)
-		inputId(id)
+		inputPassWord(password)
+		checkInvitation()
+
+	}
+
+	Service SignInService {
+
+		[Operation]
+		signIn()
+
+	}
+
+	Service CheckConclusionService {
+
+		[Operation]
+		checkConclusion()
 
 	}
 
 }
-DomainModel GMS {
-
-	Entity Teacher extends User {
-		[Refer]
-		TeachertoMeeting : Meeting* Association
-	}
-
-	Entity Student extends User {
-		[Refer]
-		StudenttoMeeting : Meeting* Association
-	}
-
-	Entity User {
-		id : String
-		password : String
-	}
-
-	Entity Meeting {
-		time : Date
-		place : String
-
-		[Refer]
-		MeetingtoStudent : Student* ! Association
-		MeetingtoTeacher : Teacher ! Association
-		MeetingtoConclusion : Conclusion Association
-	}
-
-	Entity Conclusion {
-		content : String
-
-		[Refer]
-		ConclusiontoMeeting : Meeting ! Association
-	}
-
-}
+DomainModel GMS {}
 
