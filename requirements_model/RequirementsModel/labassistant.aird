@@ -20,6 +20,30 @@
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.0"/>
       </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_UjnZ5jbgEeyWbagfJCeGRw" name="ReserveMeetingSSD" repPath="#_UjnZ4DbgEeyWbagfJCeGRw" changeId="05fd49df-ad90-4cb2-bd9b-c86b2da41f26">
+        <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+        <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.1"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_svFfZjbgEeyWbagfJCeGRw" name="InformStudentsSSD" repPath="#_svFfYDbgEeyWbagfJCeGRw" changeId="d049f97d-0d86-4e98-918e-6ec1857956e2">
+        <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+        <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.2"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_2FE-ZjbgEeyWbagfJCeGRw" name="OrganizeSignInSSD" repPath="#_2FE-YDbgEeyWbagfJCeGRw" changeId="c87fa9f2-8c42-4f46-84d1-7623c9f94007">
+        <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+        <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.3"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_AuyvFjbhEeyWbagfJCeGRw" name="MakeConclusionSSD" repPath="#_AuyvEDbhEeyWbagfJCeGRw" changeId="c296933c-fe3c-40bc-a8b3-4cb43db8519c">
+        <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+        <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.4"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_KGwkBjbhEeyWbagfJCeGRw" name="ReceiveNotificationSSD" repPath="#_KGwkADbhEeyWbagfJCeGRw" changeId="329c1021-a973-4f98-99f6-b2b5c3ee3273">
+        <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+        <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.5"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_TLeFxjbhEeyWbagfJCeGRw" name="CheckInSSD" repPath="#_TLeFwDbhEeyWbagfJCeGRw" changeId="59dc4db9-2865-4f45-88fc-6aa13a60d233">
+        <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+        <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.6"/>
+      </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
   <diagram:DSemanticDiagram uid="_k-vAADYFEeyhR-2KT_P4hg">
@@ -1685,5 +1709,1235 @@
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Sh6NoDYsEeyxVZxgizVFzg"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer"/>
     <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.0"/>
+  </sequence:SequenceDDiagram>
+  <sequence:SequenceDDiagram uid="_UjnZ4DbgEeyWbagfJCeGRw" headerHeight="3">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_UnfNQDbgEeyWbagfJCeGRw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_UnfNQTbgEeyWbagfJCeGRw" type="Sirius" element="_UjnZ4DbgEeyWbagfJCeGRw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_UnoXPjbgEeyWbagfJCeGRw" type="2001" element="_UnoXMDbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_UnyIMDbgEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_UnyIMTbgEeyWbagfJCeGRw" x="31" y="12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Un75NTbgEeyWbagfJCeGRw" type="3001" element="_UnoXNjbgEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_Un75ODbgEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Un75OTbgEeyWbagfJCeGRw" x="1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Un75PTbgEeyWbagfJCeGRw" type="3003" element="_UnoXNzbgEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Un75PjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Un75PzbgEeyWbagfJCeGRw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Un75NjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Un75NzbgEeyWbagfJCeGRw" y="44" width="10" height="1000"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Un75OjbgEeyWbagfJCeGRw" type="3005" element="_UnoXMTbgEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Un75OzbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Un75PDbgEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_UnoXPzbgEeyWbagfJCeGRw" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UnoXQDbgEeyWbagfJCeGRw" x="50" y="50" width="30" height="52"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Un75MDbgEeyWbagfJCeGRw" type="2001" element="_UnoXMzbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_Un75MzbgEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Un75NDbgEeyWbagfJCeGRw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Un75QDbgEeyWbagfJCeGRw" type="3001" element="_UnoXOTbgEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_Un75QzbgEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Un75RDbgEeyWbagfJCeGRw" x="-44"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Un75SDbgEeyWbagfJCeGRw" type="3003" element="_UnoXOjbgEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Un75STbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Un75SjbgEeyWbagfJCeGRw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ZGQeoDbgEeyWbagfJCeGRw" type="3001" element="_ZGGuLDbgEeyWbagfJCeGRw">
+              <children xmi:type="notation:Node" xmi:id="_ZGQeozbgEeyWbagfJCeGRw" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ZGQepDbgEeyWbagfJCeGRw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ZGQepTbgEeyWbagfJCeGRw" type="3003" element="_ZGGuLTbgEeyWbagfJCeGRw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_ZGQepjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZGQepzbgEeyWbagfJCeGRw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ZGQeoTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZGQeojbgEeyWbagfJCeGRw" x="-140" y="33" width="10" height="60"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_eMs0djbgEeyWbagfJCeGRw" type="3001" element="_eMs0YDbgEeyWbagfJCeGRw">
+              <children xmi:type="notation:Node" xmi:id="_eMs0eTbgEeyWbagfJCeGRw" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_eMs0ejbgEeyWbagfJCeGRw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_eMs0ezbgEeyWbagfJCeGRw" type="3003" element="_eMs0YTbgEeyWbagfJCeGRw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_eMs0fDbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMs0fTbgEeyWbagfJCeGRw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_eMs0dzbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMs0eDbgEeyWbagfJCeGRw" x="-140" y="120" width="10" height="60"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_hznQyDbgEeyWbagfJCeGRw" type="3001" element="_hznQqDbgEeyWbagfJCeGRw">
+              <children xmi:type="notation:Node" xmi:id="_hznQyzbgEeyWbagfJCeGRw" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hznQzDbgEeyWbagfJCeGRw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hznQzTbgEeyWbagfJCeGRw" type="3003" element="_hznQqTbgEeyWbagfJCeGRw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_hznQzjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hznQzzbgEeyWbagfJCeGRw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_hznQyTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hznQyjbgEeyWbagfJCeGRw" x="-140" y="203" width="10" height="60"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_lOmxLjbgEeyWbagfJCeGRw" type="3001" element="_lOmxBDbgEeyWbagfJCeGRw">
+              <children xmi:type="notation:Node" xmi:id="_lOmxMTbgEeyWbagfJCeGRw" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_lOmxMjbgEeyWbagfJCeGRw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_lOmxMzbgEeyWbagfJCeGRw" type="3003" element="_lOmxBTbgEeyWbagfJCeGRw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_lOmxNDbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOmxNTbgEeyWbagfJCeGRw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_lOmxLzbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOmxMDbgEeyWbagfJCeGRw" x="-140" y="292" width="10" height="60"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Un75QTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Un75QjbgEeyWbagfJCeGRw" y="42" width="10" height="1002"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Un75RTbgEeyWbagfJCeGRw" type="3003" element="_UnoXNDbgEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Un75RjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Un75RzbgEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Un75MTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Un75MjbgEeyWbagfJCeGRw" x="263" y="50" width="295" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_UnfNQjbgEeyWbagfJCeGRw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_ZGQeqDbgEeyWbagfJCeGRw" type="4001" element="_ZF9jsDbgEeyWbagfJCeGRw" source="_Un75NTbgEeyWbagfJCeGRw" target="_Un75QDbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_ZGQerDbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZGQerTbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZGQerjbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZGQerzbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZGQesDbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZGQesTbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZGQeqTbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_ZGQeqjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="10" bold="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZGQeqzbgEeyWbagfJCeGRw" points="[0, 0, -345, 0]$[344, 0, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZGQesjbgEeyWbagfJCeGRw" id="(0.5,0.031) custom"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZGQeszbgEeyWbagfJCeGRw" id="(0.5,0.03293413173652695) custom"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_ZGQetDbgEeyWbagfJCeGRw" type="4001" element="_ZGGuMzbgEeyWbagfJCeGRw" source="_Un75QDbgEeyWbagfJCeGRw" target="_Un75NTbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_ZGQeuDbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZGQeuTbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZGQeujbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZGQeuzbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZGQevDbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZGQevTbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZGQetTbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_ZGQetjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZGQetzbgEeyWbagfJCeGRw" points="[263, 93, 263, 91]$[50, 93, 50, 91]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZGQevjbgEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZGQevzbgEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_eMs0fjbgEeyWbagfJCeGRw" type="4001" element="_eMjDBDbgEeyWbagfJCeGRw" source="_Un75NTbgEeyWbagfJCeGRw" target="_Un75QDbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_eMs0gjbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMs0gzbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_eMs0hDbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMs0hTbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_eMs0hjbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMs0hzbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_eMs0fzbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_eMs0gDbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="10" bold="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_eMs0gTbgEeyWbagfJCeGRw" points="[0, 0, -345, 0]$[346, 0, 1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_eMs0iDbgEeyWbagfJCeGRw" id="(0.5,0.118) custom"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_eMs0iTbgEeyWbagfJCeGRw" id="(0.5,0.11976047904191617) custom"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_eMs0ijbgEeyWbagfJCeGRw" type="4001" element="_eMs0cTbgEeyWbagfJCeGRw" source="_Un75QDbgEeyWbagfJCeGRw" target="_Un75NTbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_eMs0jjbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMs0jzbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_eMs0kDbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMs0kTbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_eMs0kjbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMs0kzbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_eMs0izbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_eMs0jDbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_eMs0jTbgEeyWbagfJCeGRw" points="[263, 160, 263, 162]$[50, 160, 50, 162]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_eMs0lDbgEeyWbagfJCeGRw" id="(0.0,0.019860973187686197)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_eMs0lTbgEeyWbagfJCeGRw" id="(0.0,0.015920398009950248)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_hznQ0DbgEeyWbagfJCeGRw" type="4001" element="_hzdfWDbgEeyWbagfJCeGRw" source="_Un75NTbgEeyWbagfJCeGRw" target="_Un75QDbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_hznQ1DbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hznQ1TbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_hznQ1jbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hznQ1zbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_hznQ2DbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hznQ2TbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_hznQ0TbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_hznQ0jbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="10" bold="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hznQ0zbgEeyWbagfJCeGRw" points="[0, 0, -345, 0]$[344, 0, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hznQ2jbgEeyWbagfJCeGRw" id="(0.5,0.201) custom"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hznQ2zbgEeyWbagfJCeGRw" id="(0.5,0.2025948103792415) custom"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_hznQ3DbgEeyWbagfJCeGRw" type="4001" element="_hznQwzbgEeyWbagfJCeGRw" source="_Un75QDbgEeyWbagfJCeGRw" target="_Un75NTbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_hznQ4DbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hznQ4TbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_hznQ4jbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hznQ4zbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_hznQ5DbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hznQ5TbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_hznQ3TbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_hznQ3jbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hznQ3zbgEeyWbagfJCeGRw" points="[263, 161, 263, 162]$[50, 161, 50, 162]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hznQ5jbgEeyWbagfJCeGRw" id="(0.0,0.10228401191658391)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hznQ5zbgEeyWbagfJCeGRw" id="(0.0,0.09850746268656717)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_lOmxNjbgEeyWbagfJCeGRw" type="4001" element="_lOc_jDbgEeyWbagfJCeGRw" source="_Un75NTbgEeyWbagfJCeGRw" target="_Un75QDbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_lOmxOjbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOmxOzbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_lOmxPDbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOmxPTbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_lOmxPjbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOmxPzbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_lOmxNzbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_lOmxODbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="10" bold="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lOmxOTbgEeyWbagfJCeGRw" points="[0, 0, -345, 0]$[345, 0, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lOmxQDbgEeyWbagfJCeGRw" id="(0.5,0.29) custom"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lOmxQTbgEeyWbagfJCeGRw" id="(0.5,0.29141716566866266) custom"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_lOmxQjbgEeyWbagfJCeGRw" type="4001" element="_lOmxKTbgEeyWbagfJCeGRw" source="_Un75QDbgEeyWbagfJCeGRw" target="_Un75NTbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_lOmxRjbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOmxRzbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_lOmxSDbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOmxSTbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_lOmxSjbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOmxSzbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_lOmxQzbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_lOmxRDbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lOmxRTbgEeyWbagfJCeGRw" points="[263, 161, 263, 163]$[50, 161, 50, 163]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lOmxTDbgEeyWbagfJCeGRw" id="(0.0,0.1906653426017875)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lOmxTTbgEeyWbagfJCeGRw" id="(0.0,0.18706467661691542)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_UnoXPDbgEeyWbagfJCeGRw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_UnoXPTbgEeyWbagfJCeGRw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UnoXMDbgEeyWbagfJCeGRw" name=":Teacher" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+      <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_UpbG8DbgEeyWbagfJCeGRw" x="50" y="50" height="52" width="30"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_UnoXNjbgEeyWbagfJCeGRw" outgoingEdges="_ZF9jsDbgEeyWbagfJCeGRw _eMjDBDbgEeyWbagfJCeGRw _hzdfWDbgEeyWbagfJCeGRw _lOc_jDbgEeyWbagfJCeGRw" incomingEdges="_ZGGuMzbgEeyWbagfJCeGRw _eMs0cTbgEeyWbagfJCeGRw _hznQwzbgEeyWbagfJCeGRw _lOmxKTbgEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+        <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_UnoXNzbgEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_UnoXMTbgEeyWbagfJCeGRw" labelSize="12" showIcon="false" labelColor="39,76,114" workspacePath="/net.mydreamy.requirementmodel.design/images/actor.svg">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UnoXMzbgEeyWbagfJCeGRw" name=":ReserveMeetingService" width="12" height="5" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.3"/>
+      <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.3"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_UpbG8TbgEeyWbagfJCeGRw" x="263" y="50" height="50" width="295"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_UnoXOTbgEeyWbagfJCeGRw" outgoingEdges="_ZGGuMzbgEeyWbagfJCeGRw _eMs0cTbgEeyWbagfJCeGRw _hznQwzbgEeyWbagfJCeGRw _lOmxKTbgEeyWbagfJCeGRw" incomingEdges="_ZF9jsDbgEeyWbagfJCeGRw _eMjDBDbgEeyWbagfJCeGRw _hzdfWDbgEeyWbagfJCeGRw _lOc_jDbgEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.3"/>
+        <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.3"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_ZGGuLDbgEeyWbagfJCeGRw" width="1" height="6" resizeKind="NORTH_SOUTH">
+          <target xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@executions.0"/>
+          <semanticElements xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@executions.0"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_ZGZokDbgEeyWbagfJCeGRw" x="405" y="133" height="60" width="10"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_ZGGuLTbgEeyWbagfJCeGRw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_eMs0YDbgEeyWbagfJCeGRw" width="1" height="6" resizeKind="NORTH_SOUTH">
+          <target xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@executions.1"/>
+          <semanticElements xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@executions.1"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_eM198DbgEeyWbagfJCeGRw" x="405" y="220" height="60" width="10"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_eMs0YTbgEeyWbagfJCeGRw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_hznQqDbgEeyWbagfJCeGRw" width="1" height="6" resizeKind="NORTH_SOUTH">
+          <target xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@executions.2"/>
+          <semanticElements xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@executions.2"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_hzwaQDbgEeyWbagfJCeGRw" x="405" y="303" height="60" width="10"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_hznQqTbgEeyWbagfJCeGRw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_lOmxBDbgEeyWbagfJCeGRw" width="1" height="6" resizeKind="NORTH_SOUTH">
+          <target xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@executions.3"/>
+          <semanticElements xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@executions.3"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_lOwhgDbgEeyWbagfJCeGRw" x="405" y="392" height="60" width="10"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_lOmxBTbgEeyWbagfJCeGRw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_UnoXOjbgEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:Square" uid="_UnoXNDbgEeyWbagfJCeGRw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="194,239,255">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ZF9jsDbgEeyWbagfJCeGRw" name="inputId (id)" sourceNode="_UnoXNjbgEeyWbagfJCeGRw" targetNode="_UnoXOTbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.0"/>
+      <semanticElements xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.0"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_ZF9jtTbgEeyWbagfJCeGRw" y="133" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ZF9jsTbgEeyWbagfJCeGRw" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ZF9jsjbgEeyWbagfJCeGRw" labelSize="10" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:BasicMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ZGGuMzbgEeyWbagfJCeGRw" sourceNode="_UnoXOTbgEeyWbagfJCeGRw" targetNode="_UnoXNjbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.1"/>
+      <semanticElements xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.1"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_ZGZokTbgEeyWbagfJCeGRw" y="193" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ZGGuNDbgEeyWbagfJCeGRw" lineStyle="dot" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ZGGuNTbgEeyWbagfJCeGRw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_eMjDBDbgEeyWbagfJCeGRw" name="inputPassword (password)" sourceNode="_UnoXNjbgEeyWbagfJCeGRw" targetNode="_UnoXOTbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.2"/>
+      <semanticElements xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.2"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_eMjDCTbgEeyWbagfJCeGRw" y="220" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_eMjDBTbgEeyWbagfJCeGRw" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_eMjDBjbgEeyWbagfJCeGRw" labelSize="10" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:BasicMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_eMs0cTbgEeyWbagfJCeGRw" sourceNode="_UnoXOTbgEeyWbagfJCeGRw" targetNode="_UnoXNjbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.3"/>
+      <semanticElements xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.3"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_eM198TbgEeyWbagfJCeGRw" y="280" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_eMs0cjbgEeyWbagfJCeGRw" lineStyle="dot" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_eMs0czbgEeyWbagfJCeGRw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_hzdfWDbgEeyWbagfJCeGRw" name="inputTime (time)" sourceNode="_UnoXNjbgEeyWbagfJCeGRw" targetNode="_UnoXOTbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.4"/>
+      <semanticElements xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.4"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_hzdfXTbgEeyWbagfJCeGRw" y="303" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_hzdfWTbgEeyWbagfJCeGRw" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_hzdfWjbgEeyWbagfJCeGRw" labelSize="10" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:BasicMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_hznQwzbgEeyWbagfJCeGRw" sourceNode="_UnoXOTbgEeyWbagfJCeGRw" targetNode="_UnoXNjbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.5"/>
+      <semanticElements xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.5"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_hzwaQTbgEeyWbagfJCeGRw" y="363" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_hznQxDbgEeyWbagfJCeGRw" lineStyle="dot" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_hznQxTbgEeyWbagfJCeGRw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_lOc_jDbgEeyWbagfJCeGRw" name="inputPlace (place)" sourceNode="_UnoXNjbgEeyWbagfJCeGRw" targetNode="_UnoXOTbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.6"/>
+      <semanticElements xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.6"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_lOc_kTbgEeyWbagfJCeGRw" y="392" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_lOc_jTbgEeyWbagfJCeGRw" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_lOc_jjbgEeyWbagfJCeGRw" labelSize="10" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:BasicMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_lOmxKTbgEeyWbagfJCeGRw" sourceNode="_UnoXOTbgEeyWbagfJCeGRw" targetNode="_UnoXNjbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.7"/>
+      <semanticElements xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.1/@messages.7"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_lOwhgTbgEeyWbagfJCeGRw" y="452" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_lOmxKjbgEeyWbagfJCeGRw" lineStyle="dot" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_lOmxKzbgEeyWbagfJCeGRw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_UjnZ4TbgEeyWbagfJCeGRw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer"/>
+    <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.1"/>
+  </sequence:SequenceDDiagram>
+  <sequence:SequenceDDiagram uid="_svFfYDbgEeyWbagfJCeGRw" headerHeight="3">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_svFfZzbgEeyWbagfJCeGRw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_svFfaDbgEeyWbagfJCeGRw" type="Sirius" element="_svFfYDbgEeyWbagfJCeGRw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_svOpWzbgEeyWbagfJCeGRw" type="2001" element="_svFfajbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_svOpXjbgEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_svOpXzbgEeyWbagfJCeGRw" x="31" y="12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_svOpZTbgEeyWbagfJCeGRw" type="3001" element="_svOpUzbgEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_svOpaDbgEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_svOpaTbgEeyWbagfJCeGRw" x="1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_svOpbTbgEeyWbagfJCeGRw" type="3003" element="_svOpVDbgEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_svOpbjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svOpbzbgEeyWbagfJCeGRw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_svOpZjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svOpZzbgEeyWbagfJCeGRw" y="44" width="10" height="1000"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_svOpajbgEeyWbagfJCeGRw" type="3005" element="_svFfazbgEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_svOpazbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svOpbDbgEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_svOpXDbgEeyWbagfJCeGRw" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svOpXTbgEeyWbagfJCeGRw" x="50" y="50" width="30" height="52"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_svOpYDbgEeyWbagfJCeGRw" type="2001" element="_svOpUDbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_svOpYzbgEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_svOpZDbgEeyWbagfJCeGRw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_svOpcDbgEeyWbagfJCeGRw" type="3001" element="_svOpVjbgEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_svOpczbgEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_svOpdDbgEeyWbagfJCeGRw" x="-44"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_svOpeDbgEeyWbagfJCeGRw" type="3003" element="_svOpVzbgEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_svOpeTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svOpejbgEeyWbagfJCeGRw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_yFb5MDbgEeyWbagfJCeGRw" type="3001" element="_yFb5JDbgEeyWbagfJCeGRw">
+              <children xmi:type="notation:Node" xmi:id="_yFb5MzbgEeyWbagfJCeGRw" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_yFb5NDbgEeyWbagfJCeGRw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_yFb5NTbgEeyWbagfJCeGRw" type="3003" element="_yFb5JTbgEeyWbagfJCeGRw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_yFb5NjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yFb5NzbgEeyWbagfJCeGRw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_yFb5MTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yFb5MjbgEeyWbagfJCeGRw" x="-151" y="37" width="10" height="60"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_svOpcTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svOpcjbgEeyWbagfJCeGRw" y="42" width="10" height="1002"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_svOpdTbgEeyWbagfJCeGRw" type="3003" element="_svOpUTbgEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_svOpdjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svOpdzbgEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_svOpYTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svOpYjbgEeyWbagfJCeGRw" x="281" y="50" width="316" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_svFfaTbgEeyWbagfJCeGRw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_yFb5ODbgEeyWbagfJCeGRw" type="4001" element="_yFSIADbgEeyWbagfJCeGRw" source="_svOpZTbgEeyWbagfJCeGRw" target="_svOpcDbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_yFb5PDbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yFb5PTbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yFb5PjbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yFb5PzbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yFb5QDbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yFb5QTbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_yFb5OTbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_yFb5OjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="10" bold="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yFb5OzbgEeyWbagfJCeGRw" points="[0, 0, -374, 0]$[375, 0, 1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yFb5QjbgEeyWbagfJCeGRw" id="(0.5,0.035) custom"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yFb5QzbgEeyWbagfJCeGRw" id="(0.5,0.036926147704590816) custom"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_yFb5RDbgEeyWbagfJCeGRw" type="4001" element="_yFb5KzbgEeyWbagfJCeGRw" source="_svOpcDbgEeyWbagfJCeGRw" target="_svOpZTbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_yFb5SDbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yFb5STbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yFb5SjbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yFb5SzbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yFb5TDbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yFb5TTbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_yFb5RTbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_yFb5RjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yFb5RzbgEeyWbagfJCeGRw" points="[281, 97, 281, 95]$[50, 97, 50, 95]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yFb5TjbgEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yFb5TzbgEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_svOpWTbgEeyWbagfJCeGRw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_svOpWjbgEeyWbagfJCeGRw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_svFfajbgEeyWbagfJCeGRw" name=":Teacher" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+      <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_swktIDbgEeyWbagfJCeGRw" x="50" y="50" height="52" width="30"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_svOpUzbgEeyWbagfJCeGRw" outgoingEdges="_yFSIADbgEeyWbagfJCeGRw" incomingEdges="_yFb5KzbgEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+        <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_svOpVDbgEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_svFfazbgEeyWbagfJCeGRw" labelSize="12" showIcon="false" labelColor="39,76,114" workspacePath="/net.mydreamy.requirementmodel.design/images/actor.svg">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_svOpUDbgEeyWbagfJCeGRw" name=":InformStudentsService" width="12" height="5" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.4"/>
+      <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.4"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_swktITbgEeyWbagfJCeGRw" x="281" y="50" height="50" width="316"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_svOpVjbgEeyWbagfJCeGRw" outgoingEdges="_yFb5KzbgEeyWbagfJCeGRw" incomingEdges="_yFSIADbgEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.4"/>
+        <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.4"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_yFb5JDbgEeyWbagfJCeGRw" width="1" height="6" resizeKind="NORTH_SOUTH">
+          <target xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.2/@executions.0"/>
+          <semanticElements xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.2/@executions.0"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_yFb5UDbgEeyWbagfJCeGRw" x="434" y="137" height="60" width="10"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_yFb5JTbgEeyWbagfJCeGRw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_svOpVzbgEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:Square" uid="_svOpUTbgEeyWbagfJCeGRw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="194,239,255">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_yFSIADbgEeyWbagfJCeGRw" name="inputStudents (students)" sourceNode="_svOpUzbgEeyWbagfJCeGRw" targetNode="_svOpVjbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.2/@messages.0"/>
+      <semanticElements xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.2/@messages.0"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_yFSIBTbgEeyWbagfJCeGRw" y="137" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_yFSIATbgEeyWbagfJCeGRw" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_yFSIAjbgEeyWbagfJCeGRw" labelSize="10" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:BasicMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_yFb5KzbgEeyWbagfJCeGRw" sourceNode="_svOpVjbgEeyWbagfJCeGRw" targetNode="_svOpUzbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.2/@messages.1"/>
+      <semanticElements xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.2/@messages.1"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_yFb5UTbgEeyWbagfJCeGRw" y="197" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_yFb5LDbgEeyWbagfJCeGRw" lineStyle="dot" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_yFb5LTbgEeyWbagfJCeGRw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_svFfYTbgEeyWbagfJCeGRw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer"/>
+    <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.2"/>
+  </sequence:SequenceDDiagram>
+  <sequence:SequenceDDiagram uid="_2FE-YDbgEeyWbagfJCeGRw" headerHeight="3">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_2FOIUDbgEeyWbagfJCeGRw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_2FOIUTbgEeyWbagfJCeGRw" type="Sirius" element="_2FE-YDbgEeyWbagfJCeGRw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_2FOIYTbgEeyWbagfJCeGRw" type="2001" element="_2FOIUzbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_2FOIZDbgEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_2FOIZTbgEeyWbagfJCeGRw" x="31" y="12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2FX5VTbgEeyWbagfJCeGRw" type="3001" element="_2FOIWTbgEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_2FX5WDbgEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_2FX5WTbgEeyWbagfJCeGRw" x="1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_2FX5XTbgEeyWbagfJCeGRw" type="3003" element="_2FOIWjbgEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_2FX5XjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2FX5XzbgEeyWbagfJCeGRw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_2FX5VjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2FX5VzbgEeyWbagfJCeGRw" y="44" width="10" height="1000"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2FX5WjbgEeyWbagfJCeGRw" type="3005" element="_2FOIVDbgEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_2FX5WzbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2FX5XDbgEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_2FOIYjbgEeyWbagfJCeGRw" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2FOIYzbgEeyWbagfJCeGRw" x="50" y="50" width="30" height="52"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_2FX5UDbgEeyWbagfJCeGRw" type="2001" element="_2FOIVjbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_2FX5UzbgEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_2FX5VDbgEeyWbagfJCeGRw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2FX5YDbgEeyWbagfJCeGRw" type="3001" element="_2FOIXDbgEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_2FX5YzbgEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_2FX5ZDbgEeyWbagfJCeGRw" x="-44"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_2FX5aDbgEeyWbagfJCeGRw" type="3003" element="_2FOIXTbgEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_2FX5aTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2FX5ajbgEeyWbagfJCeGRw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_86eJWjbgEeyWbagfJCeGRw" type="3001" element="_86eJTjbgEeyWbagfJCeGRw">
+              <children xmi:type="notation:Node" xmi:id="_86eJXTbgEeyWbagfJCeGRw" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_86eJXjbgEeyWbagfJCeGRw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_86eJXzbgEeyWbagfJCeGRw" type="3003" element="_86eJTzbgEeyWbagfJCeGRw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_86eJYDbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_86eJYTbgEeyWbagfJCeGRw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_86eJWzbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_86eJXDbgEeyWbagfJCeGRw" x="-148" y="47" width="10" height="60"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_2FX5YTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2FX5YjbgEeyWbagfJCeGRw" y="42" width="10" height="1002"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2FX5ZTbgEeyWbagfJCeGRw" type="3003" element="_2FOIVzbgEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_2FX5ZjbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2FX5ZzbgEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_2FX5UTbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2FX5UjbgEeyWbagfJCeGRw" x="323" y="50" width="311" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_2FOIUjbgEeyWbagfJCeGRw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_86eJYjbgEeyWbagfJCeGRw" type="4001" element="_86UX4DbgEeyWbagfJCeGRw" source="_2FX5VTbgEeyWbagfJCeGRw" target="_2FX5YDbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_86eJZjbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_86eJZzbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_86eJaDbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_86eJaTbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_86eJajbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_86eJazbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_86eJYzbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_86eJZDbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="10" bold="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_86eJZTbgEeyWbagfJCeGRw" points="[0, 0, -413, 0]$[412, 0, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_86eJbDbgEeyWbagfJCeGRw" id="(0.5,0.045) custom"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_86eJbTbgEeyWbagfJCeGRw" id="(0.5,0.046906187624750496) custom"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_86eJbjbgEeyWbagfJCeGRw" type="4001" element="_86eJVTbgEeyWbagfJCeGRw" source="_2FX5YDbgEeyWbagfJCeGRw" target="_2FX5VTbgEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_86eJcjbgEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_86eJczbgEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_86eJdDbgEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_86eJdTbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_86eJdjbgEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_86eJdzbgEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_86eJbzbgEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_86eJcDbgEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_86eJcTbgEeyWbagfJCeGRw" points="[323, 107, 323, 105]$[50, 107, 50, 105]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_86eJeDbgEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_86eJeTbgEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_2FOIXzbgEeyWbagfJCeGRw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_2FOIYDbgEeyWbagfJCeGRw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_2FOIUzbgEeyWbagfJCeGRw" name=":Teacher" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+      <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_2Gt9IDbgEeyWbagfJCeGRw" x="50" y="50" height="52" width="30"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_2FOIWTbgEeyWbagfJCeGRw" outgoingEdges="_86UX4DbgEeyWbagfJCeGRw" incomingEdges="_86eJVTbgEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+        <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_2FOIWjbgEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_2FOIVDbgEeyWbagfJCeGRw" labelSize="12" showIcon="false" labelColor="39,76,114" workspacePath="/net.mydreamy.requirementmodel.design/images/actor.svg">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_2FOIVjbgEeyWbagfJCeGRw" name=":OrganizeSignInService" width="12" height="5" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.5"/>
+      <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.5"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_2Gt9ITbgEeyWbagfJCeGRw" x="323" y="50" height="50" width="311"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_2FOIXDbgEeyWbagfJCeGRw" outgoingEdges="_86eJVTbgEeyWbagfJCeGRw" incomingEdges="_86UX4DbgEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.5"/>
+        <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.5"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_86eJTjbgEeyWbagfJCeGRw" width="1" height="6" resizeKind="NORTH_SOUTH">
+          <target xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.3/@executions.0"/>
+          <semanticElements xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.3/@executions.0"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_86eJejbgEeyWbagfJCeGRw" x="473" y="147" height="60" width="10"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_86eJTzbgEeyWbagfJCeGRw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_2FOIXTbgEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:Square" uid="_2FOIVzbgEeyWbagfJCeGRw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="194,239,255">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_86UX4DbgEeyWbagfJCeGRw" name="organizeASignIn ()" sourceNode="_2FOIWTbgEeyWbagfJCeGRw" targetNode="_2FOIXDbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.3/@messages.0"/>
+      <semanticElements xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.3/@messages.0"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_86UX5TbgEeyWbagfJCeGRw" y="147" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_86UX4TbgEeyWbagfJCeGRw" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_86UX4jbgEeyWbagfJCeGRw" labelSize="10" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:BasicMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_86eJVTbgEeyWbagfJCeGRw" sourceNode="_2FOIXDbgEeyWbagfJCeGRw" targetNode="_2FOIWTbgEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.3/@messages.1"/>
+      <semanticElements xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.3/@messages.1"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_86eJezbgEeyWbagfJCeGRw" y="207" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_86eJVjbgEeyWbagfJCeGRw" lineStyle="dot" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_86eJVzbgEeyWbagfJCeGRw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_2FE-YTbgEeyWbagfJCeGRw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer"/>
+    <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.3"/>
+  </sequence:SequenceDDiagram>
+  <sequence:SequenceDDiagram uid="_AuyvEDbhEeyWbagfJCeGRw" headerHeight="3">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_AuyvFzbhEeyWbagfJCeGRw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_AuyvGDbhEeyWbagfJCeGRw" type="Sirius" element="_AuyvEDbhEeyWbagfJCeGRw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_AuyvKDbhEeyWbagfJCeGRw" type="2001" element="_AuyvGjbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_AuyvKzbhEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_AuyvLDbhEeyWbagfJCeGRw" x="31" y="12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Au75ADbhEeyWbagfJCeGRw" type="3001" element="_AuyvIDbhEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_Au75AzbhEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Au75BDbhEeyWbagfJCeGRw" x="1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Au75CDbhEeyWbagfJCeGRw" type="3003" element="_AuyvITbhEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Au75CTbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Au75CjbhEeyWbagfJCeGRw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Au75ATbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Au75AjbhEeyWbagfJCeGRw" y="44" width="10" height="1000"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Au75BTbhEeyWbagfJCeGRw" type="3005" element="_AuyvGzbhEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Au75BjbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Au75BzbhEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_AuyvKTbhEeyWbagfJCeGRw" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AuyvKjbhEeyWbagfJCeGRw" x="50" y="50" width="30" height="52"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_AuyvLTbhEeyWbagfJCeGRw" type="2001" element="_AuyvHTbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_AuyvMDbhEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_AuyvMTbhEeyWbagfJCeGRw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Au75CzbhEeyWbagfJCeGRw" type="3001" element="_AuyvIzbhEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_Au75DjbhEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Au75DzbhEeyWbagfJCeGRw" x="-44"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Au75EzbhEeyWbagfJCeGRw" type="3003" element="_AuyvJDbhEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Au75FDbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Au75FTbhEeyWbagfJCeGRw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E04bNjbhEeyWbagfJCeGRw" type="3001" element="_E04bKjbhEeyWbagfJCeGRw">
+              <children xmi:type="notation:Node" xmi:id="_E04bOTbhEeyWbagfJCeGRw" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_E04bOjbhEeyWbagfJCeGRw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_E04bOzbhEeyWbagfJCeGRw" type="3003" element="_E04bKzbhEeyWbagfJCeGRw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_E04bPDbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E04bPTbhEeyWbagfJCeGRw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E04bNzbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E04bODbhEeyWbagfJCeGRw" x="-148" y="36" width="10" height="60"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Au75DDbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Au75DTbhEeyWbagfJCeGRw" y="42" width="10" height="1002"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Au75EDbhEeyWbagfJCeGRw" type="3003" element="_AuyvHjbhEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Au75ETbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Au75EjbhEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_AuyvLjbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AuyvLzbhEeyWbagfJCeGRw" x="315" y="50" width="311" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_AuyvGTbhEeyWbagfJCeGRw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_E04bPjbhEeyWbagfJCeGRw" type="4001" element="_E0upsDbhEeyWbagfJCeGRw" source="_Au75ADbhEeyWbagfJCeGRw" target="_Au75CzbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_E04bQjbhEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E04bQzbhEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E04bRDbhEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E04bRTbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E04bRjbhEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E04bRzbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E04bPzbhEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E04bQDbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="10" bold="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E04bQTbhEeyWbagfJCeGRw" points="[0, 0, -405, 0]$[403, 0, -2, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E04bSDbhEeyWbagfJCeGRw" id="(0.5,0.034) custom"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E04bSTbhEeyWbagfJCeGRw" id="(0.5,0.03592814371257485) custom"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E04bSjbhEeyWbagfJCeGRw" type="4001" element="_E04bMTbhEeyWbagfJCeGRw" source="_Au75CzbhEeyWbagfJCeGRw" target="_Au75ADbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_E04bTjbhEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E04bTzbhEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E04bUDbhEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E04bUTbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E04bUjbhEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E04bUzbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E04bSzbhEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E04bTDbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E04bTTbhEeyWbagfJCeGRw" points="[315, 96, 315, 94]$[50, 96, 50, 94]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E04bVDbhEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E04bVTbhEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_AuyvJjbhEeyWbagfJCeGRw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_AuyvJzbhEeyWbagfJCeGRw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_AuyvGjbhEeyWbagfJCeGRw" name=":Teacher" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+      <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_AwR80DbhEeyWbagfJCeGRw" x="50" y="50" height="52" width="30"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_AuyvIDbhEeyWbagfJCeGRw" outgoingEdges="_E0upsDbhEeyWbagfJCeGRw" incomingEdges="_E04bMTbhEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+        <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_AuyvITbhEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_AuyvGzbhEeyWbagfJCeGRw" labelSize="12" showIcon="false" labelColor="39,76,114" workspacePath="/net.mydreamy.requirementmodel.design/images/actor.svg">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_AuyvHTbhEeyWbagfJCeGRw" name=":MakeConclusionService" width="12" height="5" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.6"/>
+      <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.6"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_AwR80TbhEeyWbagfJCeGRw" x="315" y="50" height="50" width="311"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_AuyvIzbhEeyWbagfJCeGRw" outgoingEdges="_E04bMTbhEeyWbagfJCeGRw" incomingEdges="_E0upsDbhEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.6"/>
+        <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.6"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E04bKjbhEeyWbagfJCeGRw" width="1" height="6" resizeKind="NORTH_SOUTH">
+          <target xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.4/@executions.0"/>
+          <semanticElements xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.4/@executions.0"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_E04bVjbhEeyWbagfJCeGRw" x="465" y="136" height="60" width="10"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_E04bKzbhEeyWbagfJCeGRw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_AuyvJDbhEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:Square" uid="_AuyvHjbhEeyWbagfJCeGRw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="194,239,255">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E0upsDbhEeyWbagfJCeGRw" name="MakeAConclusion ()" sourceNode="_AuyvIDbhEeyWbagfJCeGRw" targetNode="_AuyvIzbhEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.4/@messages.0"/>
+      <semanticElements xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.4/@messages.0"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_E0uptTbhEeyWbagfJCeGRw" y="136" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E0upsTbhEeyWbagfJCeGRw" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E0upsjbhEeyWbagfJCeGRw" labelSize="10" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:BasicMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E04bMTbhEeyWbagfJCeGRw" sourceNode="_AuyvIzbhEeyWbagfJCeGRw" targetNode="_AuyvIDbhEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.4/@messages.1"/>
+      <semanticElements xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.4/@messages.1"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_E04bVzbhEeyWbagfJCeGRw" y="196" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E04bMjbhEeyWbagfJCeGRw" lineStyle="dot" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E04bMzbhEeyWbagfJCeGRw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_AuyvETbhEeyWbagfJCeGRw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer"/>
+    <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.4"/>
+  </sequence:SequenceDDiagram>
+  <sequence:SequenceDDiagram uid="_KGwkADbhEeyWbagfJCeGRw" headerHeight="3">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_KGwkBzbhEeyWbagfJCeGRw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_KGwkCDbhEeyWbagfJCeGRw" type="Sirius" element="_KGwkADbhEeyWbagfJCeGRw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_KG5t9DbhEeyWbagfJCeGRw" type="2001" element="_KGwkCjbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_KG5t9zbhEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_KG5t-DbhEeyWbagfJCeGRw" x="31" y="12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KG5t_jbhEeyWbagfJCeGRw" type="3001" element="_KGwkEDbhEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_KG5uATbhEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_KG5uAjbhEeyWbagfJCeGRw" x="1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_KG5uBjbhEeyWbagfJCeGRw" type="3003" element="_KGwkETbhEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_KG5uBzbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KG5uCDbhEeyWbagfJCeGRw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_KG5t_zbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KG5uADbhEeyWbagfJCeGRw" y="44" width="10" height="1000"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KG5uAzbhEeyWbagfJCeGRw" type="3005" element="_KGwkCzbhEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_KG5uBDbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KG5uBTbhEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_KG5t9TbhEeyWbagfJCeGRw" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KG5t9jbhEeyWbagfJCeGRw" x="50" y="50" width="30" height="52"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_KG5t-TbhEeyWbagfJCeGRw" type="2001" element="_KGwkDTbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_KG5t_DbhEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_KG5t_TbhEeyWbagfJCeGRw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KG5uCTbhEeyWbagfJCeGRw" type="3001" element="_KGwkEzbhEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_KG5uDDbhEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_KG5uDTbhEeyWbagfJCeGRw" x="-44"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_KG5uETbhEeyWbagfJCeGRw" type="3003" element="_KG5t8DbhEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_KG5uEjbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KG5uEzbhEeyWbagfJCeGRw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_N-zNGjbhEeyWbagfJCeGRw" type="3001" element="_N-zNDjbhEeyWbagfJCeGRw">
+              <children xmi:type="notation:Node" xmi:id="_N-zNHTbhEeyWbagfJCeGRw" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_N-zNHjbhEeyWbagfJCeGRw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_N-zNHzbhEeyWbagfJCeGRw" type="3003" element="_N-zNDzbhEeyWbagfJCeGRw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_N-zNIDbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N-zNITbhEeyWbagfJCeGRw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_N-zNGzbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N-zNHDbhEeyWbagfJCeGRw" x="-222" y="44" width="10" height="60"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_KG5uCjbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KG5uCzbhEeyWbagfJCeGRw" y="42" width="10" height="1002"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KG5uDjbhEeyWbagfJCeGRw" type="3003" element="_KGwkDjbhEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_KG5uDzbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KG5uEDbhEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_KG5t-jbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KG5t-zbhEeyWbagfJCeGRw" x="342" y="50" width="458" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_KGwkCTbhEeyWbagfJCeGRw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_N-zNIjbhEeyWbagfJCeGRw" type="4001" element="_N-qCoDbhEeyWbagfJCeGRw" source="_KG5t_jbhEeyWbagfJCeGRw" target="_KG5uCTbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_N-zNJjbhEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N-zNJzbhEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_N-zNKDbhEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N-zNKTbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_N-zNKjbhEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N-zNKzbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_N-zNIzbhEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_N-zNJDbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="10" bold="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_N-zNJTbhEeyWbagfJCeGRw" points="[0, 0, -506, 0]$[506, 0, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N-zNLDbhEeyWbagfJCeGRw" id="(0.5,0.042) custom"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N-zNLTbhEeyWbagfJCeGRw" id="(0.5,0.043912175648702596) custom"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_N-zNLjbhEeyWbagfJCeGRw" type="4001" element="_N-zNFTbhEeyWbagfJCeGRw" source="_KG5uCTbhEeyWbagfJCeGRw" target="_KG5t_jbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_N-zNMjbhEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N-zNMzbhEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_N-zNNDbhEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N-zNNTbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_N-zNNjbhEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N-zNNzbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_N-zNLzbhEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_N-zNMDbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_N-zNMTbhEeyWbagfJCeGRw" points="[342, 104, 342, 102]$[50, 104, 50, 102]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N-zNODbhEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N-zNOTbhEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_KG5t8jbhEeyWbagfJCeGRw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_KG5t8zbhEeyWbagfJCeGRw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_KGwkCjbhEeyWbagfJCeGRw" name=":Student" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.1"/>
+      <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.1"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_KIPxwDbhEeyWbagfJCeGRw" x="50" y="50" height="52" width="30"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KGwkEDbhEeyWbagfJCeGRw" outgoingEdges="_N-qCoDbhEeyWbagfJCeGRw" incomingEdges="_N-zNFTbhEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.1"/>
+        <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.1"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_KGwkETbhEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_KGwkCzbhEeyWbagfJCeGRw" labelSize="12" showIcon="false" labelColor="39,76,114" workspacePath="/net.mydreamy.requirementmodel.design/images/actor.svg">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_KGwkDTbhEeyWbagfJCeGRw" name=":ReceiveNotificationService" width="12" height="5" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.7"/>
+      <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.7"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_KIPxwTbhEeyWbagfJCeGRw" x="342" y="50" height="50" width="458"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KGwkEzbhEeyWbagfJCeGRw" outgoingEdges="_N-zNFTbhEeyWbagfJCeGRw" incomingEdges="_N-qCoDbhEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.7"/>
+        <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.7"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_N-zNDjbhEeyWbagfJCeGRw" width="1" height="6" resizeKind="NORTH_SOUTH">
+          <target xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.5/@executions.0"/>
+          <semanticElements xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.5/@executions.0"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_N-89kDbhEeyWbagfJCeGRw" x="566" y="144" height="60" width="10"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_N-zNDzbhEeyWbagfJCeGRw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_KG5t8DbhEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:Square" uid="_KGwkDjbhEeyWbagfJCeGRw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="194,239,255">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_N-qCoDbhEeyWbagfJCeGRw" name="receiveANotification ()" sourceNode="_KGwkEDbhEeyWbagfJCeGRw" targetNode="_KGwkEzbhEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.5/@messages.0"/>
+      <semanticElements xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.5/@messages.0"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_N-qCpTbhEeyWbagfJCeGRw" y="144" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_N-qCoTbhEeyWbagfJCeGRw" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_N-qCojbhEeyWbagfJCeGRw" labelSize="10" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:BasicMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_N-zNFTbhEeyWbagfJCeGRw" sourceNode="_KGwkEzbhEeyWbagfJCeGRw" targetNode="_KGwkEDbhEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.5/@messages.1"/>
+      <semanticElements xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.5/@messages.1"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_N-89kTbhEeyWbagfJCeGRw" y="204" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_N-zNFjbhEeyWbagfJCeGRw" lineStyle="dot" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_N-zNFzbhEeyWbagfJCeGRw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_KGwkATbhEeyWbagfJCeGRw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer"/>
+    <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.5"/>
+  </sequence:SequenceDDiagram>
+  <sequence:SequenceDDiagram uid="_TLeFwDbhEeyWbagfJCeGRw" headerHeight="3">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_TLeFxzbhEeyWbagfJCeGRw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_TLeFyDbhEeyWbagfJCeGRw" type="Sirius" element="_TLeFwDbhEeyWbagfJCeGRw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_TLeF2DbhEeyWbagfJCeGRw" type="2001" element="_TLeFyjbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_TLeF2zbhEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_TLeF3DbhEeyWbagfJCeGRw" x="31" y="12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_TLnPtTbhEeyWbagfJCeGRw" type="3001" element="_TLeF0DbhEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_TLnPuDbhEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_TLnPuTbhEeyWbagfJCeGRw" x="1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_TLnPvTbhEeyWbagfJCeGRw" type="3003" element="_TLeF0TbhEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_TLnPvjbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TLnPvzbhEeyWbagfJCeGRw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_TLnPtjbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TLnPtzbhEeyWbagfJCeGRw" y="44" width="10" height="1000"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_TLnPujbhEeyWbagfJCeGRw" type="3005" element="_TLeFyzbhEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_TLnPuzbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TLnPvDbhEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_TLeF2TbhEeyWbagfJCeGRw" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TLeF2jbhEeyWbagfJCeGRw" x="50" y="50" width="30" height="52"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_TLnPsDbhEeyWbagfJCeGRw" type="2001" element="_TLeFzTbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_TLnPszbhEeyWbagfJCeGRw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_TLnPtDbhEeyWbagfJCeGRw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_TLnPwDbhEeyWbagfJCeGRw" type="3001" element="_TLeF0zbhEeyWbagfJCeGRw">
+            <children xmi:type="notation:Node" xmi:id="_TLnPwzbhEeyWbagfJCeGRw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_TLnPxDbhEeyWbagfJCeGRw" x="-44"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_TLnPyDbhEeyWbagfJCeGRw" type="3003" element="_TLeF1DbhEeyWbagfJCeGRw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_TLnPyTbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TLnPyjbhEeyWbagfJCeGRw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ZSrVLjbhEeyWbagfJCeGRw" type="3001" element="_ZSrVIjbhEeyWbagfJCeGRw">
+              <children xmi:type="notation:Node" xmi:id="_ZSrVMTbhEeyWbagfJCeGRw" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ZSrVMjbhEeyWbagfJCeGRw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ZS1FkDbhEeyWbagfJCeGRw" type="3003" element="_ZSrVIzbhEeyWbagfJCeGRw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_ZS1FkTbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZS1FkjbhEeyWbagfJCeGRw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ZSrVLzbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZSrVMDbhEeyWbagfJCeGRw" x="-151" y="60" width="10" height="60"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_TLnPwTbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TLnPwjbhEeyWbagfJCeGRw" y="42" width="10" height="1002"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_TLnPxTbhEeyWbagfJCeGRw" type="3003" element="_TLeFzjbhEeyWbagfJCeGRw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_TLnPxjbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TLnPxzbhEeyWbagfJCeGRw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_TLnPsTbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TLnPsjbhEeyWbagfJCeGRw" x="357" y="50" width="317" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_TLeFyTbhEeyWbagfJCeGRw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_ZS1FkzbhEeyWbagfJCeGRw" type="4001" element="_ZSrUkDbhEeyWbagfJCeGRw" source="_TLnPtTbhEeyWbagfJCeGRw" target="_TLnPwDbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_ZS1FlzbhEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZS1FmDbhEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZS1FmTbhEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZS1FmjbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZS1FmzbhEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZS1FnDbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZS1FlDbhEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_ZS1FlTbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="10" bold="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZS1FljbhEeyWbagfJCeGRw" points="[0, 0, -450, 0]$[449, 0, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZS1FnTbhEeyWbagfJCeGRw" id="(0.5,0.058) custom"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZS1FnjbhEeyWbagfJCeGRw" id="(0.5,0.059880239520958084) custom"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_ZS1FnzbhEeyWbagfJCeGRw" type="4001" element="_ZSrVKTbhEeyWbagfJCeGRw" source="_TLnPwDbhEeyWbagfJCeGRw" target="_TLnPtTbhEeyWbagfJCeGRw">
+          <children xmi:type="notation:Node" xmi:id="_ZS1FozbhEeyWbagfJCeGRw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZS1FpDbhEeyWbagfJCeGRw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZS1FpTbhEeyWbagfJCeGRw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZS1FpjbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZS1FpzbhEeyWbagfJCeGRw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZS1FqDbhEeyWbagfJCeGRw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZS1FoDbhEeyWbagfJCeGRw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_ZS1FoTbhEeyWbagfJCeGRw" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZS1FojbhEeyWbagfJCeGRw" points="[357, 120, 357, 118]$[50, 120, 50, 118]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZS1FqTbhEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZS1FqjbhEeyWbagfJCeGRw" id="(0.0,0.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_TLeF1jbhEeyWbagfJCeGRw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_TLeF1zbhEeyWbagfJCeGRw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_TLeFyjbhEeyWbagfJCeGRw" name=":Student" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.1"/>
+      <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.1"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_TMzigDbhEeyWbagfJCeGRw" x="50" y="50" height="52" width="30"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_TLeF0DbhEeyWbagfJCeGRw" outgoingEdges="_ZSrUkDbhEeyWbagfJCeGRw" incomingEdges="_ZSrVKTbhEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.1"/>
+        <semanticElements xmi:type="rEMODEL:Actor" href="labassistant.remodel#//@UseCaseModel/@actor.1"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_TLeF0TbhEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_TLeFyzbhEeyWbagfJCeGRw" labelSize="12" showIcon="false" labelColor="39,76,114" workspacePath="/net.mydreamy.requirementmodel.design/images/actor.svg">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_TLeFzTbhEeyWbagfJCeGRw" name=":CheckInService" width="12" height="5" resizeKind="NSEW">
+      <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.8"/>
+      <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.8"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_TMzigTbhEeyWbagfJCeGRw" x="357" y="50" height="50" width="317"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_TLeF0zbhEeyWbagfJCeGRw" outgoingEdges="_ZSrVKTbhEeyWbagfJCeGRw" incomingEdges="_ZSrUkDbhEeyWbagfJCeGRw" width="1" height="100" resizeKind="NSEW">
+        <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.8"/>
+        <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.8"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_ZSrVIjbhEeyWbagfJCeGRw" width="1" height="6" resizeKind="NORTH_SOUTH">
+          <target xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.6/@executions.0"/>
+          <semanticElements xmi:type="rEMODEL:Execution" href="labassistant.remodel#//@UseCaseModel/@interaction.6/@executions.0"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_ZS1FqzbhEeyWbagfJCeGRw" x="510" y="160" height="60" width="10"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_ZSrVIzbhEeyWbagfJCeGRw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_TLeF1DbhEeyWbagfJCeGRw" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,159,207" width="1" height="100" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ExecutionMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:Square" uid="_TLeFzjbhEeyWbagfJCeGRw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="194,239,255">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ZSrUkDbhEeyWbagfJCeGRw" name="signIn ()" sourceNode="_TLeF0DbhEeyWbagfJCeGRw" targetNode="_TLeF0zbhEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.6/@messages.0"/>
+      <semanticElements xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.6/@messages.0"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_ZSrUlTbhEeyWbagfJCeGRw" y="160" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ZSrUkTbhEeyWbagfJCeGRw" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ZSrUkjbhEeyWbagfJCeGRw" labelSize="10" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:BasicMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='CallMessage']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ZSrVKTbhEeyWbagfJCeGRw" sourceNode="_TLeF0zbhEeyWbagfJCeGRw" targetNode="_TLeF0DbhEeyWbagfJCeGRw">
+      <target xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.6/@messages.1"/>
+      <semanticElements xmi:type="rEMODEL:ReturnMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.6/@messages.1"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_ZS1FrDbhEeyWbagfJCeGRw" y="220" height="0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ZSrVKjbhEeyWbagfJCeGRw" lineStyle="dot" size="2" strokeColor="114,159,207">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ZSrVKzbhEeyWbagfJCeGRw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_TLeFwTbhEeyWbagfJCeGRw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer"/>
+    <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.6"/>
   </sequence:SequenceDDiagram>
 </xmi:XMI>

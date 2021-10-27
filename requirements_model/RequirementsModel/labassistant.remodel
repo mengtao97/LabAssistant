@@ -12,12 +12,12 @@ UseCaseModel LabAssistant {
 	UC::manageFile
 	UC::shareFile
 	UC::cancelShare
-	UC::reserveMeeting
-	UC::informStudents
-	UC::organizeSignIn
-	UC::makeConclusion
-	UC::receiveNotification
-	UC::checkIn
+	UC::reserveMeeting definedBySSD(ReserveMeetingSSD) relatedService(ReserveMeetingService)
+	UC::informStudents definedBySSD(InformStudentsSSD) relatedService(InformStudentsService)
+	UC::organizeSignIn definedBySSD(OrganizeSignInSSD) relatedService(OrganizeSignInService)
+	UC::makeConclusion definedBySSD(MakeConclusionSSD) relatedService(MakeConclusionService)
+	UC::receiveNotification definedBySSD(ReceiveNotificationSSD) relatedService(ReceiveNotificationService)
+	UC::checkIn definedBySSD(CheckInSSD) relatedService(CheckInService)
 
 	Actor Teacher extends User {
 		viewWeekly
@@ -54,6 +54,123 @@ UseCaseModel LabAssistant {
 
 	}
 
+	Interaction ReserveMeetingSSD {
+
+		[Participants: Teacher ReserveMeetingService]
+
+		CallMessage::ReserveMeetingSSDCallMessage1(inputId ReserveMeetingSSDCallMessage1SendingEnd -> ReserveMeetingSSDExecution1StartEnd)
+		ReturnMessage::ReserveMeetingSSDCallMessage1Return(ReserveMeetingSSDExecution1FinishEnd -> ReserveMeetingSSDCallMessage1ReturnReceivingEnd ReserveMeetingSSDCallMessage1)
+		CallMessage::ReserveMeetingSSDCallMessage3(inputPassword ReserveMeetingSSDCallMessage3SendingEnd -> ReserveMeetingSSDExecution2StartEnd)
+		ReturnMessage::ReserveMeetingSSDCallMessage3Return(ReserveMeetingSSDExecution2FinishEnd -> ReserveMeetingSSDCallMessage3ReturnReceivingEnd ReserveMeetingSSDCallMessage3)
+		CallMessage::ReserveMeetingSSDCallMessage5(inputTime ReserveMeetingSSDCallMessage5SendingEnd -> ReserveMeetingSSDExecution3StartEnd)
+		ReturnMessage::ReserveMeetingSSDCallMessage5Return(ReserveMeetingSSDExecution3FinishEnd -> ReserveMeetingSSDCallMessage5ReturnReceivingEnd ReserveMeetingSSDCallMessage5)
+		CallMessage::ReserveMeetingSSDCallMessage7(inputPlace ReserveMeetingSSDCallMessage7SendingEnd -> ReserveMeetingSSDExecution4StartEnd)
+		ReturnMessage::ReserveMeetingSSDCallMessage7Return(ReserveMeetingSSDExecution4FinishEnd -> ReserveMeetingSSDCallMessage7ReturnReceivingEnd ReserveMeetingSSDCallMessage7)
+
+		Execution::ReserveMeetingSSDExecution1(ReserveMeetingService ReserveMeetingSSDExecution1StartEnd ReserveMeetingSSDExecution1FinishEnd)
+		Execution::ReserveMeetingSSDExecution2(ReserveMeetingService ReserveMeetingSSDExecution2StartEnd ReserveMeetingSSDExecution2FinishEnd)
+		Execution::ReserveMeetingSSDExecution3(ReserveMeetingService ReserveMeetingSSDExecution3StartEnd ReserveMeetingSSDExecution3FinishEnd)
+		Execution::ReserveMeetingSSDExecution4(ReserveMeetingService ReserveMeetingSSDExecution4StartEnd ReserveMeetingSSDExecution4FinishEnd)
+
+		MessageEnd::ReserveMeetingSSDCallMessage1SendingEnd(Teacher ReserveMeetingSSDCallMessage1)
+		ExecutionEnd::ReserveMeetingSSDExecution1StartEnd(ReserveMeetingService ReserveMeetingSSDExecution1)
+		ExecutionEnd::ReserveMeetingSSDExecution1FinishEnd(ReserveMeetingService ReserveMeetingSSDExecution1)
+		MessageEnd::ReserveMeetingSSDCallMessage1ReturnReceivingEnd(Teacher ReserveMeetingSSDCallMessage1Return)
+		MessageEnd::ReserveMeetingSSDCallMessage3SendingEnd(Teacher ReserveMeetingSSDCallMessage3)
+		ExecutionEnd::ReserveMeetingSSDExecution2StartEnd(ReserveMeetingService ReserveMeetingSSDExecution2)
+		ExecutionEnd::ReserveMeetingSSDExecution2FinishEnd(ReserveMeetingService ReserveMeetingSSDExecution2)
+		MessageEnd::ReserveMeetingSSDCallMessage3ReturnReceivingEnd(Teacher ReserveMeetingSSDCallMessage3Return)
+		MessageEnd::ReserveMeetingSSDCallMessage5SendingEnd(Teacher ReserveMeetingSSDCallMessage5)
+		ExecutionEnd::ReserveMeetingSSDExecution3StartEnd(ReserveMeetingService ReserveMeetingSSDExecution3)
+		ExecutionEnd::ReserveMeetingSSDExecution3FinishEnd(ReserveMeetingService ReserveMeetingSSDExecution3)
+		MessageEnd::ReserveMeetingSSDCallMessage5ReturnReceivingEnd(Teacher ReserveMeetingSSDCallMessage5Return)
+		MessageEnd::ReserveMeetingSSDCallMessage7SendingEnd(Teacher ReserveMeetingSSDCallMessage7)
+		ExecutionEnd::ReserveMeetingSSDExecution4StartEnd(ReserveMeetingService ReserveMeetingSSDExecution4)
+		ExecutionEnd::ReserveMeetingSSDExecution4FinishEnd(ReserveMeetingService ReserveMeetingSSDExecution4)
+		MessageEnd::ReserveMeetingSSDCallMessage7ReturnReceivingEnd(Teacher ReserveMeetingSSDCallMessage7Return)
+
+	}
+
+	Interaction InformStudentsSSD {
+
+		[Participants: Teacher InformStudentsService]
+
+		CallMessage::InformStudentsSSDCallMessage1(inputStudents InformStudentsSSDCallMessage1SendingEnd -> InformStudentsSSDExecution1StartEnd)
+		ReturnMessage::InformStudentsSSDCallMessage1Return(InformStudentsSSDExecution1FinishEnd -> InformStudentsSSDCallMessage1ReturnReceivingEnd InformStudentsSSDCallMessage1)
+
+		Execution::InformStudentsSSDExecution1(InformStudentsService InformStudentsSSDExecution1StartEnd InformStudentsSSDExecution1FinishEnd)
+
+		MessageEnd::InformStudentsSSDCallMessage1SendingEnd(Teacher InformStudentsSSDCallMessage1)
+		ExecutionEnd::InformStudentsSSDExecution1StartEnd(InformStudentsService InformStudentsSSDExecution1)
+		ExecutionEnd::InformStudentsSSDExecution1FinishEnd(InformStudentsService InformStudentsSSDExecution1)
+		MessageEnd::InformStudentsSSDCallMessage1ReturnReceivingEnd(Teacher InformStudentsSSDCallMessage1Return)
+
+	}
+
+	Interaction OrganizeSignInSSD {
+
+		[Participants: Teacher OrganizeSignInService]
+
+		CallMessage::OrganizeSignInSSDCallMessage1(organizeASignIn OrganizeSignInSSDCallMessage1SendingEnd -> OrganizeSignInSSDExecution1StartEnd)
+		ReturnMessage::OrganizeSignInSSDCallMessage1Return(OrganizeSignInSSDExecution1FinishEnd -> OrganizeSignInSSDCallMessage1ReturnReceivingEnd OrganizeSignInSSDCallMessage1)
+
+		Execution::OrganizeSignInSSDExecution1(OrganizeSignInService OrganizeSignInSSDExecution1StartEnd OrganizeSignInSSDExecution1FinishEnd)
+
+		MessageEnd::OrganizeSignInSSDCallMessage1SendingEnd(Teacher OrganizeSignInSSDCallMessage1)
+		ExecutionEnd::OrganizeSignInSSDExecution1StartEnd(OrganizeSignInService OrganizeSignInSSDExecution1)
+		ExecutionEnd::OrganizeSignInSSDExecution1FinishEnd(OrganizeSignInService OrganizeSignInSSDExecution1)
+		MessageEnd::OrganizeSignInSSDCallMessage1ReturnReceivingEnd(Teacher OrganizeSignInSSDCallMessage1Return)
+
+	}
+
+	Interaction MakeConclusionSSD {
+
+		[Participants: Teacher MakeConclusionService]
+
+		CallMessage::MakeConclusionSSDCallMessage1(MakeAConclusion MakeConclusionSSDCallMessage1SendingEnd -> MakeConclusionSSDExecution1StartEnd)
+		ReturnMessage::MakeConclusionSSDCallMessage1Return(MakeConclusionSSDExecution1FinishEnd -> MakeConclusionSSDCallMessage1ReturnReceivingEnd MakeConclusionSSDCallMessage1)
+
+		Execution::MakeConclusionSSDExecution1(MakeConclusionService MakeConclusionSSDExecution1StartEnd MakeConclusionSSDExecution1FinishEnd)
+
+		MessageEnd::MakeConclusionSSDCallMessage1SendingEnd(Teacher MakeConclusionSSDCallMessage1)
+		ExecutionEnd::MakeConclusionSSDExecution1StartEnd(MakeConclusionService MakeConclusionSSDExecution1)
+		ExecutionEnd::MakeConclusionSSDExecution1FinishEnd(MakeConclusionService MakeConclusionSSDExecution1)
+		MessageEnd::MakeConclusionSSDCallMessage1ReturnReceivingEnd(Teacher MakeConclusionSSDCallMessage1Return)
+
+	}
+
+	Interaction ReceiveNotificationSSD {
+
+		[Participants: Student ReceiveNotificationService]
+
+		CallMessage::ReceiveNotificationSSDCallMessage1(receiveANotification ReceiveNotificationSSDCallMessage1SendingEnd -> ReceiveNotificationSSDExecution1StartEnd)
+		ReturnMessage::ReceiveNotificationSSDCallMessage1Return(ReceiveNotificationSSDExecution1FinishEnd -> ReceiveNotificationSSDCallMessage1ReturnReceivingEnd ReceiveNotificationSSDCallMessage1)
+
+		Execution::ReceiveNotificationSSDExecution1(ReceiveNotificationService ReceiveNotificationSSDExecution1StartEnd ReceiveNotificationSSDExecution1FinishEnd)
+
+		MessageEnd::ReceiveNotificationSSDCallMessage1SendingEnd(Student ReceiveNotificationSSDCallMessage1)
+		ExecutionEnd::ReceiveNotificationSSDExecution1StartEnd(ReceiveNotificationService ReceiveNotificationSSDExecution1)
+		ExecutionEnd::ReceiveNotificationSSDExecution1FinishEnd(ReceiveNotificationService ReceiveNotificationSSDExecution1)
+		MessageEnd::ReceiveNotificationSSDCallMessage1ReturnReceivingEnd(Student ReceiveNotificationSSDCallMessage1Return)
+
+	}
+
+	Interaction CheckInSSD {
+
+		[Participants: Student CheckInService]
+
+		CallMessage::CheckInSSDCallMessage1(signIn CheckInSSDCallMessage1SendingEnd -> CheckInSSDExecution1StartEnd)
+		ReturnMessage::CheckInSSDCallMessage1Return(CheckInSSDExecution1FinishEnd -> CheckInSSDCallMessage1ReturnReceivingEnd CheckInSSDCallMessage1)
+
+		Execution::CheckInSSDExecution1(CheckInService CheckInSSDExecution1StartEnd CheckInSSDExecution1FinishEnd)
+
+		MessageEnd::CheckInSSDCallMessage1SendingEnd(Student CheckInSSDCallMessage1)
+		ExecutionEnd::CheckInSSDExecution1StartEnd(CheckInService CheckInSSDExecution1)
+		ExecutionEnd::CheckInSSDExecution1FinishEnd(CheckInService CheckInSSDExecution1)
+		MessageEnd::CheckInSSDCallMessage1ReturnReceivingEnd(Student CheckInSSDCallMessage1Return)
+
+	}
+
 	Service LabAssistantSystem {
 
 		[Operation]
@@ -83,6 +200,51 @@ UseCaseModel LabAssistant {
 	}
 
 Service ManagePlansService {
+
+	}
+
+Service ReserveMeetingService {
+
+		[Operation]
+		inputId(id)
+		inputPassword(password)
+		inputTime(time)
+		inputPlace(place)
+
+	}
+
+	Service InformStudentsService {
+
+		[Operation]
+		inputStudents(students)
+
+	}
+
+	Service OrganizeSignInService {
+
+		[Operation]
+		organizeASignIn()
+
+	}
+
+	Service MakeConclusionService {
+
+		[Operation]
+		MakeAConclusion()
+
+	}
+
+	Service ReceiveNotificationService {
+
+		[Operation]
+		receiveANotification()
+
+	}
+
+	Service CheckInService {
+
+		[Operation]
+		signIn()
 
 	}
 
