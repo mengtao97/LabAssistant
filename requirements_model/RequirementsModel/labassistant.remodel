@@ -14,12 +14,12 @@ UseCaseModel LabAssistant {
 
 	Actor Teacher {
 		supervisePlans
-	createWeekly
+		createWeekly
 		assignTask
 	}
 
 	Actor Student {
-	updateTaskProcession
+		updateTaskProcession
 		reportProblem
 	}
 
@@ -29,7 +29,7 @@ UseCaseModel LabAssistant {
 		representInfo
 		shareFile
 		cancelSharing
-	viewWeekly
+		viewWeekly
 	}
 
 	Interaction ManagePlansSSD {
@@ -328,6 +328,95 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
+	Contract CreateWeeklyService::createWeeklyByTeacher(creatorId : String, weeklyId : String, content : String, weekNum : String, beginDate : String, endDate : String) : Boolean {
+
+		definition:
+			weekly:Weekly = Weekly.allInstance()->any(wl:Weekly | wl.Id = weeklyId)
+
+		precondition:
+			weekly.oclIsUndefined() = true
+
+		postcondition:
+			let wl:Weekly in
+			wl.oclIsNew() and
+			wl.Id = weeklyId and
+			wl.CreatorId = creatorId and
+			wl.Content = content and
+			wl.BeginDate = beginDate and
+			wl.EndDate = endDate and
+			wl.Weeknum = weekNum and
+			Weekly.allInstance()->includes(wl) and
+			result = true
+	}
+
+	Contract AssignTaskService::createTaskByTeacher(creatorId : String, taskId : String, content : String) : Boolean {
+
+		definition:
+			task:Task = Task.allInstance()->any(tk:Task | tk.Id = taskId)
+
+		precondition:
+			task.oclIsUndefined() = true
+
+		postcondition:
+			let tk:Task in
+			tk.oclIsNew() and
+			tk.Id = taskId and
+			tk.CreatorId = creatorId and
+			tk.Content = content and
+			Task.allInstance()->includes(tk) and
+			result = true
+	}
+
+	Contract AssignTaskService::assignTaskByTeacher(taskId : String, creatorId : String, ownerId : String) : Boolean {
+
+		definition:
+			tk:Task = Task.allInstance()->any(t:Task | t.Id = taskId)
+
+		precondition:
+			tk.oclIsUndefined() = false and
+			tk.CreatorId = creatorId
+		postcondition:
+			tk.OwnerId = ownerId and
+			result = true
+	}
+
+	Contract ViewWeeklyService::viewWeeklyByUser(weeklyId : String) : Weekly {
+
+		definition:
+			wk:Weekly = Weekly.allInstance()->any(w:Weekly | w.Id = weekId)
+
+		precondition:
+			wk.oclIsUndefined() = false
+		postcondition:
+			result = wk
+	}
+
+	Contract UpdateTaskProcessionService::updateProcessionByOwner(taskId : String, ownerId : String, progress : String) : Boolean {
+
+		definition:
+			tk:Task = Task.allInstance()->any(t:Task | t.Id = taskId)
+
+		precondition:
+			tk.oclIsUndefined() = false and
+			tk.OwnerId = ownerId
+		postcondition:
+			tk.Progress = progress and
+			result = true
+	}
+
+	Contract ReportProblemService::reportProblem(taskId : String, problem : String, ownerId : String) : Boolean {
+
+		definition:
+			tk:Task = Task.allInstance()->any(t:Task | t.Id = taskId)
+
+		precondition:
+			tk.oclIsUndefined() = false and
+			tk.OwnerId = ownerId
+		postcondition:
+			tk.Problem = problem and
+			result = true
+	}
+
 }
 
 DomainModel LabAssistant {
@@ -344,7 +433,7 @@ DomainModel LabAssistant {
 		UsertoPlan : Plan* Association
 		Browses : MyFile* Association
 		Teacher : User Association
-	UsertoWeekly : Weekly* Association
+		UsertoWeekly : Weekly* Association
 		create : Task Association
 		own : Task Association
 	}
@@ -365,22 +454,22 @@ DomainModel LabAssistant {
 		FileID : Integer
 	}
 
-Entity Weekly {
+	Entity Weekly {
 		Id : Integer
-		content : String
+		Content : String
 		WeekNum : Integer
 		BeginDate : Date
 		EndDate : Date
 		CreatorId : Integer
-		problem : String
-		progress : Real
+		Problem : String
+		Progress : Real
 	}
 
 	Entity Task {
 		Id : Integer
-		content : String
-		creatorId : Integer
-		ownerId : Integer
+		Content : String
+		CreatorId : Integer
+		OwnerId : Integer
 	}
 
 }

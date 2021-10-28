@@ -4,7 +4,7 @@
     <semanticResources>labassistant.remodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_M6bJUDfwEeygGZYFOLeLxw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_M78MQDfwEeygGZYFOLeLxw" name="LabAssistant Conceptual Class Diagram" repPath="#_M7VIQDfwEeygGZYFOLeLxw" changeId="3e742a71-6307-458d-8680-3c23a8b5b806">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_M78MQDfwEeygGZYFOLeLxw" name="LabAssistant Conceptual Class Diagram" repPath="#_M7VIQDfwEeygGZYFOLeLxw" changeId="e51571af-d0a8-41f5-a791-40f770b07123">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']"/>
         <target xmi:type="rEMODEL:DomainModel" href="labassistant.remodel#//@DomainModel"/>
       </ownedRepresentationDescriptors>
@@ -518,7 +518,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_f28qcDgAEeyzV4oZqbI20Q" name="content : String">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_f28qcDgAEeyzV4oZqbI20Q" name="Content : String">
         <target xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.3/@attributes.1"/>
         <semanticElements xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.3/@attributes.1"/>
         <ownedStyle xmi:type="diagram:Square" uid="_f28qcTgAEeyzV4oZqbI20Q" showIcon="false" labelAlignment="LEFT" labelPosition="node" height="20">
@@ -558,7 +558,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_yZ3hIDgCEeyzV4oZqbI20Q" name="problem : String">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_yZ3hIDgCEeyzV4oZqbI20Q" name="Problem : String">
         <target xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.3/@attributes.6"/>
         <semanticElements xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.3/@attributes.6"/>
         <ownedStyle xmi:type="diagram:Square" uid="_yZ3hITgCEeyzV4oZqbI20Q" showIcon="false" labelAlignment="LEFT" labelPosition="node" height="20">
@@ -566,7 +566,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_0axo8DgCEeyzV4oZqbI20Q" name="progress : Real">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_0axo8DgCEeyzV4oZqbI20Q" name="Progress : Real">
         <target xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.3/@attributes.7"/>
         <semanticElements xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.3/@attributes.7"/>
         <ownedStyle xmi:type="diagram:Square" uid="_0axo8TgCEeyzV4oZqbI20Q" showIcon="false" labelAlignment="LEFT" labelPosition="node" height="20">
@@ -604,7 +604,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_bcOWIDgBEeyzV4oZqbI20Q" name="content : String">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_bcOWIDgBEeyzV4oZqbI20Q" name="Content : String">
         <target xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.4/@attributes.1"/>
         <semanticElements xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.4/@attributes.1"/>
         <ownedStyle xmi:type="diagram:Square" uid="_bcOWITgBEeyzV4oZqbI20Q" showIcon="false" labelAlignment="LEFT" labelPosition="node" height="20">
@@ -612,7 +612,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_eHpakDgBEeyzV4oZqbI20Q" name="creatorId : Integer">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_eHpakDgBEeyzV4oZqbI20Q" name="CreatorId : Integer">
         <target xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.4/@attributes.2"/>
         <semanticElements xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.4/@attributes.2"/>
         <ownedStyle xmi:type="diagram:Square" uid="_eHpakTgBEeyzV4oZqbI20Q" showIcon="false" labelAlignment="LEFT" labelPosition="node" height="20">
@@ -620,7 +620,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_hhjVoDgBEeyzV4oZqbI20Q" name="ownerId : Integer">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_hhjVoDgBEeyzV4oZqbI20Q" name="OwnerId : Integer">
         <target xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.4/@attributes.3"/>
         <semanticElements xmi:type="rEMODEL:Attribute" href="labassistant.remodel#//@DomainModel/@entity.4/@attributes.3"/>
         <ownedStyle xmi:type="diagram:Square" uid="_hhj8sDgBEeyzV4oZqbI20Q" showIcon="false" labelAlignment="LEFT" labelPosition="node" height="20">
