@@ -6,12 +6,21 @@ UseCaseModel LabAssistant {
 	UC::representInfo
 	UC::shareFile
 	UC::cancelSharing
+	UC::createWeekly definedBySSD(CreateWeeklySSD) relatedService(CreateWeeklyService)
+	UC::assignTask definedBySSD(AssignTaskSSD) relatedService(AssignTaskService)
+	UC::viewWeekly definedBySSD(ViewWeeklySSD) relatedService(ViewWeeklyService)
+	UC::updateTaskProcession definedBySSD(UpdateTaskProcessionSSD) relatedService(UpdateTaskProcessionService)
+	UC::reportProblem definedBySSD(ReportProblemSSD) relatedService(ReportProblemService)
 
 	Actor Teacher {
 		supervisePlans
+	createWeekly
+		assignTask
 	}
 
 	Actor Student {
+	updateTaskProcession
+		reportProblem
 	}
 
 	Actor User {
@@ -20,6 +29,7 @@ UseCaseModel LabAssistant {
 		representInfo
 		shareFile
 		cancelSharing
+	viewWeekly
 	}
 
 	Interaction ManagePlansSSD {
@@ -84,6 +94,93 @@ UseCaseModel LabAssistant {
 
 	}
 
+	Interaction CreateWeeklySSD {
+
+		[Participants: Teacher CreateWeeklyService]
+
+		CallMessage::CreateWeeklySSDCallMessage1(createWeeklyByTeacher CreateWeeklySSDCallMessage1SendingEnd -> CreateWeeklySSDExecution1StartEnd)
+		ReturnMessage::CreateWeeklySSDCallMessage1Return(CreateWeeklySSDExecution1FinishEnd -> CreateWeeklySSDCallMessage1ReturnReceivingEnd CreateWeeklySSDCallMessage1)
+
+		Execution::CreateWeeklySSDExecution1(CreateWeeklyService CreateWeeklySSDExecution1StartEnd CreateWeeklySSDExecution1FinishEnd)
+
+		MessageEnd::CreateWeeklySSDCallMessage1SendingEnd(Teacher CreateWeeklySSDCallMessage1)
+		ExecutionEnd::CreateWeeklySSDExecution1StartEnd(CreateWeeklyService CreateWeeklySSDExecution1)
+		ExecutionEnd::CreateWeeklySSDExecution1FinishEnd(CreateWeeklyService CreateWeeklySSDExecution1)
+		MessageEnd::CreateWeeklySSDCallMessage1ReturnReceivingEnd(Teacher CreateWeeklySSDCallMessage1Return)
+
+	}
+
+	Interaction AssignTaskSSD {
+
+		[Participants: Teacher AssignTaskService]
+
+		CallMessage::AssignTaskSSDCallMessage1(assignTaskByTeacher AssignTaskSSDCallMessage1SendingEnd -> AssignTaskSSDExecution1StartEnd)
+		ReturnMessage::AssignTaskSSDCallMessage1Return(AssignTaskSSDExecution1FinishEnd -> AssignTaskSSDCallMessage1ReturnReceivingEnd AssignTaskSSDCallMessage1)
+		CallMessage::AssignTaskSSDCallMessage3(createTaskByTeacher AssignTaskSSDCallMessage3SendingEnd -> AssignTaskSSDExecution2StartEnd)
+		ReturnMessage::AssignTaskSSDCallMessage3Return(AssignTaskSSDExecution2FinishEnd -> AssignTaskSSDCallMessage3ReturnReceivingEnd AssignTaskSSDCallMessage3)
+
+		Execution::AssignTaskSSDExecution1(AssignTaskService AssignTaskSSDExecution1StartEnd AssignTaskSSDExecution1FinishEnd)
+		Execution::AssignTaskSSDExecution2(AssignTaskService AssignTaskSSDExecution2StartEnd AssignTaskSSDExecution2FinishEnd)
+
+		MessageEnd::AssignTaskSSDCallMessage3SendingEnd(Teacher AssignTaskSSDCallMessage3)
+		ExecutionEnd::AssignTaskSSDExecution2StartEnd(AssignTaskService AssignTaskSSDExecution2)
+		ExecutionEnd::AssignTaskSSDExecution2FinishEnd(AssignTaskService AssignTaskSSDExecution2)
+		MessageEnd::AssignTaskSSDCallMessage3ReturnReceivingEnd(Teacher AssignTaskSSDCallMessage3Return)
+		MessageEnd::AssignTaskSSDCallMessage1SendingEnd(Teacher AssignTaskSSDCallMessage1)
+		ExecutionEnd::AssignTaskSSDExecution1StartEnd(AssignTaskService AssignTaskSSDExecution1)
+		ExecutionEnd::AssignTaskSSDExecution1FinishEnd(AssignTaskService AssignTaskSSDExecution1)
+		MessageEnd::AssignTaskSSDCallMessage1ReturnReceivingEnd(Teacher AssignTaskSSDCallMessage1Return)
+
+	}
+
+	Interaction ViewWeeklySSD {
+
+		[Participants: User ViewWeeklyService]
+
+		CallMessage::ViewWeeklySSDCallMessage1(viewWeeklyByUser ViewWeeklySSDCallMessage1SendingEnd -> ViewWeeklySSDExecution1StartEnd)
+		ReturnMessage::ViewWeeklySSDCallMessage1Return(ViewWeeklySSDExecution1FinishEnd -> ViewWeeklySSDCallMessage1ReturnReceivingEnd ViewWeeklySSDCallMessage1)
+
+		Execution::ViewWeeklySSDExecution1(ViewWeeklyService ViewWeeklySSDExecution1StartEnd ViewWeeklySSDExecution1FinishEnd)
+
+		MessageEnd::ViewWeeklySSDCallMessage1SendingEnd(User ViewWeeklySSDCallMessage1)
+		ExecutionEnd::ViewWeeklySSDExecution1StartEnd(ViewWeeklyService ViewWeeklySSDExecution1)
+		ExecutionEnd::ViewWeeklySSDExecution1FinishEnd(ViewWeeklyService ViewWeeklySSDExecution1)
+		MessageEnd::ViewWeeklySSDCallMessage1ReturnReceivingEnd(User ViewWeeklySSDCallMessage1Return)
+
+	}
+
+	Interaction UpdateTaskProcessionSSD {
+
+		[Participants: Student UpdateTaskProcessionService]
+
+		CallMessage::UpdateTaskProcessionSSDCallMessage1(updateProcessionByOwner UpdateTaskProcessionSSDCallMessage1SendingEnd -> UpdateTaskProcessionSSDExecution1StartEnd)
+		ReturnMessage::UpdateTaskProcessionSSDCallMessage1Return(UpdateTaskProcessionSSDExecution1FinishEnd -> UpdateTaskProcessionSSDCallMessage1ReturnReceivingEnd UpdateTaskProcessionSSDCallMessage1)
+
+		Execution::UpdateTaskProcessionSSDExecution1(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1StartEnd UpdateTaskProcessionSSDExecution1FinishEnd)
+
+		MessageEnd::UpdateTaskProcessionSSDCallMessage1SendingEnd(Student UpdateTaskProcessionSSDCallMessage1)
+		ExecutionEnd::UpdateTaskProcessionSSDExecution1StartEnd(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1)
+		ExecutionEnd::UpdateTaskProcessionSSDExecution1FinishEnd(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1)
+		MessageEnd::UpdateTaskProcessionSSDCallMessage1ReturnReceivingEnd(Student UpdateTaskProcessionSSDCallMessage1Return)
+
+	}
+
+	Interaction ReportProblemSSD {
+
+		[Participants: Student ReportProblemService]
+
+		CallMessage::ReportProblemSSDCallMessage1(reportProblem ReportProblemSSDCallMessage1SendingEnd -> ReportProblemSSDExecution1StartEnd)
+		ReturnMessage::ReportProblemSSDCallMessage1Return(ReportProblemSSDExecution1FinishEnd -> ReportProblemSSDCallMessage1ReturnReceivingEnd ReportProblemSSDCallMessage1)
+
+		Execution::ReportProblemSSDExecution1(ReportProblemService ReportProblemSSDExecution1StartEnd ReportProblemSSDExecution1FinishEnd)
+
+		MessageEnd::ReportProblemSSDCallMessage1SendingEnd(Student ReportProblemSSDCallMessage1)
+		ExecutionEnd::ReportProblemSSDExecution1StartEnd(ReportProblemService ReportProblemSSDExecution1)
+		ExecutionEnd::ReportProblemSSDExecution1FinishEnd(ReportProblemService ReportProblemSSDExecution1)
+		MessageEnd::ReportProblemSSDCallMessage1ReturnReceivingEnd(Student ReportProblemSSDCallMessage1Return)
+
+	}
+
 	Service LabAssistantSystem {
 
 	}
@@ -117,6 +214,42 @@ UseCaseModel LabAssistant {
 		[Operation]
 		addFile(userid, fileid, fileName)
 		deleteFile(userid, fileid)
+
+	}
+
+	Service CreateWeeklyService {
+
+		[Operation]
+		createWeeklyByTeacher(creatorId, weeklyId, content, weekNum, beginDate, endDate)
+
+	}
+
+	Service AssignTaskService {
+
+		[Operation]
+		assignTaskByTeacher(taskId, creatorId, ownerId)
+		createTaskByTeacher(creatorId, taskId, content)
+
+	}
+
+	Service ViewWeeklyService {
+
+		[Operation]
+		viewWeeklyByUser(weeklyId)
+
+	}
+
+	Service UpdateTaskProcessionService {
+
+		[Operation]
+		updateProcessionByOwner(taskId, ownerId, progress)
+
+	}
+
+	Service ReportProblemService {
+
+		[Operation]
+		reportProblem(taskId, problem, ownerId)
 
 	}
 
@@ -211,6 +344,9 @@ DomainModel LabAssistant {
 		UsertoPlan : Plan* Association
 		Browses : MyFile* Association
 		Teacher : User Association
+	UsertoWeekly : Weekly* Association
+		create : Task Association
+		own : Task Association
 	}
 
 	@AutoCRUD Entity Plan {
@@ -227,6 +363,24 @@ DomainModel LabAssistant {
 		OwnerID : Integer
 		FileName : String
 		FileID : Integer
+	}
+
+Entity Weekly {
+		Id : Integer
+		content : String
+		WeekNum : Integer
+		BeginDate : Date
+		EndDate : Date
+		CreatorId : Integer
+		problem : String
+		progress : Real
+	}
+
+	Entity Task {
+		Id : Integer
+		content : String
+		creatorId : Integer
+		ownerId : Integer
 	}
 
 }
