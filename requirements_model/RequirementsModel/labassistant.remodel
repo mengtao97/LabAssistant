@@ -1,80 +1,59 @@
 UseCaseModel LabAssistant {
 
-	UC::assignTask
-	UC::launchTask
-	UC::viewWeekly
-	UC::updateTaskProcession
-	UC::uploadProblem
-	UC::createWeekly
 	UC::managePlans definedBySSD(ManagePlansSSD) relatedService(ManagePlansService)
-	UC::supervisePlans
-	UC::representInfo
-	UC::manageFile
-	UC::shareFile
-	UC::cancelShare
-	UC::reserveMeeting
-	UC::informStudents
-	UC::organizeSignIn
-	UC::makeConclusion
-	UC::receiveNotification
-	UC::checkIn
+	UC::supervisePlans definedBySSD(SupervisePlansSSD) relatedService(SupervisePlansService)
 
-	Actor Teacher extends User {
-		viewWeekly
-		assignTask
-		createWeekly
-		launchTask
-		managePlans
+	Actor Teacher {
 		supervisePlans
-		reserveMeeting
-		informStudents
-		organizeSignIn
-		makeConclusion
-		}
+	}
 
-	Actor Student extends User {
-		updateTaskProcession
-		viewWeekly
-		uploadProblem
-		managePlans
-		receiveNotification
-		checkIn
-		}
+	Actor Student {
+	}
 
 	Actor User {
-		cancelShare
-		shareFile
-		manageFile
-		representInfo
+		managePlans
 	}
 
 	Interaction ManagePlansSSD {
 
-		[Participants: Teacher Student ManagePlansService]
+		[Participants: User ManagePlansService]
+
+		CallMessage::ManagePlansSSDCallMessage1(inputPlanInformation ManagePlansSSDCallMessage1SendingEnd -> ManagePlansSSDExecution1StartEnd)
+		ReturnMessage::ManagePlansSSDCallMessage1Return(ManagePlansSSDExecution1FinishEnd -> ManagePlansSSDCallMessage1ReturnReceivingEnd ManagePlansSSDCallMessage1)
+
+		Execution::ManagePlansSSDExecution1(ManagePlansService ManagePlansSSDExecution1StartEnd ManagePlansSSDExecution1FinishEnd)
+
+		MessageEnd::ManagePlansSSDCallMessage1SendingEnd(User ManagePlansSSDCallMessage1)
+		ExecutionEnd::ManagePlansSSDExecution1StartEnd(ManagePlansService ManagePlansSSDExecution1)
+		ExecutionEnd::ManagePlansSSDExecution1FinishEnd(ManagePlansService ManagePlansSSDExecution1)
+		MessageEnd::ManagePlansSSDCallMessage1ReturnReceivingEnd(User ManagePlansSSDCallMessage1Return)
+
+	}
+
+	Interaction SupervisePlansSSD {
+
+		[Participants: Teacher SupervisePlansService]
+
+		CallMessage::SupervisePlansSSDCallMessage1(selectPlan SupervisePlansSSDCallMessage1SendingEnd -> SupervisePlansSSDExecution1StartEnd)
+		ReturnMessage::SupervisePlansSSDCallMessage1Return(SupervisePlansSSDExecution1FinishEnd -> SupervisePlansSSDCallMessage1ReturnReceivingEnd SupervisePlansSSDCallMessage1)
+		CallMessage::SupervisePlansSSDCallMessage3(inputReviewMessage SupervisePlansSSDCallMessage3SendingEnd -> SupervisePlansSSDExecution2StartEnd)
+		ReturnMessage::SupervisePlansSSDCallMessage3Return(SupervisePlansSSDExecution2FinishEnd -> SupervisePlansSSDCallMessage3ReturnReceivingEnd SupervisePlansSSDCallMessage3)
+
+		Execution::SupervisePlansSSDExecution1(SupervisePlansService SupervisePlansSSDExecution1StartEnd SupervisePlansSSDExecution1FinishEnd)
+		Execution::SupervisePlansSSDExecution2(SupervisePlansService SupervisePlansSSDExecution2StartEnd SupervisePlansSSDExecution2FinishEnd)
+
+		MessageEnd::SupervisePlansSSDCallMessage1SendingEnd(Teacher SupervisePlansSSDCallMessage1)
+		ExecutionEnd::SupervisePlansSSDExecution1StartEnd(SupervisePlansService SupervisePlansSSDExecution1)
+		ExecutionEnd::SupervisePlansSSDExecution1FinishEnd(SupervisePlansService SupervisePlansSSDExecution1)
+		MessageEnd::SupervisePlansSSDCallMessage1ReturnReceivingEnd(Teacher SupervisePlansSSDCallMessage1Return)
+		MessageEnd::SupervisePlansSSDCallMessage3SendingEnd(Teacher SupervisePlansSSDCallMessage3)
+		ExecutionEnd::SupervisePlansSSDExecution2StartEnd(SupervisePlansService SupervisePlansSSDExecution2)
+		ExecutionEnd::SupervisePlansSSDExecution2FinishEnd(SupervisePlansService SupervisePlansSSDExecution2)
+		MessageEnd::SupervisePlansSSDCallMessage3ReturnReceivingEnd(Teacher SupervisePlansSSDCallMessage3Return)
 
 	}
 
 	Service LabAssistantSystem {
-
-		[Operation]
-		representInfo()
-		assignTask()
-		checkIn()
-		receiveNotification()
-		makeConclusion()
-		organizeSignIn()
-		informStudents()
-		reserveMeeting()
-		cancelShare()
-		shareFile()
-		manageFile()
-		supervisePlans()
-		managePlans()
-		createWeekly()
-		uploadProblem()
-		launchTask()
-		updateTaskProcession()
-		viewWeekly()
 
 	}
 
@@ -82,8 +61,62 @@ UseCaseModel LabAssistant {
 
 	}
 
-Service ManagePlansService {
+	Service ManagePlansService {
 
+		[Operation]
+		inputPlanInformation(plan)
+		createPlan(id, title, content, beginDate, endDate, creatorId, type)
+		queryPlanById(id)
+		queryPlanByCreatorId(id)
+		modifyPlan(id, title, content, beginDate, endDate, creatorId, type)
+		deletePlan(id)
+
+	}
+
+	Service SupervisePlansService {
+
+		[Operation]
+		selectPlan()
+		inputReviewMessage()
+
+	}
+
+	Contract ManagePlansService::inputPlanInformation(plan) : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			true
+	}
+
+	Contract ManagePlansService::createPlan(id : String, title : String, content : String, beginDate : String, endDate : String, creatorId : String, type : String) : Boolean {
+
+		definition:
+			plan:Plan = Plan.allInstance()->any(pla:Plan | pla.id = id)
+
+		precondition:
+			plan.oclIsUndefined() = true
+
+		postcondition:
+			let pla:Plan in
+			pla.oclIsNew() and
+			pla.id = id and
+			pla.title = title and
+			pla.content = content and
+			pla.beginDate = beginDate and
+			pla.endDate = endDate and
+			pla.creatorId = creatorId and
+			pla.type = type and
+			Plan.allInstance()->includes(pla) and
+			result = true
+	}
+
+	Contract ManagePlansService::queryPlanById(id : String) : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			true
 	}
 
 }
@@ -92,7 +125,7 @@ DomainModel LabAssistant {
 
 	@AutoCRUD Entity User {
 		Id : Integer
-		Name : String
+		Username : String
 		Password : String
 		Email : String
 		Phone : String
@@ -100,23 +133,16 @@ DomainModel LabAssistant {
 
 		[Refer]
 		UsertoPlan : Plan* Association
-	Browses : MyFile* Association
-		Teacher : User Association
 	}
 
 	@AutoCRUD Entity Plan {
 		Id : Integer
 		Title : String
 		Content : String
-		Type : String
-		CreatorId : Integer
 		BeginDate : Date
 		EndDate : Date
-	}
-
-Entity MyFile {
-		FileName : String
-		OwnerID : Integer
+		CreatorId : Integer
+		Type : String
 	}
 
 }
