@@ -2,6 +2,10 @@ UseCaseModel LabAssistant {
 
 	UC::managePlans definedBySSD(ManagePlansSSD) relatedService(ManagePlansService)
 	UC::supervisePlans definedBySSD(SupervisePlansSSD) relatedService(SupervisePlansService)
+	UC::manageFile definedBySSD(ManageFileSSD) relatedService(ManageFileService)
+	UC::representInfo
+	UC::shareFile
+	UC::cancelSharing
 
 	Actor Teacher {
 		supervisePlans
@@ -12,6 +16,10 @@ UseCaseModel LabAssistant {
 
 	Actor User {
 		managePlans
+		manageFile
+		representInfo
+		shareFile
+		cancelSharing
 	}
 
 	Interaction ManagePlansSSD {
@@ -53,6 +61,29 @@ UseCaseModel LabAssistant {
 
 	}
 
+	Interaction ManageFileSSD {
+
+		[Participants: User ManageFileService]
+
+		CallMessage::ManageFileSSDCallMessage1(addFile ManageFileSSDCallMessage1SendingEnd -> ManageFileSSDExecution1StartEnd)
+		ReturnMessage::ManageFileSSDCallMessage1Return(ManageFileSSDExecution1FinishEnd -> ManageFileSSDCallMessage1ReturnReceivingEnd ManageFileSSDCallMessage1)
+		CallMessage::ManageFileSSDCallMessage3(deleteFile ManageFileSSDCallMessage3SendingEnd -> ManageFileSSDExecution2StartEnd)
+		ReturnMessage::ManageFileSSDCallMessage3Return(ManageFileSSDExecution2FinishEnd -> ManageFileSSDCallMessage3ReturnReceivingEnd ManageFileSSDCallMessage3)
+
+		Execution::ManageFileSSDExecution1(ManageFileService ManageFileSSDExecution1StartEnd ManageFileSSDExecution1FinishEnd)
+		Execution::ManageFileSSDExecution2(ManageFileService ManageFileSSDExecution2StartEnd ManageFileSSDExecution2FinishEnd)
+
+		MessageEnd::ManageFileSSDCallMessage1SendingEnd(User ManageFileSSDCallMessage1)
+		ExecutionEnd::ManageFileSSDExecution1StartEnd(ManageFileService ManageFileSSDExecution1)
+		ExecutionEnd::ManageFileSSDExecution1FinishEnd(ManageFileService ManageFileSSDExecution1)
+		MessageEnd::ManageFileSSDCallMessage1ReturnReceivingEnd(User ManageFileSSDCallMessage1Return)
+		MessageEnd::ManageFileSSDCallMessage3SendingEnd(User ManageFileSSDCallMessage3)
+		ExecutionEnd::ManageFileSSDExecution2StartEnd(ManageFileService ManageFileSSDExecution2)
+		ExecutionEnd::ManageFileSSDExecution2FinishEnd(ManageFileService ManageFileSSDExecution2)
+		MessageEnd::ManageFileSSDCallMessage3ReturnReceivingEnd(User ManageFileSSDCallMessage3Return)
+
+	}
+
 	Service LabAssistantSystem {
 
 	}
@@ -78,6 +109,14 @@ UseCaseModel LabAssistant {
 		[Operation]
 		selectPlan()
 		inputReviewMessage()
+
+	}
+
+	Service ManageFileService {
+
+		[Operation]
+		addFile(userid, fileid, fileName)
+		deleteFile(userid, fileid)
 
 	}
 
@@ -119,6 +158,43 @@ UseCaseModel LabAssistant {
 			true
 	}
 
+	Contract ManageFileService::addFile(userid : Integer, fileid : Integer, fileName : String) : Boolean {
+
+		definition:
+			user:User = User.allInstance()->any(use:User | use.Id = userid),
+			fff:MyFile = MyFile.allInstance()->any(fffff:MyFile | fffff.FileID = fileid)
+
+		precondition:
+			fff.oclIsUndefined() = true and
+			user.oclIsUndefined() = false
+
+		postcondition:
+			let fff:MyFile in
+			fff.oclIsNew() and
+			fff.OwnerID = userid and
+			fff.FileName = fileName and
+			fff.FileID = fileid and
+			MyFile.allInstance()->includes(fff) and
+			result = true
+	}
+
+	Contract ManageFileService::deleteFile(userid : Integer, fileid : Integer) : Boolean {
+
+		definition:
+			fff:MyFile = MyFile.allInstance()->any(fffff:MyFile | fffff.FileID = fileid),
+			usr:User = User.allInstance()->any(uuuuu:User | uuuuu.Id = userid)
+
+		precondition:
+			fff.oclIsUndefined() = false and
+			usr.oclIsUndefined() = false and
+			MyFile.allInstance()->includes(fff) and
+			User.allInstance()->includes(usr)
+
+		postcondition:
+			MyFile.allInstance()->excludes(fff) and
+			result = true
+	}
+
 }
 
 DomainModel LabAssistant {
@@ -133,6 +209,8 @@ DomainModel LabAssistant {
 
 		[Refer]
 		UsertoPlan : Plan* Association
+		Browses : MyFile* Association
+		Teacher : User Association
 	}
 
 	@AutoCRUD Entity Plan {
@@ -143,6 +221,12 @@ DomainModel LabAssistant {
 		EndDate : Date
 		CreatorId : Integer
 		Type : String
+	}
+
+	Entity MyFile {
+		OwnerID : Integer
+		FileName : String
+		FileID : Integer
 	}
 
 }
