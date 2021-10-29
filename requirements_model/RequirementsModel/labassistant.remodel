@@ -151,7 +151,7 @@ UseCaseModel LabAssistant {
 
 		[Participants: Student UpdateTaskProcessionService]
 
-		CallMessage::UpdateTaskProcessionSSDCallMessage1(updateProcessionByOwner UpdateTaskProcessionSSDCallMessage1SendingEnd -> UpdateTaskProcessionSSDExecution1StartEnd)
+		CallMessage::UpdateTaskProcessionSSDCallMessage1(updateProgressByOwner UpdateTaskProcessionSSDCallMessage1SendingEnd -> UpdateTaskProcessionSSDExecution1StartEnd)
 		ReturnMessage::UpdateTaskProcessionSSDCallMessage1Return(UpdateTaskProcessionSSDExecution1FinishEnd -> UpdateTaskProcessionSSDCallMessage1ReturnReceivingEnd UpdateTaskProcessionSSDCallMessage1)
 
 		Execution::UpdateTaskProcessionSSDExecution1(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1StartEnd UpdateTaskProcessionSSDExecution1FinishEnd)
@@ -285,7 +285,7 @@ UseCaseModel LabAssistant {
 	Service UpdateTaskProcessionService {
 
 		[Operation]
-		updateProcessionByOwner(taskId, ownerId, progress)
+		updateProgressByOwner(taskId, ownerId, progress)
 
 	}
 
@@ -454,7 +454,7 @@ UseCaseModel LabAssistant {
 			result = wk
 	}
 
-	Contract UpdateTaskProcessionService::updateProcessionByOwner(taskId : String, ownerId : String, progress : String) : Boolean {
+	Contract UpdateTaskProcessionService::updateProgressByOwner(taskId : String, ownerId : String, progress : String) : Boolean {
 
 		definition:
 			tk:Task = Task.allInstance()->any(t:Task | t.Id = taskId)
