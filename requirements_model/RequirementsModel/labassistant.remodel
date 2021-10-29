@@ -239,7 +239,6 @@ UseCaseModel LabAssistant {
 		inputPlanInformation(plan)
 		createPlan(id, title, content, beginDate, endDate, creatorId, type)
 		queryPlanById(id)
-		queryPlanByCreatorId(id)
 		modifyPlan(id, title, content, beginDate, endDate, creatorId, type)
 		deletePlan(id)
 
@@ -248,8 +247,8 @@ UseCaseModel LabAssistant {
 	Service SupervisePlansService {
 
 		[Operation]
-		selectPlan()
-		inputReviewMessage()
+		selectPlan(id)
+		inputReviewMessage(id, content, planId)
 
 	}
 
@@ -321,10 +320,10 @@ UseCaseModel LabAssistant {
 			true
 	}
 
-	Contract ManagePlansService::createPlan(id : String, title : String, content : String, beginDate : String, endDate : String, creatorId : String, type : String) : Boolean {
+	Contract ManagePlansService::createPlan(id : Integer, title : String, content : String, beginDate : Date, endDate : Date, creatorId : Integer, type : String) : Boolean {
 
 		definition:
-			plan:Plan = Plan.allInstance()->any(pla:Plan | pla.id = id)
+			plan:Plan = Plan.allInstance()->any(pla:Plan | pla.Id = id)
 
 		precondition:
 			plan.oclIsUndefined() = true
@@ -332,23 +331,27 @@ UseCaseModel LabAssistant {
 		postcondition:
 			let pla:Plan in
 			pla.oclIsNew() and
-			pla.id = id and
-			pla.title = title and
-			pla.content = content and
-			pla.beginDate = beginDate and
-			pla.endDate = endDate and
-			pla.creatorId = creatorId and
-			pla.type = type and
+			pla.Id = id and
+			pla.Title = title and
+			pla.Content = content and
+			pla.BeginDate = beginDate and
+			pla.EndDate = endDate and
+			pla.CreatorId = creatorId and
+			pla.Type = type and
 			Plan.allInstance()->includes(pla) and
 			result = true
 	}
 
-	Contract ManagePlansService::queryPlanById(id : String) : Boolean {
+	Contract ManagePlansService::queryPlanById(id : Integer) : Boolean {
+
+		definition:
+			plan:Plan = Plan.allInstance()->any(pla:Plan | pla.Id = id)
 
 		precondition:
-			true
+			plan.oclIsUndefined() = false
+
 		postcondition:
-			true
+			result = plan
 	}
 
 	Contract ManageFileService::addFile(userid : Integer, fileid : Integer, fileName : String) : Boolean {
@@ -539,6 +542,70 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
+	Contract ManagePlansService::modifyPlan(id : Integer, title : String, content : String, beginDate : Date, endDate : Date, creatorId : Integer, type : String) : Boolean {
+
+		definition:
+			plan:Plan = Plan.allInstance()->any(pla:Plan | pla.Id = id)
+
+		precondition:
+			plan.oclIsUndefined() = true
+
+		postcondition:
+			plan.oclIsNew() and
+			plan.Id = id and
+			plan.Title = title and
+			plan.Content = content and
+			plan.BeginDate = beginDate and
+			plan.EndDate = endDate and
+			plan.CreatorId = creatorId and
+			plan.Type = type and
+			result = true
+	}
+
+	Contract ManagePlansService::deletePlan(id : Integer) : Boolean {
+
+		definition:
+			plan:Plan = Plan.allInstance()->any(pla:Plan | pla.Id = id)
+
+		precondition:
+			plan.oclIsUndefined() = false and
+			Plan.allInstance()->includes(plan)
+
+		postcondition:
+			Plan.allInstance()->excludes(plan) and
+			result = true
+	}
+
+	Contract SupervisePlansService::selectPlan(id: Integer) : Boolean {
+
+		definition:
+			plan:Plan = Plan.allInstance()->any(pla:Plan | pla.Id = id)
+
+		precondition:
+			plan.oclIsUndefined() = false
+
+		postcondition:
+			result = plan
+	}
+
+	Contract SupervisePlansService::inputReviewMessage(id : Integer, content : String, planId: Integer) : Boolean {
+
+		definition:
+			review:Review = Review.allInstance()->any(rew:Review | rew.Id = id)
+
+		precondition:
+			review.oclIsUndefined() = true
+
+		postcondition:
+			let rew:Review in
+			rew.oclIsNew() and
+			rew.Id = id and
+			rew.Content = content and
+			rew.PlanId = planId and
+			Review.allInstance()->includes(rew) and
+			result = true
+	}
+
 }
 
 DomainModel LabAssistant {
@@ -569,6 +636,9 @@ DomainModel LabAssistant {
 		EndDate : Date
 		CreatorId : Integer
 		Type : String
+
+		[Refer]
+		PlantoReview : Review* Association
 	}
 
 	Entity MyFile {
@@ -593,6 +663,12 @@ DomainModel LabAssistant {
 		Content : String
 		CreatorId : Integer
 		OwnerId : Integer
+	}
+
+	@AutoCRUD Entity Review {
+		Id : Integer
+		Content : String
+		PlanId : Integer
 	}
 
 }
