@@ -10,11 +10,15 @@ UseCaseModel LabAssistant {
 	UC::viewWeekly definedBySSD(ViewWeeklySSD) relatedService(ViewWeeklyService)
 	UC::updateTaskProcession definedBySSD(UpdateTaskProcessionSSD) relatedService(UpdateTaskProcessionService)
 	UC::reportProblem definedBySSD(ReportProblemSSD) relatedService(ReportProblemService)
+	UC::reserveMeeting definedBySSD(ReserveMeetingSSD) relatedService(ReserveMeetingService)
+	UC::informStudent definedBySSD(InformStudentSSD) relatedService(InformStudentService)
 
 	Actor Teacher {
 		supervisePlans
 		createWeekly
 		assignTask
+		reserveMeeting
+		informStudent
 	}
 
 	Actor Student {
@@ -225,6 +229,38 @@ UseCaseModel LabAssistant {
 
 	}
 
+	Interaction ReserveMeetingSSD {
+
+		[Participants: Teacher ReserveMeetingService]
+
+		CallMessage::ReserveMeetingSSDCallMessage9(reserve ReserveMeetingSSDCallMessage9SendingEnd -> ReserveMeetingSSDExecution5StartEnd)
+		ReturnMessage::ReserveMeetingSSDCallMessage9Return(ReserveMeetingSSDExecution5FinishEnd -> ReserveMeetingSSDCallMessage9ReturnReceivingEnd ReserveMeetingSSDCallMessage9)
+
+		Execution::ReserveMeetingSSDExecution5(ReserveMeetingService ReserveMeetingSSDExecution5StartEnd ReserveMeetingSSDExecution5FinishEnd)
+
+		MessageEnd::ReserveMeetingSSDCallMessage9SendingEnd(Teacher ReserveMeetingSSDCallMessage9)
+		ExecutionEnd::ReserveMeetingSSDExecution5StartEnd(ReserveMeetingService ReserveMeetingSSDExecution5)
+		ExecutionEnd::ReserveMeetingSSDExecution5FinishEnd(ReserveMeetingService ReserveMeetingSSDExecution5)
+		MessageEnd::ReserveMeetingSSDCallMessage9ReturnReceivingEnd(Teacher ReserveMeetingSSDCallMessage9Return)
+
+	}
+
+	Interaction InformStudentSSD {
+
+		[Participants: Teacher InformStudentService]
+
+		CallMessage::InformStudentSSDCallMessage1(inform InformStudentSSDCallMessage1SendingEnd -> InformStudentSSDExecution1StartEnd)
+		ReturnMessage::InformStudentSSDCallMessage1Return(InformStudentSSDExecution1FinishEnd -> InformStudentSSDCallMessage1ReturnReceivingEnd InformStudentSSDCallMessage1)
+
+		Execution::InformStudentSSDExecution1(InformStudentService InformStudentSSDExecution1StartEnd InformStudentSSDExecution1FinishEnd)
+
+		MessageEnd::InformStudentSSDCallMessage1SendingEnd(Teacher InformStudentSSDCallMessage1)
+		ExecutionEnd::InformStudentSSDExecution1StartEnd(InformStudentService InformStudentSSDExecution1)
+		ExecutionEnd::InformStudentSSDExecution1FinishEnd(InformStudentService InformStudentSSDExecution1)
+		MessageEnd::InformStudentSSDCallMessage1ReturnReceivingEnd(Teacher InformStudentSSDCallMessage1Return)
+
+	}
+
 	Service LabAssistantSystem {
 
 	}
@@ -309,6 +345,20 @@ UseCaseModel LabAssistant {
 		[Operation]
 		shareFile(user, file)
 		cancelSharing(user, file)
+
+	}
+
+	Service ReserveMeetingService {
+
+		[Operation]
+		reserve(id, password, time, place)
+
+	}
+
+	Service InformStudentService {
+
+		[Operation]
+		inform(student)
 
 	}
 
@@ -606,6 +656,38 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
+	Contract ReserveMeetingService::reserve(id : String, password : String, time : String, place : String) : Boolean {
+
+		definition:
+			meeting:Meeting = Meeting.allInstance()->any(mee:Meeting | mee.time = time)
+
+		precondition:
+			meeting.oclIsUndefined() = true
+		postcondition:
+			let mee:Meeting in
+			mee.oclIsNew() and
+			mee.Id = id and
+			mee.Time = time and
+			mee.Place = place and
+			Meeting.allInstance()->includes(mee) and
+			result = true
+	}
+
+	Contract InformStudentService::inform(student : String) : Boolean {
+
+		definition:
+			student:User = User.allInstance()->any(stu:User | stu.id = student)
+
+		precondition:
+			student.oclIsUndefined() = true
+		postcondition:
+			let stu:User in
+			stu.oclIsNew() and
+			stu.Id = student and
+			Student.allInstance()->includes(stu) and
+			result = true
+	}
+
 }
 
 DomainModel LabAssistant {
@@ -626,6 +708,7 @@ DomainModel LabAssistant {
 		UsertoWeekly : Weekly* Association
 		Create : Task Association
 		Own : Task Association
+	UsertoMessage : Message* Association
 	}
 
 	@AutoCRUD Entity Plan {
@@ -669,6 +752,22 @@ DomainModel LabAssistant {
 		Id : Integer
 		Content : String
 		PlanId : Integer
+	}
+
+	Entity Meeting {
+		Id : Integer
+		Time : Date
+		Place : String
+
+		[Refer]
+		MeetingtoUser : User* Association
+	}
+
+@AutoCRUD Entity Message {
+		Id : Integer
+		Content : String
+		SenderId : Integer
+		Date : Date
 	}
 
 }
