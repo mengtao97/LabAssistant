@@ -3,9 +3,8 @@ UseCaseModel LabAssistant {
 	UC::managePlans definedBySSD(ManagePlansSSD) relatedService(ManagePlansService)
 	UC::supervisePlans definedBySSD(SupervisePlansSSD) relatedService(SupervisePlansService)
 	UC::manageFile definedBySSD(ManageFileSSD) relatedService(ManageFileService)
-	UC::representInfo
-	UC::shareFile
-	UC::cancelSharing
+	UC::representInfo definedBySSD(RepresentInfoSSD) relatedService(RepresentInfoService)
+	UC::manageShare definedBySSD(ManageShareSSD) relatedService(ManageShareService)
 	UC::createWeekly definedBySSD(CreateWeeklySSD) relatedService(CreateWeeklyService)
 	UC::assignTask definedBySSD(AssignTaskSSD) relatedService(AssignTaskService)
 	UC::viewWeekly definedBySSD(ViewWeeklySSD) relatedService(ViewWeeklyService)
@@ -27,8 +26,7 @@ UseCaseModel LabAssistant {
 		managePlans
 		manageFile
 		representInfo
-		shareFile
-		cancelSharing
+		manageShare
 		viewWeekly
 	}
 
@@ -181,6 +179,52 @@ UseCaseModel LabAssistant {
 
 	}
 
+	Interaction RepresentInfoSSD {
+
+		[Participants: User RepresentInfoService]
+
+		CallMessage::RepresentInfoSSDCallMessage1(updateUserInfo RepresentInfoSSDCallMessage1SendingEnd -> RepresentInfoSSDExecution1StartEnd)
+		ReturnMessage::RepresentInfoSSDCallMessage1Return(RepresentInfoSSDExecution1FinishEnd -> RepresentInfoSSDCallMessage1ReturnReceivingEnd RepresentInfoSSDCallMessage1)
+		CallMessage::RepresentInfoSSDCallMessage3(addTeacher RepresentInfoSSDCallMessage3SendingEnd -> RepresentInfoSSDExecution2StartEnd)
+		ReturnMessage::RepresentInfoSSDCallMessage3Return(RepresentInfoSSDExecution2FinishEnd -> RepresentInfoSSDCallMessage3ReturnReceivingEnd RepresentInfoSSDCallMessage3)
+
+		Execution::RepresentInfoSSDExecution1(RepresentInfoService RepresentInfoSSDExecution1StartEnd RepresentInfoSSDExecution1FinishEnd)
+		Execution::RepresentInfoSSDExecution2(RepresentInfoService RepresentInfoSSDExecution2StartEnd RepresentInfoSSDExecution2FinishEnd)
+
+		MessageEnd::RepresentInfoSSDCallMessage1SendingEnd(User RepresentInfoSSDCallMessage1)
+		ExecutionEnd::RepresentInfoSSDExecution1StartEnd(RepresentInfoService RepresentInfoSSDExecution1)
+		ExecutionEnd::RepresentInfoSSDExecution1FinishEnd(RepresentInfoService RepresentInfoSSDExecution1)
+		MessageEnd::RepresentInfoSSDCallMessage1ReturnReceivingEnd(User RepresentInfoSSDCallMessage1Return)
+		MessageEnd::RepresentInfoSSDCallMessage3SendingEnd(User RepresentInfoSSDCallMessage3)
+		ExecutionEnd::RepresentInfoSSDExecution2StartEnd(RepresentInfoService RepresentInfoSSDExecution2)
+		ExecutionEnd::RepresentInfoSSDExecution2FinishEnd(RepresentInfoService RepresentInfoSSDExecution2)
+		MessageEnd::RepresentInfoSSDCallMessage3ReturnReceivingEnd(User RepresentInfoSSDCallMessage3Return)
+
+	}
+
+	Interaction ManageShareSSD {
+
+		[Participants: User ManageShareService]
+
+		CallMessage::ManageShareSSDCallMessage1(shareFile ManageShareSSDCallMessage1SendingEnd -> ManageShareSSDExecution1StartEnd)
+		ReturnMessage::ManageShareSSDCallMessage1Return(ManageShareSSDExecution1FinishEnd -> ManageShareSSDCallMessage1ReturnReceivingEnd ManageShareSSDCallMessage1)
+		CallMessage::ManageShareSSDCallMessage3(cancelSharing ManageShareSSDCallMessage3SendingEnd -> ManageShareSSDExecution2StartEnd)
+		ReturnMessage::ManageShareSSDCallMessage3Return(ManageShareSSDExecution2FinishEnd -> ManageShareSSDCallMessage3ReturnReceivingEnd ManageShareSSDCallMessage3)
+
+		Execution::ManageShareSSDExecution1(ManageShareService ManageShareSSDExecution1StartEnd ManageShareSSDExecution1FinishEnd)
+		Execution::ManageShareSSDExecution2(ManageShareService ManageShareSSDExecution2StartEnd ManageShareSSDExecution2FinishEnd)
+
+		MessageEnd::ManageShareSSDCallMessage1SendingEnd(User ManageShareSSDCallMessage1)
+		ExecutionEnd::ManageShareSSDExecution1StartEnd(ManageShareService ManageShareSSDExecution1)
+		ExecutionEnd::ManageShareSSDExecution1FinishEnd(ManageShareService ManageShareSSDExecution1)
+		MessageEnd::ManageShareSSDCallMessage1ReturnReceivingEnd(User ManageShareSSDCallMessage1Return)
+		MessageEnd::ManageShareSSDCallMessage3SendingEnd(User ManageShareSSDCallMessage3)
+		ExecutionEnd::ManageShareSSDExecution2StartEnd(ManageShareService ManageShareSSDExecution2)
+		ExecutionEnd::ManageShareSSDExecution2FinishEnd(ManageShareService ManageShareSSDExecution2)
+		MessageEnd::ManageShareSSDCallMessage3ReturnReceivingEnd(User ManageShareSSDCallMessage3Return)
+
+	}
+
 	Service LabAssistantSystem {
 
 	}
@@ -250,6 +294,22 @@ UseCaseModel LabAssistant {
 
 		[Operation]
 		reportProblem(taskId, problem, ownerId)
+
+	}
+
+	Service RepresentInfoService {
+
+		[Operation]
+		updateUserInfo(user, email, phone, introduction)
+		addTeacher(student, teacher)
+
+	}
+
+	Service ManageShareService {
+
+		[Operation]
+		shareFile(user, file)
+		cancelSharing(user, file)
 
 	}
 
@@ -417,6 +477,68 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
+	Contract RepresentInfoService::updateUserInfo(user : Integer, email : String, phone : String, introduction : String) : Boolean {
+
+		definition:
+			uuu:User = User.allInstance()->any(u:User | u.Id = user)
+
+		precondition:
+			uuu.oclIsUndefined() = false
+
+		postcondition:
+			uuu.Email = email and
+			uuu.Phone = phone and
+			uuu.Introduction = introduction and
+			result = true
+	}
+
+	Contract RepresentInfoService::addTeacher(student : Integer, teacher : Integer) : Boolean {
+
+		definition:
+			stu:User = User.allInstance()->any(u:User | u.Id = student),
+			tea:User = User.allInstance()->any(u:User | u.Id = teacher)
+
+		precondition:
+			stu.oclIsUndefined() = false and
+			tea.oclIsUndefined() = false
+
+		postcondition:
+			stu.Teacher = tea and
+			result = true
+	}
+
+	Contract ManageShareService::shareFile(user : Integer, file : Integer) : Boolean {
+
+		definition:
+			uuu:User = User.allInstance()->any(u:User | u.Id = user),
+			fff:MyFile = MyFile.allInstance()->any(f:MyFile | f.FileID = file)
+
+		precondition:
+			uuu.oclIsUndefined() = false and
+			fff.oclIsUndefined() = false and
+			uuu.Browses->excludes(fff)
+
+		postcondition:
+			uuu.Browses->includes(fff) and
+			result = true
+	}
+
+	Contract ManageShareService::cancelSharing(user : Integer, file : Integer) : Boolean {
+
+		definition:
+			uuu:User = User.allInstance()->any(u:User | u.Id = user),
+			fff:MyFile = MyFile.allInstance()->any(f:MyFile | f.FileID = file)
+
+		precondition:
+			uuu.oclIsUndefined() = false and
+			fff.oclIsUndefined() = false and
+			uuu.Browses->includes(fff)
+
+		postcondition:
+			uuu.Browses->excludes(fff) and
+			result = true
+	}
+
 }
 
 DomainModel LabAssistant {
@@ -428,14 +550,15 @@ DomainModel LabAssistant {
 		Email : String
 		Phone : String
 		Role : String
+		Introduction : String
 
 		[Refer]
 		UsertoPlan : Plan* Association
 		Browses : MyFile* Association
 		Teacher : User Association
 		UsertoWeekly : Weekly* Association
-		create : Task Association
-		own : Task Association
+		Create : Task Association
+		Own : Task Association
 	}
 
 	@AutoCRUD Entity Plan {
