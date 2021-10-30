@@ -22,7 +22,7 @@ ZY2121103 邓程诺：组会相关活动的需求分析 EARS编写 UML建模 合
 
 ### 第二次迭代
 
-commit id: 
+commit id: 7b8ccc8
 
 #### 用例图
 
