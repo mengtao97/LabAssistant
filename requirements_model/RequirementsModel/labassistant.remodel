@@ -358,11 +358,11 @@ UseCaseModel LabAssistant {
 	Service InformStudentService {
 
 		[Operation]
-		inform(student)
+		inform(studentId)
 
 	}
 
-	Contract ManagePlansService::inputPlanInformation(plan) : Boolean {
+	Contract ManagePlansService::inputPlanInformation(plan: String) : Boolean {
 
 		precondition:
 			true
@@ -392,7 +392,7 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
-	Contract ManagePlansService::queryPlanById(id : Integer) : Boolean {
+	Contract ManagePlansService::queryPlanById(id : Integer) : Plan {
 
 		definition:
 			plan:Plan = Plan.allInstance()->any(pla:Plan | pla.Id = id)
@@ -415,12 +415,12 @@ UseCaseModel LabAssistant {
 			user.oclIsUndefined() = false
 
 		postcondition:
-			let fff:MyFile in
-			fff.oclIsNew() and
-			fff.OwnerID = userid and
-			fff.FileName = fileName and
-			fff.FileID = fileid and
-			MyFile.allInstance()->includes(fff) and
+			let newFile:MyFile in
+			newFile.oclIsNew() and
+			newFile.OwnerID = userid and
+			newFile.FileName = fileName and
+			newFile.FileID = fileid and
+			MyFile.allInstance()->includes(newFile) and
 			result = true
 	}
 
@@ -441,7 +441,7 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
-	Contract CreateWeeklyService::createWeeklyByTeacher(creatorId : String, weeklyId : String, content : String, weekNum : String, beginDate : String, endDate : String) : Boolean {
+	Contract CreateWeeklyService::createWeeklyByTeacher(creatorId : Integer, weeklyId : Integer, content : String, weekNum : Integer, beginDate : Date, endDate : Date) : Boolean {
 
 		definition:
 			weekly:Weekly = Weekly.allInstance()->any(wl:Weekly | wl.Id = weeklyId)
@@ -457,12 +457,12 @@ UseCaseModel LabAssistant {
 			wl.Content = content and
 			wl.BeginDate = beginDate and
 			wl.EndDate = endDate and
-			wl.Weeknum = weekNum and
+			wl.WeekNum = weekNum and
 			Weekly.allInstance()->includes(wl) and
 			result = true
 	}
 
-	Contract AssignTaskService::createTaskByTeacher(creatorId : String, taskId : String, content : String) : Boolean {
+	Contract AssignTaskService::createTaskByTeacher(creatorId : Integer, taskId : Integer, content : String) : Boolean {
 
 		definition:
 			task:Task = Task.allInstance()->any(tk:Task | tk.Id = taskId)
@@ -480,7 +480,7 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
-	Contract AssignTaskService::assignTaskByTeacher(taskId : String, creatorId : String, ownerId : String) : Boolean {
+	Contract AssignTaskService::assignTaskByTeacher(taskId : Integer, creatorId : Integer, ownerId : Integer) : Boolean {
 
 		definition:
 			tk:Task = Task.allInstance()->any(t:Task | t.Id = taskId)
@@ -493,7 +493,7 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
-	Contract ViewWeeklyService::viewWeeklyByUser(weeklyId : String) : Weekly {
+	Contract ViewWeeklyService::viewWeeklyByUser(weeklyId : Integer) : Weekly {
 
 		definition:
 			wk:Weekly = Weekly.allInstance()->any(w:Weekly | w.Id = weekId)
@@ -504,7 +504,7 @@ UseCaseModel LabAssistant {
 			result = wk
 	}
 
-	Contract UpdateTaskProgressService::updateProgressByOwner(taskId : String, ownerId : String, progress : String) : Boolean {
+	Contract UpdateTaskProgressService::updateProgressByOwner(taskId : Integer, ownerId : Integer, progress : Real) : Boolean {
 
 		definition:
 			tk:Task = Task.allInstance()->any(t:Task | t.Id = taskId)
@@ -517,7 +517,7 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
-	Contract ReportProblemService::reportProblem(taskId : String, problem : String, ownerId : String) : Boolean {
+	Contract ReportProblemService::reportProblem(taskId : Integer, problem : String, ownerId : Integer) : Boolean {
 
 		definition:
 			tk:Task = Task.allInstance()->any(t:Task | t.Id = taskId)
@@ -601,8 +601,6 @@ UseCaseModel LabAssistant {
 			plan.oclIsUndefined() = true
 
 		postcondition:
-			plan.oclIsNew() and
-			plan.Id = id and
 			plan.Title = title and
 			plan.Content = content and
 			plan.BeginDate = beginDate and
@@ -626,7 +624,7 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
-	Contract SupervisePlansService::selectPlan(id: Integer) : Boolean {
+	Contract SupervisePlansService::selectPlan(id: Integer) : Plan {
 
 		definition:
 			plan:Plan = Plan.allInstance()->any(pla:Plan | pla.Id = id)
@@ -673,10 +671,10 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
-	Contract InformStudentService::inform(student : String) : Boolean {
+	Contract InformStudentService::inform(studentId : String) : Boolean {
 
 		definition:
-			student:User = User.allInstance()->any(stu:User | stu.id = student)
+			student:User = User.allInstance()->any(stu:User | stu.id = studentId)
 
 		precondition:
 			student.oclIsUndefined() = true
@@ -737,8 +735,6 @@ DomainModel LabAssistant {
 		BeginDate : Date
 		EndDate : Date
 		CreatorId : Integer
-		Problem : String
-		Progress : Real
 	}
 
 	Entity Task {
@@ -746,6 +742,8 @@ DomainModel LabAssistant {
 		Content : String
 		CreatorId : Integer
 		OwnerId : Integer
+		Problem : String
+	Progress : Real
 	}
 
 	@AutoCRUD Entity Review {
