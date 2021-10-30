@@ -52,7 +52,7 @@
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.9"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GYcjQDhiEeyWxLPO81VQ8Q" name="ReserveMeetingSSD" repPath="#_GYXqwDhiEeyWxLPO81VQ8Q" changeId="f7c33c0d-b17a-4388-aff6-810cc4085daa">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GYcjQDhiEeyWxLPO81VQ8Q" name="ReserveMeetingSSD" repPath="#_GYXqwDhiEeyWxLPO81VQ8Q" changeId="56fbbfd7-cc07-4bcf-9b88-e943e841005a">
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.10"/>
       </ownedRepresentationDescriptors>
@@ -3765,7 +3765,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fLxBEDhkEey4cONU1OLWiA" name="reserve (id, password, time, place)" sourceNode="_GYmUQzhiEeyWxLPO81VQ8Q" targetNode="_GYm7UThiEeyWxLPO81VQ8Q">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fLxBEDhkEey4cONU1OLWiA" name="reserve (id, time, place)" sourceNode="_GYmUQzhiEeyWxLPO81VQ8Q" targetNode="_GYm7UThiEeyWxLPO81VQ8Q">
       <target xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.10/@messages.0"/>
       <semanticElements xmi:type="rEMODEL:CallMessage" href="labassistant.remodel#//@UseCaseModel/@interaction.10/@messages.0"/>
       <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_fLzdQjhkEey4cONU1OLWiA" y="508" height="0"/>

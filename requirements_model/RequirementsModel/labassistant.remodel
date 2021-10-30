@@ -351,7 +351,7 @@ UseCaseModel LabAssistant {
 	Service ReserveMeetingService {
 
 		[Operation]
-		reserve(id, password, time, place)
+		reserve(id, time, place)
 
 	}
 
@@ -654,7 +654,7 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
-	Contract ReserveMeetingService::reserve(id : String, password : String, time : String, place : String) : Boolean {
+	Contract ReserveMeetingService::reserve(id : String, time : Date, place : String) : Boolean {
 
 		definition:
 			meeting:Meeting = Meeting.allInstance()->any(mee:Meeting | mee.time = time)
@@ -681,7 +681,7 @@ UseCaseModel LabAssistant {
 		postcondition:
 			let stu:User in
 			stu.oclIsNew() and
-			stu.Id = student and
+			stu.Id = studentId and
 			Student.allInstance()->includes(stu) and
 			result = true
 	}
@@ -743,7 +743,7 @@ DomainModel LabAssistant {
 		CreatorId : Integer
 		OwnerId : Integer
 		Problem : String
-	Progress : Real
+		Progress : Real
 	}
 
 	@AutoCRUD Entity Review {
