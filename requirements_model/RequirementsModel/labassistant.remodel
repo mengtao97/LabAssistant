@@ -38,16 +38,6 @@ UseCaseModel LabAssistant {
 
 		[Participants: User ManagePlansService]
 
-		CallMessage::ManagePlansSSDCallMessage1(inputPlanInformation ManagePlansSSDCallMessage1SendingEnd -> ManagePlansSSDExecution1StartEnd)
-		ReturnMessage::ManagePlansSSDCallMessage1Return(ManagePlansSSDExecution1FinishEnd -> ManagePlansSSDCallMessage1ReturnReceivingEnd ManagePlansSSDCallMessage1)
-
-		Execution::ManagePlansSSDExecution1(ManagePlansService ManagePlansSSDExecution1StartEnd ManagePlansSSDExecution1FinishEnd)
-
-		MessageEnd::ManagePlansSSDCallMessage1SendingEnd(User ManagePlansSSDCallMessage1)
-		ExecutionEnd::ManagePlansSSDExecution1StartEnd(ManagePlansService ManagePlansSSDExecution1)
-		ExecutionEnd::ManagePlansSSDExecution1FinishEnd(ManagePlansService ManagePlansSSDExecution1)
-		MessageEnd::ManagePlansSSDCallMessage1ReturnReceivingEnd(User ManagePlansSSDCallMessage1Return)
-
 	}
 
 	Interaction SupervisePlansSSD {
@@ -272,7 +262,6 @@ UseCaseModel LabAssistant {
 	Service ManagePlansService {
 
 		[Operation]
-		inputPlanInformation(plan)
 		createPlan(id, title, content, beginDate, endDate, creatorId, type)
 		queryPlanById(id)
 		modifyPlan(id, title, content, beginDate, endDate, creatorId, type)
@@ -360,14 +349,6 @@ UseCaseModel LabAssistant {
 		[Operation]
 		inform(studentId)
 
-	}
-
-	Contract ManagePlansService::inputPlanInformation(plan: String) : Boolean {
-
-		precondition:
-			true
-		postcondition:
-			true
 	}
 
 	Contract ManagePlansService::createPlan(id : Integer, title : String, content : String, beginDate : Date, endDate : Date, creatorId : Integer, type : String) : Boolean {
