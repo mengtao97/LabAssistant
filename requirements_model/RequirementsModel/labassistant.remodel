@@ -8,7 +8,7 @@ UseCaseModel LabAssistant {
 	UC::createWeekly definedBySSD(CreateWeeklySSD) relatedService(CreateWeeklyService)
 	UC::assignTask definedBySSD(AssignTaskSSD) relatedService(AssignTaskService)
 	UC::viewWeekly definedBySSD(ViewWeeklySSD) relatedService(ViewWeeklyService)
-	UC::updateTaskProcession definedBySSD(UpdateTaskProcessionSSD) relatedService(UpdateTaskProcessionService)
+	UC::updateTaskProgress definedBySSD(UpdateTaskProgressSSD) relatedService(UpdateTaskProgressService)
 	UC::reportProblem definedBySSD(ReportProblemSSD) relatedService(ReportProblemService)
 	UC::reserveMeeting definedBySSD(ReserveMeetingSSD) relatedService(ReserveMeetingService)
 	UC::informStudent definedBySSD(InformStudentSSD) relatedService(InformStudentService)
@@ -22,7 +22,7 @@ UseCaseModel LabAssistant {
 	}
 
 	Actor Student {
-		updateTaskProcession
+		updateTaskProgress
 		reportProblem
 	}
 
@@ -151,19 +151,19 @@ UseCaseModel LabAssistant {
 
 	}
 
-	Interaction UpdateTaskProcessionSSD {
+	Interaction UpdateTaskProgressSSD {
 
-		[Participants: Student UpdateTaskProcessionService]
+		[Participants: Student UpdateTaskProgressService]
 
-		CallMessage::UpdateTaskProcessionSSDCallMessage1(updateProgressByOwner UpdateTaskProcessionSSDCallMessage1SendingEnd -> UpdateTaskProcessionSSDExecution1StartEnd)
-		ReturnMessage::UpdateTaskProcessionSSDCallMessage1Return(UpdateTaskProcessionSSDExecution1FinishEnd -> UpdateTaskProcessionSSDCallMessage1ReturnReceivingEnd UpdateTaskProcessionSSDCallMessage1)
+		CallMessage::UpdateTaskProgressSSDCallMessage1(updateProgressByOwner UpdateTaskProgressSSDCallMessage1SendingEnd -> UpdateTaskProgressSSDExecution1StartEnd)
+		ReturnMessage::UpdateTaskProgressSSDCallMessage1Return(UpdateTaskProgressSSDExecution1FinishEnd -> UpdateTaskProgressSSDCallMessage1ReturnReceivingEnd UpdateTaskProgressSSDCallMessage1)
 
-		Execution::UpdateTaskProcessionSSDExecution1(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1StartEnd UpdateTaskProcessionSSDExecution1FinishEnd)
+		Execution::UpdateTaskProgressSSDExecution1(UpdateTaskProgressService UpdateTaskProgressSSDExecution1StartEnd UpdateTaskProgressSSDExecution1FinishEnd)
 
-		MessageEnd::UpdateTaskProcessionSSDCallMessage1SendingEnd(Student UpdateTaskProcessionSSDCallMessage1)
-		ExecutionEnd::UpdateTaskProcessionSSDExecution1StartEnd(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1)
-		ExecutionEnd::UpdateTaskProcessionSSDExecution1FinishEnd(UpdateTaskProcessionService UpdateTaskProcessionSSDExecution1)
-		MessageEnd::UpdateTaskProcessionSSDCallMessage1ReturnReceivingEnd(Student UpdateTaskProcessionSSDCallMessage1Return)
+		MessageEnd::UpdateTaskProgressSSDCallMessage1SendingEnd(Student UpdateTaskProgressSSDCallMessage1)
+		ExecutionEnd::UpdateTaskProgressSSDExecution1StartEnd(UpdateTaskProgressService UpdateTaskProgressSSDExecution1)
+		ExecutionEnd::UpdateTaskProgressSSDExecution1FinishEnd(UpdateTaskProgressService UpdateTaskProgressSSDExecution1)
+		MessageEnd::UpdateTaskProgressSSDCallMessage1ReturnReceivingEnd(Student UpdateTaskProgressSSDCallMessage1Return)
 
 	}
 
@@ -318,7 +318,7 @@ UseCaseModel LabAssistant {
 
 	}
 
-	Service UpdateTaskProcessionService {
+	Service UpdateTaskProgressService {
 
 		[Operation]
 		updateProgressByOwner(taskId, ownerId, progress)
@@ -504,7 +504,7 @@ UseCaseModel LabAssistant {
 			result = wk
 	}
 
-	Contract UpdateTaskProcessionService::updateProgressByOwner(taskId : String, ownerId : String, progress : String) : Boolean {
+	Contract UpdateTaskProgressService::updateProgressByOwner(taskId : String, ownerId : String, progress : String) : Boolean {
 
 		definition:
 			tk:Task = Task.allInstance()->any(t:Task | t.Id = taskId)
@@ -708,7 +708,7 @@ DomainModel LabAssistant {
 		UsertoWeekly : Weekly* Association
 		Create : Task Association
 		Own : Task Association
-	UsertoMessage : Message* Association
+		UsertoMessage : Message* Association
 	}
 
 	@AutoCRUD Entity Plan {
@@ -763,11 +763,10 @@ DomainModel LabAssistant {
 		MeetingtoUser : User* Association
 	}
 
-@AutoCRUD Entity Message {
+	@AutoCRUD Entity Message {
 		Id : Integer
 		Content : String
 		SenderId : Integer
-		Date : Date
 	}
 
 }

@@ -8,7 +8,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']"/>
         <target xmi:type="rEMODEL:DomainModel" href="labassistant.remodel#//@DomainModel"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_NMjbIDfwEeygGZYFOLeLxw" name="LabAssistant Use Case Diagram" repPath="#_NMhl8DfwEeygGZYFOLeLxw" changeId="fee79288-7723-4ffb-9977-550b2d90c9ff">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_NMjbIDfwEeygGZYFOLeLxw" name="LabAssistant Use Case Diagram" repPath="#_NMhl8DfwEeygGZYFOLeLxw" changeId="929982f1-94d2-4f07-80a4-14fdaffd7c07">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Use%20Case%20Diagram']"/>
         <target xmi:type="rEMODEL:UseCaseModel" href="labassistant.remodel#//@UseCaseModel"/>
       </ownedRepresentationDescriptors>
@@ -36,7 +36,7 @@
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.5"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_gybJVjgCEeyzV4oZqbI20Q" name="UpdateTaskProcessionSSD" repPath="#_gybJUDgCEeyzV4oZqbI20Q" changeId="0b043e21-8f0b-4ec9-af8f-459be4500a6e">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_gybJVjgCEeyzV4oZqbI20Q" name="UpdateTaskProcessionSSD" repPath="#_gybJUDgCEeyzV4oZqbI20Q" changeId="0b7ac559-b1c1-4219-9cba-a70bfa0a71df">
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="labassistant.remodel#//@UseCaseModel/@interaction.6"/>
       </ownedRepresentationDescriptors>
@@ -1413,7 +1413,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='UseCaseModel']/@subNodeMappings[name='UseCase']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_dCO1MDgCEeyzV4oZqbI20Q" name="updateTaskProcession" incomingEdges="_f8ltpDgCEeyzV4oZqbI20Q" width="15" height="7" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_dCO1MDgCEeyzV4oZqbI20Q" name="updateTaskProgress" incomingEdges="_f8ltpDgCEeyzV4oZqbI20Q" width="15" height="7" resizeKind="NSEW">
         <target xmi:type="rEMODEL:UC" href="labassistant.remodel#//@UseCaseModel/@uc.8"/>
         <semanticElements xmi:type="rEMODEL:UC" href="labassistant.remodel#//@UseCaseModel/@uc.8"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2930,7 +2930,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_gyc-hjgCEeyzV4oZqbI20Q" name=":UpdateTaskProcessionService" width="12" height="5" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_gyc-hjgCEeyzV4oZqbI20Q" name=":UpdateTaskProgressService" width="12" height="5" resizeKind="NSEW">
       <target xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.8"/>
       <semanticElements xmi:type="rEMODEL:Service" href="labassistant.remodel#//@UseCaseModel/@service.8"/>
       <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_gzdEETgCEeyzV4oZqbI20Q" x="211" y="50" height="50" width="120"/>
