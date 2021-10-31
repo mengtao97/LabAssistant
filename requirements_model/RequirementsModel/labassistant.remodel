@@ -264,6 +264,7 @@ UseCaseModel LabAssistant {
 		[Operation]
 		createPlan(id, title, content, beginDate, endDate, creatorId, type)
 		queryPlanById(id)
+		queryPlanByType(type)
 		modifyPlan(id, title, content, beginDate, endDate, creatorId, type)
 		deletePlan(id)
 
@@ -674,6 +675,14 @@ UseCaseModel LabAssistant {
 			true
 		postcondition:
 			result = Plan.allInstance()->select(plan:Plan | plan.CreatorId = userId)
+	}
+
+	Contract ManagePlansService::queryPlanByType(type : String) : Set(Plan) {
+
+		precondition:
+			true
+		postcondition:
+			result = Plan.allInstance()->select(plan:Plan | plan.Type = type)
 	}
 
 }
