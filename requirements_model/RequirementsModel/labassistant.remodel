@@ -477,7 +477,7 @@ UseCaseModel LabAssistant {
 	Contract ViewWeeklyService::viewWeeklyByUser(weeklyId : Integer) : Weekly {
 
 		definition:
-			wk:Weekly = Weekly.allInstance()->any(w:Weekly | w.Id = weekId)
+			wk:Weekly = Weekly.allInstance()->any(w:Weekly | w.Id = weeklyId)
 
 		precondition:
 			wk.oclIsUndefined() = false
@@ -635,10 +635,10 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
-	Contract ReserveMeetingService::reserve(id : String, time : Date, place : String) : Boolean {
+	Contract ReserveMeetingService::reserve(id : Integer, time : Date, place : String) : Boolean {
 
 		definition:
-			meeting:Meeting = Meeting.allInstance()->any(mee:Meeting | mee.time = time)
+			meeting:Meeting = Meeting.allInstance()->any(mee:Meeting | mee.Time = time)
 
 		precondition:
 			meeting.oclIsUndefined() = true
@@ -652,10 +652,10 @@ UseCaseModel LabAssistant {
 			result = true
 	}
 
-	Contract InformStudentService::inform(studentId : String) : Boolean {
+	Contract InformStudentService::inform(studentId : Integer) : Boolean {
 
 		definition:
-			student:User = User.allInstance()->any(stu:User | stu.id = studentId)
+			student:User = User.allInstance()->any(stu:User | stu.Id = studentId)
 
 		precondition:
 			student.oclIsUndefined() = true
@@ -663,7 +663,7 @@ UseCaseModel LabAssistant {
 			let stu:User in
 			stu.oclIsNew() and
 			stu.Id = studentId and
-			Student.allInstance()->includes(stu) and
+			User.allInstance()->includes(stu) and
 			result = true
 	}
 
