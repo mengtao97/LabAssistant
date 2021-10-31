@@ -13,7 +13,7 @@ UseCaseModel LabAssistant {
 	UC::reserveMeeting definedBySSD(ReserveMeetingSSD) relatedService(ReserveMeetingService)
 	UC::informStudent definedBySSD(InformStudentSSD) relatedService(InformStudentService)
 
-	Actor Teacher {
+	Actor Teacher extends User {
 		supervisePlans
 		createWeekly
 		assignTask
@@ -21,7 +21,7 @@ UseCaseModel LabAssistant {
 		informStudent
 	}
 
-	Actor Student {
+	Actor Student extends User {
 		updateTaskProgress
 		reportProblem
 	}
