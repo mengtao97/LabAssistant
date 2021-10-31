@@ -273,6 +273,7 @@ UseCaseModel LabAssistant {
 
 		[Operation]
 		selectPlan(id)
+		selectPlansByUserId(userId)
 		inputReviewMessage(id, content, planId)
 
 	}
@@ -665,6 +666,14 @@ UseCaseModel LabAssistant {
 			stu.Id = studentId and
 			User.allInstance()->includes(stu) and
 			result = true
+	}
+
+	Contract SupervisePlansService::selectPlansByUserId(userId : Integer) : Set(Plan) {
+
+		precondition:
+			true
+		postcondition:
+			result = Plan.allInstance()->select(plan:Plan | plan.CreatorId = userId)
 	}
 
 }
