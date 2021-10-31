@@ -33,7 +33,7 @@ commit id: 7215568f
 * ZY2121110 孟涛：Teacher - (createWeekly、assignTask)、User-viewWeekly、Student-(updateTaskProcession、reportProblem)
 * ZY2121103 邓程诺：
 
-![image-20211031100423464](/Users/mengtao/codebase/LabAssistant/README.assets/image-20211031100423464.png)
+![image-20211031100423464](./README.assets/image-20211031100423464.png)
 
 #### 类图
 
@@ -44,7 +44,7 @@ commit id: 7215568f
 * ZY2121110 孟涛：Weekly、Task
 * ZY2121103 邓程诺：
 
-![image-20211031101723408](/Users/mengtao/codebase/LabAssistant/README.assets/image-20211031101723408.png)
+![image-20211031101723408](./README.assets/image-20211031101723408.png)
 
 #### 顺序图
 
@@ -65,7 +65,7 @@ commit id: 7215568f
 
 ![image-20211030201603213](./README.assets/image-20211030201603213.png)
 
-![image-20211031103258184](/Users/mengtao/codebase/LabAssistant/README.assets/image-20211031103258184.png)
+![image-20211031103258184](./README.assets/image-20211031103258184.png)
 
 ![image-20211030201623259](./README.assets/image-20211030201623259.png)
 
