@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/UAF_Standards/src-gen" creationIcons="false" editDirectory="/UAF_Standards.edit/src-gen"
+    editorDirectory="/UAF_Standards.editor/src-gen" modelPluginID="UAF_Standards"
+    modelName="UAF_Standards" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>uAF_Standards.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="UAF_Standards" disposableProviderFactory="true" ecorePackage="uAF_Standards.ecore#/">
+    <genClasses ecoreClass="uAF_Standards.ecore#//Standard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uAF_Standards.ecore#//Standard/mandatedDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uAF_Standards.ecore#//Standard/retiredDate"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Standards.ecore#//Protocol">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uAF_Standards.ecore#//Protocol/wholepart"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Standards.ecore#//ProtocolStack"/>
+    <genClasses ecoreClass="uAF_Standards.ecore#//ProtocolLayer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Standards.ecore#//ProtocolLayer/type"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Standards.ecore#//ProtocolIplementation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Standards.ecore#//ProtocolIplementation/implements"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Standards.ecore#//ActualOrganization">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Standards.ecore#//ActualOrganization/retifiedby"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uAF_Standards.ecore#//ActualOrganization/shortName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uAF_Standards.ecore#//ActualOrganization/serviceType"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Standards.ecore#//UAFElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Standards.ecore#//UAFElement/conformsTo"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Standards.ecore#//MeasurableElement"/>
+    <genClasses ecoreClass="uAF_Standards.ecore#//ActualResponsibleResource"/>
+    <genClasses ecoreClass="uAF_Standards.ecore#//OrganizationInEnterprise">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Standards.ecore#//OrganizationInEnterprise/organization"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Standards.ecore#//Organization">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Standards.ecore#//Organization/instanceType"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Standards.ecore#//ActualOrganizationResource"/>
+    <genClasses ecoreClass="uAF_Standards.ecore#//ActualResponsibility"/>
+    <genClasses ecoreClass="uAF_Standards.ecore#//ActualProject"/>
+    <genClasses ecoreClass="uAF_Standards.ecore#//ActualResource"/>
+    <genClasses ecoreClass="uAF_Standards.ecore#//StakeHolder"/>
+  </genPackages>
+</genmodel:GenModel>
