@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ocl_final:OCL xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ocl_final="http://www.example.org/ocl_final">
+  <service name="S1">
+    <contract name="S1C1">
+      <precondition>
+        <operation>
+          <ifexpression>
+            <condition>
+              <operation>
+                <opwithoutreturn xsi:type="ocl_final:Compare">
+                  <subject xsi:type="ocl_final:GetAttribute" subject="Which" attrName="What"/>
+                  <object xsi:type="ocl_final:Literal" value="10"/>
+                </opwithoutreturn>
+                <ifexpression/>
+              </operation>
+            </condition>
+          </ifexpression>
+        </operation>
+      </precondition>
+    </contract>
+  </service>
+  <service>
+    <contract name="444"/>
+  </service>
+</ocl_final:OCL>
