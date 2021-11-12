@@ -8,23 +8,17 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>jenkins.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Jenkins" disposableProviderFactory="true" ecorePackage="jenkins.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jenkins.ecore#//TriggerType">
-      <genEnumLiterals ecoreEnumLiteral="jenkins.ecore#//TriggerType/PUSH"/>
-      <genEnumLiterals ecoreEnumLiteral="jenkins.ecore#//TriggerType/OPENMR"/>
-      <genEnumLiterals ecoreEnumLiteral="jenkins.ecore#//TriggerType/CLOSEMR"/>
-      <genEnumLiterals ecoreEnumLiteral="jenkins.ecore#//TriggerType/ACMR"/>
-      <genEnumLiterals ecoreEnumLiteral="jenkins.ecore#//TriggerType/COMMENTS"/>
-    </genEnums>
+  <genPackages prefix="Jenkins" basePackage="org.jenkins.myjenkins" disposableProviderFactory="true"
+      ecorePackage="jenkins.ecore#/">
     <genClasses ecoreClass="jenkins.ecore#//Pipeline">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//Pipeline/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//Pipeline/lastSuccess"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//Pipeline/lastFailure"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//Pipeline/lastDuration"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Pipeline/trigger"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Pipeline/sourcecodemanagement"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Pipeline/build"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Pipeline/postbuild"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Pipeline/trigger"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Pipeline/build"/>
     </genClasses>
     <genClasses ecoreClass="jenkins.ecore#//SourceCodeManagement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//SourceCodeManagement/repoURL"/>
@@ -39,21 +33,17 @@
     <genClasses ecoreClass="jenkins.ecore#//Trigger">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//Trigger/type"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="jenkins.ecore#//Build"/>
     <genClasses ecoreClass="jenkins.ecore#//ExecuteShell">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//ExecuteShell/command"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="jenkins.ecore#//BuildPlugin"/>
     <genClasses image="false" ecoreClass="jenkins.ecore#//PostBuild"/>
     <genClasses ecoreClass="jenkins.ecore#//DockerEngine">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//DockerEngine/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//DockerEngine/URI"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jenkins.ecore#//DockerEngine/credential"/>
     </genClasses>
     <genClasses ecoreClass="jenkins.ecore#//Server">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//Server/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//Server/IP"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jenkins.ecore#//Server/credential"/>
     </genClasses>
     <genClasses ecoreClass="jenkins.ecore#//BuildAndPulishDockerImage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//BuildAndPulishDockerImage/ImageName"/>
@@ -64,5 +54,20 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jenkins.ecore#//ExecuteShellRemote/server"/>
     </genClasses>
     <genClasses image="false" ecoreClass="jenkins.ecore#//PostBuildPlugin"/>
+    <genClasses ecoreClass="jenkins.ecore#//Jenkins">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Jenkins/config"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Jenkins/pipeline"/>
+    </genClasses>
+    <genClasses ecoreClass="jenkins.ecore#//Config">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Config/credential"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Config/server"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Config/dockerengine"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jenkins.ecore#//Config/name"/>
+    </genClasses>
+    <genClasses ecoreClass="jenkins.ecore#//Build">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Build/buildandpulishdockerimage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Build/executeshell"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jenkins.ecore#//Build/executeshellremote"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
