@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="project" version="12.0.0.2017041100">
+  <ownedViewpoints name="journeymapelements">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="journymap diagram" domainClass="journymap::AllElements" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="StartPoint" label="StartPoint" semanticCandidatesExpression="feature:point" domainClass="journymap::StartPoint">
+          <style xsi:type="style:DotDescription" borderSizeComputationExpression="3" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="EndPoint" semanticCandidatesExpression="feature:point" domainClass="journymap::EndPoint">
+          <style xsi:type="style:DotDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="customer" semanticCandidatesExpression="feature:point" domainClass="journymap::Customer">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ServiceProvider" semanticCandidatesExpression="feature:point" domainClass="journymap::ServiceProvider">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="StartPointToTouchPoint" sourceMapping="//@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='StartPoint']" targetMapping="//@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='customer'] //@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='ServiceProvider']" targetFinderExpression="feature:point">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="TouchPointToTouchPoint" sourceMapping="//@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='customer'] //@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='ServiceProvider']" targetMapping="//@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='customer'] //@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='ServiceProvider']" targetFinderExpression="feature:point">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="TouchPointToEndPoint" sourceMapping="//@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='customer'] //@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='ServiceProvider']" targetMapping="//@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='EndPoint']" targetFinderExpression="feature:point">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="StartAndEndPoint" label="projects">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="StartPointCreation" label="project" nodeMappings="//@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='StartPoint']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="journymap::StartPoint" referenceName="point"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="EndPointCreation" label="project milestone role" nodeMappings="//@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='EndPoint']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="journymap::EndPoint" referenceName="point"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="TouchPoint" label="standards">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CustomerCreation" label="resource role" nodeMappings="//@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='customer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="journymap::Customer" referenceName="point"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ServiceProviderCreation" label="actual project" nodeMappings="//@ownedViewpoints[name='journeymapelements']/@ownedRepresentations[name='journymap%20diagram']/@defaultLayer/@nodeMappings[name='ServiceProvider']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="journymap::ServiceProvider" referenceName="point"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="journeymap.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
