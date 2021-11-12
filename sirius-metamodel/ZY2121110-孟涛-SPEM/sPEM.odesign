@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="sPEM" version="12.0.0.2017041100">
+  <ownedViewpoints name="waterfall">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="WaterfallDiagram" domainClass="sPEM::SPEM" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="WorkSequenceNode" semanticCandidatesExpression="feature:worksequence" domainClass="sPEM.WorkSequence">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="MilestoneNode" semanticCandidatesExpression="feature:milestone" domainClass="sPEM.Milestone">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="WorkProductNode" domainClass="sPEM.WorkProduct">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="WorkProductRelationshipNode" semanticCandidatesExpression="feature:wprel" domainClass="sPEM.WorkProductRelationship">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ProcessParameterNode" domainClass="sPEM.ProcessParameter">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="successor" sourceMapping="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@nodeMappings[name='WorkSequenceNode']" targetMapping="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@containerMappings[name='WorkBreakdownElement']" targetFinderExpression="feature:successor">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="predecessor" sourceMapping="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@nodeMappings[name='WorkSequenceNode']" targetMapping="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@containerMappings[name='WorkBreakdownElement']" targetFinderExpression="feature:predecessor">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="WorkBreakdownElement" domainClass="sPEM::WorkBreakdownElement">
+          <subContainerMappings name="MyActivity" domainClass="sPEM::Acticity">
+            <subNodeMappings name="ProcessPerformerNode" domainClass="sPEM.ProcessPerformer">
+              <style xsi:type="style:DotDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="RoleUseNode" domainClass="sPEM.RoleUse">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="PostConstraint" domainClass="sPEM::Constraint">
+              <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="PreConstraint" domainClass="sPEM::Constraint">
+              <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="" tooltipExpression="WEB">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Entity">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="WorkSequence" nodeMappings="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@nodeMappings[name='WorkSequenceNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sPEM.WorkSequence" referenceName="worksequence"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="RoleUse" nodeMappings="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@containerMappings[name='WorkBreakdownElement']/@subContainerMappings[name='MyActivity']/@subNodeMappings[name='RoleUseNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sPEM::RoleUse" referenceName="rrole"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="PostConstraint" nodeMappings="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@containerMappings[name='WorkBreakdownElement']/@subContainerMappings[name='MyActivity']/@subNodeMappings[name='PostConstraint']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sPEM::Constraint" referenceName="postcondition"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Performer" nodeMappings="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@containerMappings[name='WorkBreakdownElement']/@subContainerMappings[name='MyActivity']/@subNodeMappings[name='ProcessPerformerNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sPEM::ProcessPerformer" referenceName="performer"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="PreConstraint" nodeMappings="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@containerMappings[name='WorkBreakdownElement']/@subContainerMappings[name='MyActivity']/@subNodeMappings[name='PreConstraint']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sPEM::Constraint" referenceName="precondition"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Container">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="WorkBreakdownElement" containerMappings="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@containerMappings[name='WorkBreakdownElement']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sPEM::WorkBreakdownElement" referenceName="element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Activity" containerMappings="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@containerMappings[name='WorkBreakdownElement']/@subContainerMappings[name='MyActivity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sPEM::Acticity" referenceName="nested"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Edge">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Preducessor" edgeMappings="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@edgeMappings[name='predecessor']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="predecessor" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Sucessor" edgeMappings="//@ownedViewpoints[name='waterfall']/@ownedRepresentations[name='WaterfallDiagram']/@defaultLayer/@edgeMappings[name='successor']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="successor" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.eclipse.sirius.sample.sPEM.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
