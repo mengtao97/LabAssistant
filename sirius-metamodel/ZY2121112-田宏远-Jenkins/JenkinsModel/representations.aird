@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:jenkins="http://www.example.org/jenkins" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_AWqLQEK7Eey1cMwPdXSBwQ" selectedViews="_L-nwEEK_Eey1cMwPdXSBwQ" version="14.3.1.202003261200">
+    <semanticResources>My.jenkins</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_FeDtcEK8Eey1cMwPdXSBwQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_L-nwEEK_Eey1cMwPdXSBwQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_N8o-IULOEey1cMwPdXSBwQ" name="new jenkins diagram" repPath="#_N8oXEELOEey1cMwPdXSBwQ" changeId="deb71fff-9be5-4d49-af9a-bf4eb5d6ffc4">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']"/>
+        <target xmi:type="jenkins:Jenkins" href="My.jenkins#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_Viv4EELHEey1cMwPdXSBwQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.jenkins.design/description/jenkins.odesign#//@ownedViewpoints[name='Jenkins']"/>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_N8oXEELOEey1cMwPdXSBwQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_N8plMELOEey1cMwPdXSBwQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_N8plMULOEey1cMwPdXSBwQ" type="Sirius" element="_N8oXEELOEey1cMwPdXSBwQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_MsHkcENdEey_L-Wvo45vmA" type="2002" element="_MsFvQENdEey_L-Wvo45vmA">
+          <children xmi:type="notation:Node" xmi:id="_MsHkc0NdEey_L-Wvo45vmA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_MsHkdENdEey_L-Wvo45vmA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_LSPYsENjEeyVvPJztZOQAA" type="3007" element="_LSB9UENjEeyVvPJztZOQAA">
+              <children xmi:type="notation:Node" xmi:id="_LSX7kENjEeyVvPJztZOQAA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_LSX7kUNjEeyVvPJztZOQAA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_LSeCMENjEeyVvPJztZOQAA" type="3016" element="_LSDLcENjEeyVvPJztZOQAA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_LSeCMUNjEeyVvPJztZOQAA" fontName=".AppleSystemUIFont"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LSeCMkNjEeyVvPJztZOQAA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_LSPYsUNjEeyVvPJztZOQAA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LSPYskNjEeyVvPJztZOQAA" x="56" y="39" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_c9_BsENjEeyVvPJztZOQAA" type="3008" element="_yXeHwENjEeyVvPJztZOQAA">
+              <children xmi:type="notation:Node" xmi:id="_c-AP0ENjEeyVvPJztZOQAA" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_c-A24ENjEeyVvPJztZOQAA" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_yZuxkENjEeyVvPJztZOQAA" type="3007" element="_yXhLEENjEeyVvPJztZOQAA">
+                  <children xmi:type="notation:Node" xmi:id="_yZv_sENjEeyVvPJztZOQAA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_yZv_sUNjEeyVvPJztZOQAA" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_yZzqEENjEeyVvPJztZOQAA" type="3016" element="_yXhyIENjEeyVvPJztZOQAA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_yZzqEUNjEeyVvPJztZOQAA" fontName=".AppleSystemUIFont"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yZzqEkNjEeyVvPJztZOQAA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_yZvYoENjEeyVvPJztZOQAA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yZvYoUNjEeyVvPJztZOQAA" x="65" y="44" width="30" height="30"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_yZyb8ENjEeyVvPJztZOQAA" type="3007" element="_yXkOYUNjEeyVvPJztZOQAA">
+                  <children xmi:type="notation:Node" xmi:id="_yZzDAENjEeyVvPJztZOQAA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_yZzDAUNjEeyVvPJztZOQAA" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_yZ04MENjEeyVvPJztZOQAA" type="3016" element="_yXk1cENjEeyVvPJztZOQAA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_yZ04MUNjEeyVvPJztZOQAA" fontName=".AppleSystemUIFont"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yZ04MkNjEeyVvPJztZOQAA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_yZyb8UNjEeyVvPJztZOQAA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yZyb8kNjEeyVvPJztZOQAA" x="152" y="44" width="30" height="30"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_wlTCsENnEeyVvPJztZOQAA" type="3007" element="_wlP_YENnEeyVvPJztZOQAA">
+                  <children xmi:type="notation:Node" xmi:id="_wlTpwENnEeyVvPJztZOQAA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_wlTpwUNnEeyVvPJztZOQAA" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_wlTpwkNnEeyVvPJztZOQAA" type="3005" element="_wlP_YUNnEeyVvPJztZOQAA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_wlTpw0NnEeyVvPJztZOQAA" fontName=".AppleSystemUIFont"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wlTpxENnEeyVvPJztZOQAA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_wlTCsUNnEeyVvPJztZOQAA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wlTCskNnEeyVvPJztZOQAA" x="127" y="102" width="50" height="35"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_c-A24UNjEeyVvPJztZOQAA"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_c-A24kNjEeyVvPJztZOQAA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_c9_BsUNjEeyVvPJztZOQAA" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c9_BskNjEeyVvPJztZOQAA" x="79" y="138" width="327" height="171"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_kokK8ENnEeyVvPJztZOQAA" type="3007" element="_koggkENnEeyVvPJztZOQAA">
+              <children xmi:type="notation:Node" xmi:id="_kokK80NnEeyVvPJztZOQAA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_kokK9ENnEeyVvPJztZOQAA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_kokyAENnEeyVvPJztZOQAA" type="3005" element="_koggkUNnEeyVvPJztZOQAA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_kokyAUNnEeyVvPJztZOQAA" fontName=".AppleSystemUIFont"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kokyAkNnEeyVvPJztZOQAA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_kokK8UNnEeyVvPJztZOQAA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kokK8kNnEeyVvPJztZOQAA" x="147" y="68" width="100" height="50"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_MsHkdUNdEey_L-Wvo45vmA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_MsHkdkNdEey_L-Wvo45vmA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_MsHkcUNdEey_L-Wvo45vmA" fontName=".AppleSystemUIFont"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MsHkckNdEey_L-Wvo45vmA" x="544" y="120" width="467" height="347"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-LUT0ENkEeyVvPJztZOQAA" type="2002" element="_-LPbUENkEeyVvPJztZOQAA">
+          <children xmi:type="notation:Node" xmi:id="_-LU64ENkEeyVvPJztZOQAA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_-LVh8ENkEeyVvPJztZOQAA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_-vYDIENkEeyVvPJztZOQAA" type="3007" element="_-vTxsENkEeyVvPJztZOQAA">
+              <children xmi:type="notation:Node" xmi:id="_-vYDI0NkEeyVvPJztZOQAA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_-vYDJENkEeyVvPJztZOQAA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_-vYDJUNkEeyVvPJztZOQAA" type="3016" element="_-vTxsUNkEeyVvPJztZOQAA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_-vYDJkNkEeyVvPJztZOQAA" fontName=".AppleSystemUIFont"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-vYDJ0NkEeyVvPJztZOQAA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_-vYDIUNkEeyVvPJztZOQAA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-vYDIkNkEeyVvPJztZOQAA" x="35" y="46" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_AgYGsENlEeyVvPJztZOQAA" type="3007" element="_AgUcUENlEeyVvPJztZOQAA">
+              <children xmi:type="notation:Node" xmi:id="_AgYtwENlEeyVvPJztZOQAA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_AgYtwUNlEeyVvPJztZOQAA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_AgYtwkNlEeyVvPJztZOQAA" type="3016" element="_AgUcUUNlEeyVvPJztZOQAA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_AgYtw0NlEeyVvPJztZOQAA" fontName=".AppleSystemUIFont"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AgYtxENlEeyVvPJztZOQAA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_AgYGsUNlEeyVvPJztZOQAA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AgYGskNlEeyVvPJztZOQAA" x="11" y="194" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BMMD0ENlEeyVvPJztZOQAA" type="3007" element="_BMIZcENlEeyVvPJztZOQAA">
+              <children xmi:type="notation:Node" xmi:id="_BMMq4ENlEeyVvPJztZOQAA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_BMMq4UNlEeyVvPJztZOQAA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_BMMq4kNlEeyVvPJztZOQAA" type="3016" element="_BMIZcUNlEeyVvPJztZOQAA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_BMMq40NlEeyVvPJztZOQAA" fontName=".AppleSystemUIFont"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BMMq5ENlEeyVvPJztZOQAA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_BMMD0UNlEeyVvPJztZOQAA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BMMD0kNlEeyVvPJztZOQAA" x="199" y="238" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_-LVh8UNkEeyVvPJztZOQAA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_-LVh8kNkEeyVvPJztZOQAA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-LUT0UNkEeyVvPJztZOQAA" fontName=".AppleSystemUIFont"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-LUT0kNkEeyVvPJztZOQAA" x="116" y="148" width="359" height="327"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_N8plMkLOEey1cMwPdXSBwQ"/>
+        <edges xmi:type="notation:Edge" xmi:id="_jrYxAENnEeyVvPJztZOQAA" type="4001" element="_jrVGoENnEeyVvPJztZOQAA" source="_yZyb8ENjEeyVvPJztZOQAA" target="_AgYGsENlEeyVvPJztZOQAA">
+          <children xmi:type="notation:Node" xmi:id="_jrZYEENnEeyVvPJztZOQAA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jrZYEUNnEeyVvPJztZOQAA" x="1" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_jrZYEkNnEeyVvPJztZOQAA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jrZYE0NnEeyVvPJztZOQAA" y="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_jrZYFENnEeyVvPJztZOQAA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jrZYFUNnEeyVvPJztZOQAA" x="1" y="11"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_jrYxAUNnEeyVvPJztZOQAA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_jrYxAkNnEeyVvPJztZOQAA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jrYxA0NnEeyVvPJztZOQAA" points="[0, 0, 623, -32]$[-623, 32, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jrZ_IENnEeyVvPJztZOQAA" id="(0.0,0.4666666666666667)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jrZ_IUNnEeyVvPJztZOQAA" id="(1.0,0.4)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_laFHcENnEeyVvPJztZOQAA" type="4001" element="_laAO8ENnEeyVvPJztZOQAA" source="_kokK8ENnEeyVvPJztZOQAA" target="_-vYDIENkEeyVvPJztZOQAA">
+          <children xmi:type="notation:Node" xmi:id="_laFugENnEeyVvPJztZOQAA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_laFugUNnEeyVvPJztZOQAA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_laFugkNnEeyVvPJztZOQAA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_laFug0NnEeyVvPJztZOQAA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_laFuhENnEeyVvPJztZOQAA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_laFuhUNnEeyVvPJztZOQAA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_laFHcUNnEeyVvPJztZOQAA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_laFHckNnEeyVvPJztZOQAA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_laFHc0NnEeyVvPJztZOQAA" points="[0, 0, 510, 0]$[-510, 0, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_laG8oENnEeyVvPJztZOQAA" id="(0.0,0.42)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_laG8oUNnEeyVvPJztZOQAA" id="(1.0,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_N8tPkELOEey1cMwPdXSBwQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_N8tPkULOEey1cMwPdXSBwQ"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_MsFvQENdEey_L-Wvo45vmA">
+      <target xmi:type="jenkins:Pipeline" href="My.jenkins#//@pipeline.0"/>
+      <semanticElements xmi:type="jenkins:Pipeline" href="My.jenkins#//@pipeline.0"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_LSB9UENjEeyVvPJztZOQAA" name="[]" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="jenkins:Trigger" href="My.jenkins#//@pipeline.0/@trigger"/>
+        <semanticElements xmi:type="jenkins:Trigger" href="My.jenkins#//@pipeline.0/@trigger"/>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_LSDLcENjEeyVvPJztZOQAA" labelSize="12" showIcon="false" labelPosition="node" color="204,242,166">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subNodeMappings[name='trigger']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subNodeMappings[name='trigger']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_yXeHwENjEeyVvPJztZOQAA">
+        <target xmi:type="jenkins:Build" href="My.jenkins#//@pipeline.0/@build"/>
+        <semanticElements xmi:type="jenkins:Build" href="My.jenkins#//@pipeline.0/@build"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_yXhLEENjEeyVvPJztZOQAA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="jenkins:ExecuteShell" href="My.jenkins#//@pipeline.0/@build/@executeshell.0"/>
+          <semanticElements xmi:type="jenkins:ExecuteShell" href="My.jenkins#//@pipeline.0/@build/@executeshell.0"/>
+          <ownedStyle xmi:type="diagram:Ellipse" uid="_yXhyIENjEeyVvPJztZOQAA" labelSize="12" showIcon="false" labelPosition="node" color="253,206,137">
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='executeshell']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='executeshell']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_yXkOYUNjEeyVvPJztZOQAA" outgoingEdges="_jrVGoENnEeyVvPJztZOQAA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="jenkins:ExecuteShellRemote" href="My.jenkins#//@pipeline.0/@build/@executeshellremote.0"/>
+          <semanticElements xmi:type="jenkins:ExecuteShellRemote" href="My.jenkins#//@pipeline.0/@build/@executeshellremote.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Ellipse" uid="_yXk1cENjEeyVvPJztZOQAA" labelSize="12" showIcon="false" labelPosition="node" color="217,196,215">
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='executeshellremote']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='executeshellremote']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_wlP_YENnEeyVvPJztZOQAA" width="5" height="5" resizeKind="NSEW">
+          <target xmi:type="jenkins:BuildAndPulishDockerImage" href="My.jenkins#//@pipeline.0/@build/@buildandpulishdockerimage.0"/>
+          <semanticElements xmi:type="jenkins:BuildAndPulishDockerImage" href="My.jenkins#//@pipeline.0/@build/@buildandpulishdockerimage.0"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_wlP_YUNnEeyVvPJztZOQAA" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/Jenkins.design/pic/docker.png">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='buildandpulishdockerimage']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='buildandpulishdockerimage']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_koggkENnEeyVvPJztZOQAA" outgoingEdges="_laAO8ENnEeyVvPJztZOQAA" width="10" height="10" resizeKind="NSEW">
+        <target xmi:type="jenkins:SourceCodeManagement" href="My.jenkins#//@pipeline.0/@sourcecodemanagement"/>
+        <semanticElements xmi:type="jenkins:SourceCodeManagement" href="My.jenkins#//@pipeline.0/@sourcecodemanagement"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_koggkUNnEeyVvPJztZOQAA" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/Jenkins.design/pic/git.png">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subNodeMappings[name='sourcecodemanagement']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subNodeMappings[name='sourcecodemanagement']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_-LPbUENkEeyVvPJztZOQAA">
+      <target xmi:type="jenkins:Config" href="My.jenkins#//@config"/>
+      <semanticElements xmi:type="jenkins:Config" href="My.jenkins#//@config"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_-vTxsENkEeyVvPJztZOQAA" name="credential" incomingEdges="_laAO8ENnEeyVvPJztZOQAA" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="jenkins:Credential" href="My.jenkins#//@config/@credential.0"/>
+        <semanticElements xmi:type="jenkins:Credential" href="My.jenkins#//@config/@credential.0"/>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_-vTxsUNkEeyVvPJztZOQAA" labelSize="12" showIcon="false" labelPosition="node" color="138,226,52">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='credential']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='credential']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_AgUcUENlEeyVvPJztZOQAA" name="server" incomingEdges="_jrVGoENnEeyVvPJztZOQAA" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="jenkins:Server" href="My.jenkins#//@config/@server.0"/>
+        <semanticElements xmi:type="jenkins:Server" href="My.jenkins#//@config/@server.0"/>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_AgUcUUNlEeyVvPJztZOQAA" labelSize="12" showIcon="false" labelPosition="node" color="252,175,62">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='server']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='server']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_BMIZcENlEeyVvPJztZOQAA" name="engine" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="jenkins:DockerEngine" href="My.jenkins#//@config/@dockerengine.0"/>
+        <semanticElements xmi:type="jenkins:DockerEngine" href="My.jenkins#//@config/@dockerengine.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_BMIZcUNlEeyVvPJztZOQAA" labelSize="12" showIcon="false" labelPosition="node" color="173,127,168">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='dockerengine']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='dockerengine']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jrVGoENnEeyVvPJztZOQAA" sourceNode="_yXkOYUNjEeyVvPJztZOQAA" targetNode="_AgUcUENlEeyVvPJztZOQAA">
+      <target xmi:type="jenkins:ExecuteShellRemote" href="My.jenkins#//@pipeline.0/@build/@executeshellremote.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jrVtsENnEeyVvPJztZOQAA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@edgeMappings[name='excuteShellRemoteToServer']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_jrVtsUNnEeyVvPJztZOQAA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@edgeMappings[name='excuteShellRemoteToServer']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_laAO8ENnEeyVvPJztZOQAA" sourceNode="_koggkENnEeyVvPJztZOQAA" targetNode="_-vTxsENkEeyVvPJztZOQAA">
+      <target xmi:type="jenkins:SourceCodeManagement" href="My.jenkins#//@pipeline.0/@sourcecodemanagement"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_laAO8UNnEeyVvPJztZOQAA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@edgeMappings[name='sourceCodeToCredential']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_laAO8kNnEeyVvPJztZOQAA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@edgeMappings[name='sourceCodeToCredential']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_N8oXEULOEey1cMwPdXSBwQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/Jenkins.design/description/Jenkins.odesign#//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer"/>
+    <target xmi:type="jenkins:Jenkins" href="My.jenkins#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

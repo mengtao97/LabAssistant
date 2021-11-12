@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="Jenkins" version="12.0.0.2017041100">
+  <ownedViewpoints name="JenkinsElements">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="jenkins diagram" domainClass="jenkins::Jenkins" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <edgeMappings name="sourceCodeToCredential" sourceMapping="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subNodeMappings[name='sourcecodemanagement']" targetMapping="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='credential']" targetFinderExpression="feature:credential">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="excuteShellRemoteToServer" sourceMapping="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='executeshellremote']" targetMapping="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='server']" targetFinderExpression="feature:server">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="dockerImageToDockerEngine" sourceMapping="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='buildandpulishdockerimage']" targetMapping="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='dockerengine']" targetFinderExpression="feature:dockerengine">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="config" domainClass="jenkins::Config">
+          <subNodeMappings name="credential" domainClass="jenkins::Credential">
+            <style xsi:type="style:EllipseNodeDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="server" domainClass="jenkins::Server">
+            <style xsi:type="style:EllipseNodeDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="dockerengine" domainClass="jenkins::DockerEngine">
+            <style xsi:type="style:EllipseNodeDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            </style>
+          </subNodeMappings>
+        </containerMappings>
+        <containerMappings name="pipeline" domainClass="jenkins::Pipeline">
+          <subNodeMappings name="sourcecodemanagement" semanticCandidatesExpression="feature:eAllContents" domainClass="jenkins::SourceCodeManagement">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/Jenkins.design/pic/git.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="trigger" domainClass="jenkins::Trigger">
+            <style xsi:type="style:EllipseNodeDescription" labelSize="12" showIcon="false" labelExpression="feature:type" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </subNodeMappings>
+          <subContainerMappings name="build" semanticCandidatesExpression="feature:eAllContents" domainClass="jenkins::Build">
+            <subNodeMappings name="executeshell" domainClass="jenkins::ExecuteShell">
+              <style xsi:type="style:EllipseNodeDescription" labelSize="12" showIcon="false" labelExpression="" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="executeshellremote" domainClass="jenkins::ExecuteShellRemote">
+              <style xsi:type="style:EllipseNodeDescription" labelSize="12" showIcon="false" labelExpression="" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="buildandpulishdockerimage" domainClass="jenkins::BuildAndPulishDockerImage">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" workspacePath="/Jenkins.design/pic/docker.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+          </subContainerMappings>
+        </containerMappings>
+        <toolSections name="create config">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="config" containerMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::Config" referenceName="config">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::DockerEngine" referenceName="dockerenginer"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="create config elements">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createCredential" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='credential']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::Credential" referenceName="credential"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createServer" nodeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='server']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::Server" referenceName="server"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createDockerEngine" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='dockerengine']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::DockerEngine" referenceName="dockerengine"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="create pipeline">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="pipeline" forceRefresh="true" containerMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::Pipeline" referenceName="pipeline"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="create pipeline elements">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createSourceCodeManagement" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subNodeMappings[name='sourcecodemanagement']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::SourceCodeManagement" referenceName="sourcecodemanagement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createTrigger" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subNodeMappings[name='trigger']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::Trigger" referenceName="trigger"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="create relation">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createSourceCodeToCredential" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@edgeMappings[name='sourceCodeToCredential']" extraSourceMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subNodeMappings[name='sourcecodemanagement']" extraTargetMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='credential']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="credential" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createExecuteShellRemoteToServer" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@edgeMappings[name='excuteShellRemoteToServer']" extraSourceMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='executeshellremote']" extraTargetMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='server']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="server" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createDockerImageToDockerEngine" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@edgeMappings[name='dockerImageToDockerEngine']" extraSourceMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='buildandpulishdockerimage']" extraTargetMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='config']/@subNodeMappings[name='dockerengine']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="dockerengine" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="create build">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="build" containerMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::Build" referenceName="build"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="create build elements">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createExecuteShellRemote" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='executeshellremote']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::ExecuteShellRemote" referenceName="executeshellremote"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createBuildAndPublishDockerImage" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='buildandpulishdockerimage']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::BuildAndPulishDockerImage" referenceName="buildandpulishdockerimage"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createExecuteShell" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='JenkinsElements']/@ownedRepresentations[name='jenkins%20diagram']/@defaultLayer/@containerMappings[name='pipeline']/@subContainerMappings[name='build']/@subNodeMappings[name='executeshell']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="jenkins::ExecuteShell" referenceName="executeshell"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="Jenkins.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
