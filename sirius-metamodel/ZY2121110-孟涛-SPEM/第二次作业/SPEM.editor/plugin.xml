@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sPEM -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.sirius.sample.sPEM.presentation.SPEMModelWizardID"
+            name="%_UI_SPEMModelWizard_label"
+            class="org.eclipse.sirius.sample.sPEM.presentation.SPEMModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SPEMModelFile.gif">
+         <description>%_UI_SPEMModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sPEM -->
+      <editor
+            id="org.eclipse.sirius.sample.sPEM.presentation.SPEMEditorID"
+            name="%_UI_SPEMEditor_label"
+            icon="icons/full/obj16/SPEMModelFile.gif"
+            extensions="spem"
+            class="org.eclipse.sirius.sample.sPEM.presentation.SPEMEditor"
+            contributorClass="org.eclipse.sirius.sample.sPEM.presentation.SPEMActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

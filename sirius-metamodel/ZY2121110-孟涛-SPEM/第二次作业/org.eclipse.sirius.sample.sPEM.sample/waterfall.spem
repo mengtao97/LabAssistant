@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sPEM:SPEM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sPEM="http://www.eclipse.org/sirius/sample/sPEM" modelName="瀑布模型">
+  <worksequence successor="//@element.1" predecessor="//@element.0"/>
+  <worksequence successor="//@element.2" predecessor="//@element.1"/>
+  <worksequence successor="//@element.3" predecessor="//@element.2"/>
+  <worksequence successor="//@element.4" predecessor="//@element.3"/>
+  <element description="" name="需求">
+    <nested description="需求调研">
+      <param>
+        <direction>out</direction>
+        <product content="调研报告"/>
+      </param>
+      <performer name="产品经理"/>
+    </nested>
+    <nested description="需求分析">
+      <param>
+        <direction>in</direction>
+        <product content="调研报告"/>
+      </param>
+      <param>
+        <direction>out</direction>
+        <product content="需求规格说明书"/>
+      </param>
+      <performer name="产品经理"/>
+      <performer name="开发人员"/>
+      <postcondition condition="产出需求规格说明书"/>
+      <precondition condition="完成需求调研"/>
+    </nested>
+  </element>
+  <element name="设计">
+    <nested description="高层设计">
+      <param>
+        <direction>in</direction>
+        <product content="需求规格说明书"/>
+      </param>
+      <param>
+        <direction>out</direction>
+        <product content="架构设计"/>
+      </param>
+      <performer name="架构师"/>
+      <postcondition condition="产出架构说明，并通过团队评审"/>
+    </nested>
+    <nested description="详细设计">
+      <param>
+        <direction>out</direction>
+        <product content="详细设计说明书"/>
+      </param>
+      <performer name="开发人员"/>
+      <precondition condition="架构可支撑详细设计"/>
+    </nested>
+  </element>
+  <element name="构造">
+    <nested description="编码">
+      <param>
+        <direction>out</direction>
+        <product content="代码"/>
+      </param>
+      <performer name="开发人员"/>
+      <postcondition condition="代码完成需求中的功能"/>
+    </nested>
+    <nested description="单元测试">
+      <param>
+        <direction>out</direction>
+        <product content="单元测试报告"/>
+      </param>
+      <performer name="开发人员"/>
+      <postcondition condition="代码通过各项单元测试"/>
+    </nested>
+  </element>
+  <element name="测试">
+    <nested description="模块&amp;集成测试">
+      <param>
+        <direction>out</direction>
+        <product content="测试报告"/>
+      </param>
+      <performer name="测试人员"/>
+      <precondition condition="各模块完成且已集成"/>
+    </nested>
+    <nested description="系统测试">
+      <param>
+        <direction>out</direction>
+        <product content="验收报告"/>
+      </param>
+      <param>
+        <direction>in</direction>
+        <product content="需求规格说明书"/>
+      </param>
+      <performer name="系统用户"/>
+      <postcondition condition="满足用户使用要求"/>
+    </nested>
+  </element>
+  <element name="运行与维护">
+    <nested description="部署">
+      <param>
+        <direction>out</direction>
+        <product content="部署手册"/>
+      </param>
+      <performer name="部署人员"/>
+      <postcondition condition="系统完成部署，且用户可用"/>
+    </nested>
+    <nested description="运维">
+      <param>
+        <direction>out</direction>
+        <product content="用户手册"/>
+      </param>
+      <performer name="运维人员"/>
+    </nested>
+  </element>
+  <milestone require="//@element.1/@nested.1/@param.0/@product.0" deadline="2021-02-01 设计完成"/>
+  <milestone require="//@element.2/@nested.1/@param.0/@product.0" deadline="2021-04-01 交付原型"/>
+  <milestone require="//@element.3/@nested.1/@param.0/@product.0" deadline="2021-05-01 验收完成"/>
+  <milestone require="//@element.4/@nested.1/@param.0/@product.0" deadline="2021-06-01 交付"/>
+  <milestone require="//@element.0/@nested.1/@param.1/@product.0" deadline="2021-01-01 需求分析完成"/>
+  <wprel source="//@element.0/@nested.1/@param.0/@product.0" target="//@element.0/@nested.1/@param.1/@product.0"/>
+  <wprel source="//@element.1/@nested.0/@param.0/@product.0" target="//@element.1/@nested.0/@param.1/@product.0"/>
+  <wprel source="//@element.1/@nested.0/@param.1/@product.0" target="//@element.1/@nested.1/@param.0/@product.0"/>
+  <wprel source="//@element.1/@nested.1/@param.0/@product.0" target="//@element.2/@nested.0/@param.0/@product.0"/>
+  <wprel source="//@element.2/@nested.0/@param.0/@product.0" target="//@element.2/@nested.1/@param.0/@product.0"/>
+  <wprel source="//@element.3/@nested.1/@param.1/@product.0" target="//@element.3/@nested.1/@param.0/@product.0"/>
+</sPEM:SPEM>

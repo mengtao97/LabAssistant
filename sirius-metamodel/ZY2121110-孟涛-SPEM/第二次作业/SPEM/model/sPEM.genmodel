@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/SPEM/src-gen" creationIcons="false" editDirectory="/SPEM.edit/src-gen"
+    editorDirectory="/SPEM.editor/src-gen" modelPluginID="SPEM" modelName="SPEM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>sPEM.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="SPEM" basePackage="org.eclipse.sirius.sample" disposableProviderFactory="true"
+      ecorePackage="sPEM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="sPEM.ecore#//WorkSenquenceKind">
+      <genEnumLiterals ecoreEnumLiteral="sPEM.ecore#//WorkSenquenceKind/finishToStart"/>
+      <genEnumLiterals ecoreEnumLiteral="sPEM.ecore#//WorkSenquenceKind/finshToFinish"/>
+      <genEnumLiterals ecoreEnumLiteral="sPEM.ecore#//WorkSenquenceKind/startToStart"/>
+      <genEnumLiterals ecoreEnumLiteral="sPEM.ecore#//WorkSenquenceKind/startToFinish"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="sPEM.ecore#//ParameterDirectionKind">
+      <genEnumLiterals ecoreEnumLiteral="sPEM.ecore#//ParameterDirectionKind/in"/>
+      <genEnumLiterals ecoreEnumLiteral="sPEM.ecore#//ParameterDirectionKind/out"/>
+      <genEnumLiterals ecoreEnumLiteral="sPEM.ecore#//ParameterDirectionKind/inout"/>
+    </genEnums>
+    <genClasses ecoreClass="sPEM.ecore#//WorkSequence">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPEM.ecore#//WorkSequence/successor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//WorkSequence/linkKind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPEM.ecore#//WorkSequence/predecessor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//WorkSequence/name"/>
+    </genClasses>
+    <genClasses ecoreClass="sPEM.ecore#//WorkBreakdownElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPEM.ecore#//WorkBreakdownElement/nested"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//WorkBreakdownElement/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//WorkBreakdownElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="sPEM.ecore#//Milestone">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPEM.ecore#//Milestone/require"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//Milestone/deadline"/>
+    </genClasses>
+    <genClasses ecoreClass="sPEM.ecore#//WorkProduct">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//WorkProduct/content"/>
+    </genClasses>
+    <genClasses ecoreClass="sPEM.ecore#//WorkProductRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPEM.ecore#//WorkProductRelationship/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPEM.ecore#//WorkProductRelationship/target"/>
+    </genClasses>
+    <genClasses ecoreClass="sPEM.ecore#//ProcessParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//ProcessParameter/direction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPEM.ecore#//ProcessParameter/product"/>
+    </genClasses>
+    <genClasses ecoreClass="sPEM.ecore#//WorkDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//WorkDefinition/description"/>
+    </genClasses>
+    <genClasses ecoreClass="sPEM.ecore#//Constraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//Constraint/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="sPEM.ecore#//Acticity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPEM.ecore#//Acticity/param"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPEM.ecore#//Acticity/performer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPEM.ecore#//Acticity/postcondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPEM.ecore#//Acticity/precondition"/>
+    </genClasses>
+    <genClasses ecoreClass="sPEM.ecore#//ProcessPerformer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//ProcessPerformer/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute sPEM.ecore#//ProcessPerformer/role"/>
+    </genClasses>
+    <genClasses ecoreClass="sPEM.ecore#//SPEM">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPEM.ecore#//SPEM/worksequence"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPEM.ecore#//SPEM/element"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPEM.ecore#//SPEM/milestone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPEM.ecore#//SPEM/modelName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPEM.ecore#//SPEM/wprel"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
