@@ -69,3 +69,8 @@
 | oclIsUndefined    | xx.oclIsUndefined()                  |
 | notEmpty          | xx.notEmpty()                        |
 | setReturn         | result = xx                          |
+
+
+# 两个版本的区别
+
+第一个版本的设计是元素包含元素，因为实现上有困难不可行而被放弃，第二个版本是元素之间相连，可以通过引用找到彼此，此外还将元模型的一些node映射成了边（如NextOperation、Condition、Then、Else）
