@@ -14,11 +14,21 @@ Todo
 
 ![image-20211118145356629](README.assets/image-20211118145356629.png)
 
+### createFile
+
+![image-20211118154714091](README.assets/image-20211118154714091.png)
+
+描述：首先创建者提供自己的id和文件的名字，然后文件类生成一个文件id，最后返回给用户文件
+
+
+
 ## 分工
 
 * 类图
   * 孟涛： Weekly、Task、Problem
   * 田宏远：User、Plan、Review
+  * 蹇熠辉：MyFile
 * 顺序图
   * 孟涛：assignTask
   * 田宏远：createReview
+  * 蹇熠辉：createFile
