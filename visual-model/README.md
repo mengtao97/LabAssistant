@@ -58,6 +58,20 @@
 
 
 
+### shareFile
+
+![image-20211125143235674](README.assets/image-20211125143235674.png)
+
+
+
+### cancelShare
+
+![image-20211125143825615](README.assets/image-20211125143825615.png)
+
+
+
+
+
 ## 分工
 
 * 架构图
@@ -70,5 +84,14 @@
 * 顺序图
   * 孟涛：createWeekly、 assignTask、updateProcession、reportProblem
   * 田宏远：createReview、deleteReview，create/delete/modifyPlan
-  * 蹇熠辉：createFile
+  * 蹇熠辉：createFile、shareFile、cancelShare
   * 邓程诺：reserveMeeting
+
+
+
+# 第二次更新的区别
+
+- 完善了类图，把上一次缺失的关系连接补充进来了
+- 完善了顺序图，补充了updateProcession、reportProblem、create/delete/modifyPlan、shareFile、cancelShare等顺序图
+- 新加入了系统的架构图
+
