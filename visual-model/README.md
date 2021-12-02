@@ -6,7 +6,18 @@
 
 ## 类图
 
-![类图](README.assets/%E7%B1%BB%E5%9B%BE.png)
+![类图](README.assets/image-20211202131740035.png)
+
+### 设计模式
+
+* 工厂模式
+  * `PlanFactory`来创建`YearPlan` 、`SemesterPlan`、`WeekPlan`
+
+
+* 观察者模式
+  * `Meeting`中包含`User`，当状态改变时，调用`notifyAttenders`来通知参加会议人员
+* 建造者模式
+  * `WeeklyBuilder` 来进行建造`Weekly`和`Task`
 
 ## 顺序图
 
