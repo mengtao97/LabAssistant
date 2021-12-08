@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="sPEM">
+	<SPEM modelName="waterfall">
+		<element name="requirement analyse" description="this is requirement analyse process">
+			<nested name="functional requirement analyse" description="this is requirement content blablablabla">
+				<performer name="bob" role="project manager"/>
+			</nested>
+		</element>
+	</SPEM>
+</xmi:XMI>

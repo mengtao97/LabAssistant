@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:document="http://www.example.org/document" name="requirement analyse">
+  <title title="this is requirement analyse process"/>
+  <section name="functional requirement analyse">
+    <detail content="this is requirement content blablablabla"/>
+  </section>
+  <author name="bob" role="project manager"/>
+</document:Document>

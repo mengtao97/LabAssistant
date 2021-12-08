@@ -1,0 +1,61 @@
+module SPEM2Document;
+
+-- @path s=/SPEM2Document/sPEM.ecore
+-- @path d=/SPEM2Document/document.ecore
+
+create OUT : d from IN : s;
+
+rule wbe2Document {
+	from 
+		wbe : s!WorkBreakdownElement,
+		performer : s!ProcessPerformer,
+		act : s!Acticity
+	to
+		dc: d!Document(
+			name <- wbe.name,
+			title <- thisModule.wbe2Title(wbe),
+			author <- thisModule.performer2Author(performer),
+			section <- thisModule.activity2Section(act)
+		)
+}
+
+lazy rule wbe2Title {
+	from 
+		wbe : s!WorkBreakdownElement
+	to
+		tt: d!Title(
+			title <- wbe.description
+		)
+}
+
+lazy rule performer2Author {
+	from 
+		performer : s!ProcessPerformer
+	to
+		author : d!Author(
+			name <- performer.name,
+			role <- performer.role
+		)
+}
+
+lazy rule activity2Section {
+	from 
+		act : s!Acticity
+	to
+		-- activity 多对多
+		sc: d!Section(
+			name <- act.name,
+			detail <- thisModule.act2Detail(act)
+		)
+}
+
+lazy rule act2Detail{
+	from 
+		act : s!Acticity
+	to
+		detail: d!Detail(
+			content	<- act.description
+		)
+}
+
+
