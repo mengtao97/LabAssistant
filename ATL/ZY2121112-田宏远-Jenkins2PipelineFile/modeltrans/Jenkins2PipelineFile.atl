@@ -1,0 +1,40 @@
+-- @path J=/modeltrans/Jenkins.ecore
+-- @path P=/modeltrans/PipelineFile.ecore
+
+module Jenkins2PipelineFile;
+create OUT : P from IN : J;
+
+rule Pipeline2Pipeline {
+	from
+		pf: J!Pipeline,
+		cred: J!Credential,
+		source: J!SourceCodeManagement,
+		trig: J!Trigger
+	to
+		pt: P!Pipeline(
+			name <- pf.name,
+			git <- thisModule.Credential2Git(cred, source),
+			trigger <- thisModule.Trigger2Trigger(trig)
+		)
+}
+
+lazy rule Credential2Git {
+	 from
+		cred: J!Credential,
+		source: J!SourceCodeManagement
+	 to 
+	  	plf: P!Git (
+			credentialsId <- cred.name,
+			url <- source.repoURL,
+			branch <- source.branch
+	  )
+}
+
+lazy rule Trigger2Trigger {
+	from
+  		trig: J!Trigger
+ 	to
+  		plf: P!Trigger (
+   			type <- trig.type 
+  		)
+}
