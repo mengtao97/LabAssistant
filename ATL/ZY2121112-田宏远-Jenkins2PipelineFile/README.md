@@ -20,4 +20,4 @@ Trigger是触发条件，直接从Jenkins的Pipeline的Trigger获得
 
 ## 输出模型
 
-![image-20211209115009864](/Users/tianhongyuan/Desktop/LabAssistant/ATL/ZY2121112-田宏远-Jenkins2PipelineFile/README.assets/image-20211209115009864.png)
+![image-20211209115009864](README.assets/image-20211209115009864.png)
