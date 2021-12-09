@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ocl_final:OCL xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ocl_final="http://www.example.org/ocl_final">
+  <basicelement xsi:type="ocl_final:Condition"/>
+  <basicelement xsi:type="ocl_final:Contract" name="C2" postcondition="//@basicelement.3" precondition="//@basicelement.4"/>
+  <basicelement xsi:type="ocl_final:Contract" name="C22"/>
+  <basicelement xsi:type="ocl_final:Postcondition"/>
+  <basicelement xsi:type="ocl_final:Precondition"/>
+  <operation xsi:type="ocl_final:AddLinkOneToOne"/>
+  <operation xsi:type="ocl_final:AddLinkOneToOne"/>
+  <operation xsi:type="ocl_final:AddLinkOneToOne"/>
+  <operation xsi:type="ocl_final:AddLinkOneToMany"/>
+  <operation xsi:type="ocl_final:AddLinkOneToOne"/>
+  <operation xsi:type="ocl_final:FindLinkedObject"/>
+</ocl_final:OCL>

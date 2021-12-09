@@ -1,0 +1,49 @@
+module o2t;
+
+-- @path OCL=/OCL2Tree/ocl_final.ecore
+-- @path Tree=/OCL2Tree/tree.ecore
+
+create OUT : Tree from IN : OCL;
+
+rule MakeRoot{
+	from
+		s : OCL!Contract
+	to
+		t : Tree!Root(
+			name <- s.name
+		)
+		
+}
+
+rule ChangePre{
+	from
+		s : OCL!Precondition
+	to
+		t : Tree!PlainNode(
+			father <- thisModule.getPretFather(s)
+		)
+}
+
+rule ChangePost{
+	from
+		s : OCL!Postcondition
+	to
+		t : Tree!PlainNode(
+			father <- thisModule.getPostFather(s)
+		)
+}
+
+helper def : getPretFather(s : OCL!Precondition) : OCL!Contract = 
+	if(OCL!Contract.allInstances() -> select(c | c.precondition = s) -> size() > 0)
+		then OCL!Contract.allInstances() -> select(c | c.precondition = s) -> first()
+		else OclUndefined
+	endif;
+
+
+helper def : getPostFather(s : OCL!Postcondition) : OCL!Contract = 
+	if(OCL!Contract.allInstances() -> select(c | c.postcondition = s) -> size() > 0)
+		then OCL!Contract.allInstances() -> select(c | c.postcondition = s) -> first()
+		else OclUndefined
+	endif;
+
+-- rule Change
