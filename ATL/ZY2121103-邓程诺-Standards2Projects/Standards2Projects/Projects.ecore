@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="uAF_Projects" nsURI="http://www.example.org/uAF_Projects" nsPrefix="uAF_Projects">
+  <eClassifiers xsi:type="ecore:EClass" name="Project" eSuperTypes="#//OrganizationalResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partwhole" upperBound="-1"
+        eType="#//Project" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="milestone" upperBound="-1"
+        eType="#//ProjectMilestoneRole" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="measurableelement" upperBound="-1"
+        eType="#//MeasurableElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrganizationalResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectMilestoneRole">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ProjectMilestone"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceRole">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projectRole" eType="#//Project"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualProject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instance" eType="#//Project"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectMilestone" eSuperTypes="#//ProjectSet">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="theme" upperBound="-1"
+        eType="#//ProjectTheme" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualProjectMilestone">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instance" eType="#//ProjectMilestone"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="milestone" upperBound="-1"
+        eType="#//ProjectStatus" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supplier" eType="#//MileStoneDependency"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectTheme">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//StatusIndicators"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectSet"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualProjectMilestoneRole" eSuperTypes="#//ActualState">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instance" lowerBound="1"
+        eType="#//ProjectMilestoneRole"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualState"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MeasurableElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statusindicators" upperBound="-1"
+        eType="#//StatusIndicators" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actualstate" upperBound="-1"
+        eType="#//ActualState" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projectmilestonerole" upperBound="-1"
+        eType="#//ProjectMilestoneRole" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectStatus" eSuperTypes="#//ActualState">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instance" eType="#//ProjectTheme"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusIndicators"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MileStoneDependency">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" eType="#//ActualProjectMilestone"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Standards">
+	<ActualOrganizationResource name="March">
+		<organizationInEnterprise name="Jim"/>
+		<organization name="Cindy"/>
+		<actualResponsibility name="Brandon"/>
+		<actualResponsibleResource name="Brenda"/>
+	</ActualOrganizationResource>
+	<ActualOrganizationResource name="Sailor">
+		<organizationInEnterprise name="Peter"/>
+		<organization name="Jackie"/>
+		<actualResponsibility name="David"/>
+		<actualResponsibility name="Dylan"/>
+		<actualResponsibleResource name="Kelly"/>
+	</ActualOrganizationResource>
+</xmi:XMI>
