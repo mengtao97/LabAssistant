@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="sPEM">
 	<SPEM modelName="waterfall">
-		<element name="requirement analyse" description="this is requirement analyse process">
-			<nested name="functional requirement analyse" description="this is requirement content blablablabla">
+		<element name="requirement analyze" description="this is requirement analyze process">
+			<nested name="functional requirement analyze" description="this is requirement content blablablabla">
+				<performer name="kite" role="project owner"/>
+			</nested>
+			<nested name="nonfunctional requirement analyze" description="this is nonfunctional requirement content blablablabla">
 				<performer name="bob" role="project manager"/>
+			</nested>
+		</element>
+		<element name="design" description="this is design process">
+			<nested name="architect design" description="this is design content blablablabla">
+				<performer name="john" role="designer"/>
+			</nested>
+			<nested name="function design" description="this is design content blablablabla">
+				<performer name="mary" role="designer"/>
+			</nested>
+		</element>
+		<element name="coding" description="this is code process">
+			<nested name="write code" description="this is coding content blablablabla">
+				<performer name="li" role="programmer"/>
+			</nested>
+		</element>
+		<element name="test" description="this is test process">
+			<nested name="unit test" description="this is test content blablablabla">
+				<performer name="jojo" role="tester"/>
 			</nested>
 		</element>
 	</SPEM>
