@@ -14,7 +14,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ProjectMilestone"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceRole">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="projectRole" eType="#//Project"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projectRole" eType="#//Project"/>     
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActualProject">
     <eStructuralFeatures xsi:type="ecore:EReference" name="instance" eType="#//Project"/>

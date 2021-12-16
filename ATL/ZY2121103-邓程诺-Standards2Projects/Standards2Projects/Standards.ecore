@@ -15,7 +15,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Protocol"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProtocolIplementation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="implements" eType="#//Protocol"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implements" eType="#//Protocol"/>   
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActualOrganization" eSuperTypes="#//ActualResponsibleResource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="retifiedby" upperBound="-1"

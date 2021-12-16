@@ -14,7 +14,7 @@
 		<constant value="J.setName(S):V"/>
 		<constant value="OclSimpleType"/>
 		<constant value="OclAny"/>
-		<constant value="J.setElementType(J):V"/>
+		<constant value="J.setElementType(J):V"/>   
 		<constant value="Member"/>
 		<constant value="Families"/>
 		<constant value="familyName"/>

@@ -19,7 +19,7 @@ helper context Standards!ActualOrganizationResource def: isStatusIndicators(): B
 helper context Standards!ActualOrganizationResource def: name: String =
 	if not self.name.oclIsUndefined() then
 		self.name
-	else
+	else    
 		if not self.name.oclIsUndefined() then
 			self.name
 		else
