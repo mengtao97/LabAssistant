@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<pipelinefile:Pipeline xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:pipelinefile="http://www.example.org/pipelinefile" name="test-pipeline">
+<pipelinefile:Pipeline xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:pipelinefile="http://www.example.org/pipelinefile" name="test-pipeline" lastDuration="1000">
   <git url="www.gitlab.com/g304/test.git" credentialsId="g304-gitlab" branch="dev"/>
   <trigger type="merge"/>
+  <builders>
+    <executeshell command="ls; pwd;"/>
+    <executecommandremote ip="10.251.254.2" password="TT12345" command="ls; python3 backend.py"/>
+    <buildandpublishdockerimage URI="scs.soft.buaa.edu.cn" ImageName="testImage"/>
+  </builders>
 </pipelinefile:Pipeline>
