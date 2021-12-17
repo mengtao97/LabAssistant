@@ -1,0 +1,50 @@
+module Standards2Projects;
+
+-- @path Standards2=/Standards2Projects/Standards2.ecore
+-- @path Projects=/Standards2Projects/Projects.ecore
+
+create OUT: Projects from IN: Standards;
+
+helper context Standards!ActualOrganizationResource def: isStatusIndicators(): Boolean =
+	if not self.name.oclIsUndefined() then
+		true
+	else
+		if not self.name.oclIsUndefined() then
+			true
+		else
+			false
+		endif
+	endif;
+
+helper context Standards!ActualOrganizationResource def: name: String =
+	if not self.name.oclIsUndefined() then
+		self.name
+	else    
+		if not self.name.oclIsUndefined() then
+			self.name
+		else
+			if not self.name.oclIsUndefined() then
+				self.name
+			else
+				self.name
+			endif
+		endif
+	endif;
+
+rule ActualOrganizationResource2ActualState {
+	from
+		s: Standards!ActualOrganizationResource (not s.isStatusIndicators())
+	to
+		t: Projects!ActualState (
+			fullName <- s.name + ' ' + s.name
+		)
+}
+
+rule ActualOrganizationResource2StatusIndicators {
+	from
+		s: Standards!ActualOrganizationResource (s.isStatusIndicators())
+	to
+		t: Projects!StatusIndicators (
+			fullName <- s.name + ' ' + s.name
+		)
+}

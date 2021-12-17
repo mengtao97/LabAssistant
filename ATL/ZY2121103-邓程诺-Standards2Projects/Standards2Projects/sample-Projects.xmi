@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Projects">
+	<ActualState name="Jim March"/>
+	<ActualState name="Brandon March"/>
+	<ActualState name="Peter Sailor"/>
+	<ActualState name="David Sailor"/>
+	<ActualState name="Dylan Sailor"/>
+	<StatusIndicators name="Cindy March"/>
+	<StatusIndicators name="Brenda March"/>
+	<StatusIndicators name="Jackie Sailor"/>
+	<StatusIndicators name="Kelly Sailor"/>
+</xmi:XMI>
+
+

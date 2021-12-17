@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sPEM" nsURI="http://www.example.org/sPEM" nsPrefix="sPEM">
+  <eClassifiers xsi:type="ecore:EClass" name="WorkSequence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="successor" upperBound="-1"
+        eType="#//WorkBreakdownElement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkKind" upperBound="3"
+        eType="#//WorkSenquenceKind"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predecessor" upperBound="-1"
+        eType="#//WorkBreakdownElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkBreakdownElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleUse"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Milestone">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredResults" upperBound="-1"
+        eType="#//WorkProductUse"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkProductUse"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkProductUseRelationship">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        upperBound="-1" eType="#//WorkProductUse"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        upperBound="-1" eType="#//WorkProductUse"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessParameter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paramterType" eType="#//WorkProductUse"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" ordered="false"
+        upperBound="2" eType="#//ParameterDirectionKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="precondition" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="postcondition" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessResponsibilityAssignment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkedWorkProductUse" eType="#//WorkProductUse"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkedRoleUse" upperBound="-1"
+        eType="#//RoleUse"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Acticity" eSuperTypes="#//WorkDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedParameter" upperBound="-1"
+        eType="#//ProcessParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nestedActivity" lowerBound="1"
+        upperBound="-1" eType="#//WorkBreakdownElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessPerformer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkedWOrkDefinition" lowerBound="1"
+        upperBound="-1" eType="#//WorkDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkedRoleUse" eType="#//RoleUse"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="WorkSenquenceKind">
+    <eLiterals name="finishToStart"/>
+    <eLiterals name="finshToFinish" value="1"/>
+    <eLiterals name="startToStart" value="2"/>
+    <eLiterals name="startToFinish" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ParameterDirectionKind">
+    <eLiterals name="in"/>
+    <eLiterals name="out" value="1"/>
+    <eLiterals name="inout" value="2"/>
+  </eClassifiers>
+</ecore:EPackage>

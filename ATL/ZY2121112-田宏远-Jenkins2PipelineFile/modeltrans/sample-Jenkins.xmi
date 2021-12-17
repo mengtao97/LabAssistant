@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="jenkins">
+	<Jenkins>
+		<pipeline name="test-pipeline" lastDuration="1000">
+			<sourcecodemanagement repoURL="www.gitlab.com/g304/test.git" branch="dev"/>
+			<trigger type="merge"/>
+			<build>
+				<buildandpublishdockerimage ImageName="testImage"/>
+				<executeshellremote command="ls; python3 backend.py"/>	
+				<executeshell command="ls; pwd;"/>
+			</build>
+		</pipeline>
+		<config name="test-config">
+			<credential name="g304-gitlab" username="g304" password="123456"/>
+			<server name="tencent-Cloud" IP="10.251.254.2" password="TT12345"/>
+			<dockerengine name="csc-docker-engine" URI="scs.soft.buaa.edu.cn"/>
+		</config>
+	</Jenkins>
+</xmi:XMI>

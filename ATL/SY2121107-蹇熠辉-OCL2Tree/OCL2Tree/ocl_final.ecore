@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ocl_final" nsURI="http://www.example.org/ocl_final" nsPrefix="ocl_final">
+  <eClassifiers xsi:type="ecore:EClass" name="OCL">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basicelement" upperBound="-1"
+        eType="#//BasicElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" upperBound="-1"
+        eType="#//Operation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contract" eSuperTypes="#//BasicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="postcondition" eType="#//Postcondition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="precondition" eType="#//Precondition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="service" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Precondition" eSuperTypes="#//BasicElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="#//Operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Postcondition" eSuperTypes="#//BasicElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="#//Operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OpWithReturnLink" abstract="true" eSuperTypes="#//OpWithReturn"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FindObject" eSuperTypes="#//OpWithReturnLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" upperBound="-1"
+        eType="#//Compare"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FindObjects" eSuperTypes="#//OpWithReturnLinks">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" upperBound="-1"
+        eType="#//Compare"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Compare" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="#//CompareType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" eType="#//OpWithReturnAttr"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//OpWithReturnAttr"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CompareType">
+    <eLiterals name="LT"/>
+    <eLiterals name="LE" value="1"/>
+    <eLiterals name="EQ" value="2"/>
+    <eLiterals name="NE" value="3"/>
+    <eLiterals name="GE" value="4"/>
+    <eLiterals name="GT" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CreateObject" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="obName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AddObject" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="obName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="obj" eType="#//OpWithReturnLink"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReleaseObject" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="obName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="obj" eType="#//OpWithReturnLink"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GetAttribute" eSuperTypes="#//OpWithReturnAttr">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attrName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OpWithoutReturn" abstract="true" eSuperTypes="#//Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SetAttribute" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attrName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//OpWithReturnAttr"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FindLinkedObject" eSuperTypes="#//OpWithReturnLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="obName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" upperBound="-1"
+        eType="#//Compare"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FindLinkedObjects" eSuperTypes="#//OpWithReturnLinks">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="obName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" upperBound="-1"
+        eType="#//Compare"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AddLinkOneToOne" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//OpWithReturnLink"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OpWithReturnAttr" abstract="true" eSuperTypes="#//OpWithReturn"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OpWithReturnLinks" abstract="true" eSuperTypes="#//OpWithReturn"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AddLinkOneToMany" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//OpWithReturnLink"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RemoveLinkOneToOne" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//OpWithReturnLink"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RemoveLinkOneToMany" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//OpWithReturnLink"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//OpWithReturnAttr">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OpWithReturn" abstract="true" eSuperTypes="#//Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThirdPartyService" eSuperTypes="#//OpWithReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="param" upperBound="-1"
+        eType="#//OpWithReturn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OCLIsUndefined" eSuperTypes="#//OpWithReturnAttr">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NotEmpty" eSuperTypes="#//OpWithReturnAttr">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetReturn" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="return" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prev_conj" eType="#//Conjunction"
+        eOpposite="#//Conjunction/prev"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next_conj" eType="#//Conjunction"
+        eOpposite="#//Conjunction/next"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IfExpression" eSuperTypes="#//Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ForAll" eSuperTypes="#//OpWithoutReturn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition" eSuperTypes="#//BasicElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ifexpression" eType="#//IfExpression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Then" eSuperTypes="#//BasicElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ifexpression" eType="#//IfExpression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Else" eSuperTypes="#//BasicElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ifexpression" eType="#//IfExpression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicElement" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Conjunction" eSuperTypes="#//BasicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="#//LogicOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prev" eType="#//Operation"
+        eOpposite="#//Operation/prev_conj"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//Operation"
+        eOpposite="#//Operation/next_conj"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LogicOperation">
+    <eLiterals name="AND"/>
+    <eLiterals name="OR" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>

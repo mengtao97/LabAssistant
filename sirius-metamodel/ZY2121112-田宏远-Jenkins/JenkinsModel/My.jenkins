@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jenkins:Jenkins xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jenkins="http://www.example.org/jenkins">
+  <config>
+    <credential name="credential"/>
+    <server name="server"/>
+    <dockerengine name="engine"/>
+  </config>
+  <pipeline>
+    <sourcecodemanagement credential="//@config/@credential.0"/>
+    <trigger/>
+    <build>
+      <buildandpulishdockerimage/>
+      <executeshell/>
+      <executeshellremote server="//@config/@server.0"/>
+    </build>
+  </pipeline>
+</jenkins:Jenkins>

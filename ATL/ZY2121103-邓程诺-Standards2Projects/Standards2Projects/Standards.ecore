@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="uAF_Standards" nsURI="http://www.example.org/uAF_Standards"
+    nsPrefix="uAF_Standards">
+  <eClassifiers xsi:type="ecore:EClass" name="Standard">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mandatedDate" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//DateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="retiredDate" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//DateTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Protocol" eSuperTypes="#//Standard">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wholepart" lowerBound="1"
+        upperBound="-1" eType="#//ProtocolLayer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProtocolStack" eSuperTypes="#//Protocol"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProtocolLayer" eSuperTypes="#//MeasurableElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Protocol"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProtocolIplementation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implements" eType="#//Protocol"/>   
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualOrganization" eSuperTypes="#//ActualResponsibleResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="retifiedby" upperBound="-1"
+        eType="#//Standard"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shortName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceType" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UAFElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conformsTo" eType="#//Standard"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MeasurableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualResponsibleResource" eSuperTypes="#//ActualOrganizationResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrganizationInEnterprise">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="organization" lowerBound="1"
+        upperBound="-1" eType="#//ActualOrganization"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Organization">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceType" lowerBound="1"
+        upperBound="-1" eType="#//ActualOrganization"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualOrganizationResource" eSuperTypes="#//ActualResource #//StakeHolder"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualResponsibility" eSuperTypes="#//ActualOrganizationResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualProject" eSuperTypes="#//ActualOrganizationResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StakeHolder"/>
+</ecore:EPackage>

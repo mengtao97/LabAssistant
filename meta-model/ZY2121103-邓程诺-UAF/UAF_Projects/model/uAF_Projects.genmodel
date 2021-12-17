@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/UAF_Projects/src-gen" creationIcons="false" editDirectory="/UAF_Projects.edit/src-gen"
+    editorDirectory="/UAF_Projects.editor/src-gen" modelPluginID="UAF_Projects" modelName="UAF_Projects"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>uAF_Projects.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="UAF_Projects" disposableProviderFactory="true" ecorePackage="uAF_Projects.ecore#/">
+    <genClasses ecoreClass="uAF_Projects.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//Project/partwhole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//Project/milestone"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Projects.ecore#//OrganizationalResource"/>
+    <genClasses ecoreClass="uAF_Projects.ecore#//ProjectMilestoneRole">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//ProjectMilestoneRole/type"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Projects.ecore#//ResourceRole">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//ResourceRole/projectRole"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Projects.ecore#//ActualProject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//ActualProject/instance"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Projects.ecore#//ProjectMilestone">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//ProjectMilestone/theme"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Projects.ecore#//ActualProjectMilestone">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//ActualProjectMilestone/instance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//ActualProjectMilestone/milestone"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//ActualProjectMilestone/supplier"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Projects.ecore#//ProjectTheme">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//ProjectTheme/type"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Projects.ecore#//ProjectSet"/>
+    <genClasses ecoreClass="uAF_Projects.ecore#//ActualProjectMilestoneRole">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//ActualProjectMilestoneRole/instance"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Projects.ecore#//ActualState"/>
+    <genClasses ecoreClass="uAF_Projects.ecore#//MeasurableElement"/>
+    <genClasses ecoreClass="uAF_Projects.ecore#//ProjectStatus">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//ProjectStatus/instance"/>
+    </genClasses>
+    <genClasses ecoreClass="uAF_Projects.ecore#//StatusIndicators"/>
+    <genClasses ecoreClass="uAF_Projects.ecore#//MileStoneDependency">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uAF_Projects.ecore#//MileStoneDependency/client"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

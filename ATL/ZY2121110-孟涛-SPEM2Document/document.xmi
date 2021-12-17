@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<material:Material xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:material="http://www.example.org/material" introduction="this is material of waterfall">
+  <document info="this is requirement analyze process">
+    <title title="requirement analyze"/>
+    <section name="functional requirement analyze">
+      <detail content="this is requirement content blablablabla"/>
+    </section>
+    <section name="nonfunctional requirement analyze">
+      <detail content="this is nonfunctional requirement content blablablabla"/>
+    </section>
+    <author name="kite" role="project owner"/>
+    <author name="bob" role="project manager"/>
+  </document>
+  <document info="this is design process">
+    <title title="design"/>
+    <section name="architect design">
+      <detail content="this is design content blablablabla"/>
+    </section>
+    <section name="function design">
+      <detail content="this is design content blablablabla"/>
+    </section>
+    <author name="john" role="designer"/>
+    <author name="mary" role="designer"/>
+  </document>
+  <document info="this is code process">
+    <title title="coding"/>
+    <section name="write code">
+      <detail content="this is coding content blablablabla"/>
+    </section>
+    <author name="li" role="programmer"/>
+  </document>
+  <document info="this is test process">
+    <title title="test"/>
+    <section name="unit test">
+      <detail content="this is test content blablablabla"/>
+    </section>
+    <author name="jojo" role="tester"/>
+  </document>
+  <checklist item="requirement analyze document"/>
+  <checklist item="design document"/>
+  <checklist item="coding document"/>
+  <checklist item="test document"/>
+</material:Material>

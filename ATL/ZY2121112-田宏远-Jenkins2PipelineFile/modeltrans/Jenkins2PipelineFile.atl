@@ -1,0 +1,96 @@
+-- @path J=/modeltrans/Jenkins.ecore
+-- @path P=/modeltrans/PipelineFile.ecore
+
+module Jenkins2PipelineFile;
+create OUT : P from IN : J;
+
+rule Pipeline2Pipeline {
+	from
+		pf: J!Pipeline,
+		cred: J!Credential,
+		source: J!SourceCodeManagement,
+		trig: J!Trigger,
+		build : J!Build,
+		es : J!ExecuteShell,
+		server : J!Server,
+		ecr : J!ExecuteShellRemote,
+		dockerengine : J!DockerEngine,
+		bpd : J!BuildAndPublishDockerImage
+	to
+		pt: P!Pipeline(
+			name <- pf.name,
+			lastDuration <- pf.lastDuration,
+			git <- thisModule.Credential2Git(cred, source),
+			trigger <- thisModule.Trigger2Trigger(trig),
+			builders <- thisModule.Builders(build, es, server, ecr, dockerengine, bpd)
+		)
+}
+
+lazy rule Credential2Git {
+	 from
+		cred: J!Credential,
+		source: J!SourceCodeManagement
+	 to 
+	  	plf: P!Git (
+			credentialsId <- cred.name,
+			url <- source.repoURL,
+			branch <- source.branch
+	  )
+}
+
+lazy rule Trigger2Trigger {
+	from
+  		trig: J!Trigger
+ 	to
+  		plf: P!Trigger (
+   			type <- trig.type 
+  		)
+}
+
+lazy rule Builders {
+	from
+		build : J!Build,
+		es : J!ExecuteShell,
+		server : J!Server,
+		ecr : J!ExecuteShellRemote,
+		dockerengine : J!DockerEngine,
+		bpd : J!BuildAndPublishDockerImage
+	to
+		plf : P!Builders (
+			executeshell <- thisModule.ExecuteShell2ExecuteShell(es),
+			executecommandremote <- thisModule.ECR2ECR(server, ecr),
+			buildandpublishdockerimage <- thisModule.bpd2bpd(dockerengine, bpd)
+		)
+}
+
+lazy rule ExecuteShell2ExecuteShell {
+	from 
+		es : J!ExecuteShell
+	to
+		plf : P!ExecuteShell (
+			command <- es.command	
+		)
+}
+
+lazy rule ECR2ECR {
+	from
+		sever : J!Sever,
+		ecr : J!ExecuteShellRemote
+	to
+		plf : P!ExecuteCommandRemote(
+			ip <- sever.IP,
+			password <- sever.password,
+			command <- ecr.command
+		)
+}
+
+lazy rule bpd2bpd {
+	from 
+		dockerengine : J!DockerEngine,
+		bpd : J!BuildAndPublishDockerImage
+	to
+		plf : P!BuildAndPublishDockerImage(
+			URI <- dockerengine.URI,
+			ImageName <- bpd.ImageName
+		)
+}
